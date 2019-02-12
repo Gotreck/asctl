@@ -21,9 +21,7 @@ class user extends Model
     public function addRole($rolename)
     {
         $role = role::where('name', $rolename)->first();
-        DB::table('role_user')->insert([
-            ['role_id' => $role->id, 'user_id' => $this->id],
-        ]);
+        $this->roles()->attach($role->id);
 
     }
 

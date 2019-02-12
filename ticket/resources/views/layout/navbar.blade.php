@@ -9,8 +9,8 @@ if(session()->has('user')){
 <nav id="top-nav">
     <div class="nav-wrapper top">
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="navitem"><a href="/">Home</a></li>
-            <li class="navitem"><a href="/ticket">Ticket</a></li>
+            <li class="navitem"><a href="/event">Home</a></li>
+            <li class="navitem"><a href="/event/1/tickets">Ticket</a></li>
             @if(!$connected)
                 <li class="navitem"><a href="/login">Login</a></li>
                 <li class="navitem"><a href="/register">Register</a></li>

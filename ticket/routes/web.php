@@ -22,3 +22,15 @@ Route::post('/user','UserController@store');
 Route::get('/logout','UserController@logout');
 
 
+Route::get('/event','EventController@index');
+Route::get('/event/create','EventController@create');
+Route::post('/event','EventController@store');
+Route::get('/event/{event}/tickets','EventController@buy');
+
+
+
+Route::get('/ticket/create','TicketController@create');
+Route::post('/ticket','TicketController@store');
+
+Route::get('/category/create','CategoryController@create');
+Route::post('/category','CategoryController@store');
