@@ -35,4 +35,22 @@ class user extends Model
         }
 
     }
+
+    public function orders(){
+        return $this->hasMany('App\order','user_id');
+    }
+ 
+    public function cart(){
+        foreach ($this->orders as $order) {
+            if(!$order->validate){
+                return $order;
+            }
+        }
+        $cart = new order();
+        $cart->validate=0;
+        $cart->user_id=$this->id;
+        $cart->save();
+        return $cart;
+
+    }
 }

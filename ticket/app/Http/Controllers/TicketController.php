@@ -13,10 +13,19 @@ class TicketController extends Controller
     //
     public function create()
     {
-        $categorys = category::get();
-        $events = event::get();
+        if (session()->has('user'))
+        {
+            if(user::find(session()->get('user')[0])->hasRole('admin'))
+            {
+                $categorys = category::get();
+                $events = event::get();
+        
+                return view("ticket.create", compact('categorys'), compact('events'));
 
-        return view("ticket.create", compact('categorys'), compact('events'));
+            }
+
+        }
+        return redirect("/event");
     }
 
 

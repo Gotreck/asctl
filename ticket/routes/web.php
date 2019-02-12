@@ -34,3 +34,11 @@ Route::post('/ticket','TicketController@store');
 
 Route::get('/category/create','CategoryController@create');
 Route::post('/category','CategoryController@store');
+
+
+Route::get('/order','OrderController@index');
+Route::put('/order/add','OrderController@addTicket');
+
+
+
+Route::get('/admin','AdminController@index');

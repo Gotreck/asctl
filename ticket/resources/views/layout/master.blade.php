@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/app.css">
     <script src="/js/jquery.js"></script>
     <script src="/js/materialize.js"></script>
+    @yield('additionalheader')
 </head>
 
 <body>

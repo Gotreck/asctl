@@ -13,11 +13,11 @@ if(session()->has('user')){
             <li class="navitem"><a href="/event/1/tickets">Ticket</a></li>
             @if(!$connected)
                 <li class="navitem"><a href="/login">Login</a></li>
-                <li class="navitem"><a href="/register">Register</a></li>
+                <li class="navitem"><a href="/register">Sign in</a></li>
             @endif
 
             @if($connected)
-                <li class="navitem"><a href="/cart">Cart</a></li>
+                <li class="navitem"><a href="/order">Cart</a></li>
                 <li class="navitem"><a href="/logout">Logout</a></li>
             @endif
 

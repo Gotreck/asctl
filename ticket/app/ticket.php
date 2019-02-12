@@ -16,4 +16,9 @@ class ticket extends Model
     public function event(){
         return event::find($this->event_id);
     }
+
+    public function orders(){
+        return $this->belongsToMany('App\order','product_order','product_id','order_id');
+    }
+
 }

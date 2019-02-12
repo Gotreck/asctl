@@ -28,7 +28,14 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view("event.create");
+        if (session()->has('user'))
+        {
+            if(user::find(session()->get('user')[0])->hasRole('admin'))
+                return view("event.create");
+
+        }
+
+        return redirect("/event");
     }
 
     /**

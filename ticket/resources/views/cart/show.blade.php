@@ -6,7 +6,7 @@
         $connected = true;
         $user = App\user::find(session()->get('user')[0]);
         $cart = $user->cart();
-
+        $tickets = $cart->ticket;
     }
 @endphp
 
@@ -32,16 +32,13 @@
                             <div class= "row">
                                 <div class="col s12 m12 l12">
                                     <div class="row valign-wrapper">
-                                        <div class="col s8 m8 l10 right-align">
-                                            <p>{{ $ticket->date }}</p>
+                                        <div class="col s6 m6 l6 left-align">
+                                            <p>Start : {{ $ticket->date }}</p>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s12 m12 l12 center-align">
                                             <h5>{{ $ticket->name }}</h5>
-                                        </div>
-                                        <div class="col s12 m12 l12 center-align">
-                                            <h5>{{ $ticket->category()->name }}</h5>
                                         </div>
                                     </div>
                                     <hr class="divider">
@@ -50,41 +47,17 @@
                                         <div class="row">
                                             <div class="col s12 m12 l12">
                                             <p>{{ $ticket->description }}</p>
-                                               
                                             </div>
-                                    
+                                            <div class="col s12 m12 l12">
+                                                    <p>{{ $ticket->pivot->quantity }} x {{ $ticket->price }}€ = {{$ticket->pivot->quantity *$ticket->price }}€ </p>
+                                                    </div>
+                                                    
                                         </div>
                                     </div>
                                 </div>
                                 
                             </div>
                         </div>
-                 
-
-                        @if (session()->has('user'))
-
-                            <form class="col s10" method="POST" action="/order/add">
-                                
-                          
-                                @csrf
-                                <input type="hidden" name="_method" value="put">
-                                <div class="row">
-                                    <input type="hidden" class="validate" name="ticket_id" value="{{$ticket->id}}">
-
-                                    <select name="quantity">
-                                            @for ($i = 1; $i <= 50; $i++)
-                                                <option value="{{$i}}">{{$i}}</option>
-                                            @endfor
-                                    </select>
-                                    <div class="input-field s6 m6 l6 textyellow">
-                                        <button class="btn waves-effect waves-light bg-blue" type="submit">Ajouter au panier</button>
-                                    </div>
-
-                                </div>
-
-
-                            </form>
-                            @endif
                     </div>
                 </div>
                 
@@ -109,7 +82,6 @@
 }        $(document).ready(function () {
             $('.sidenav.right').sidenav({ edge: 'right', preventScrolling: false });        });
         $(document).ready(function () {
-            $('select').formSelect();
             $('.sidenav.left').sidenav({ edge: 'left', preventScrolling: false });
         });        $('.dropdown-trigger').dropdown({
             constrainWidth: false,

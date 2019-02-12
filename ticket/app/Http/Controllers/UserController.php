@@ -21,6 +21,10 @@ class UserController extends Controller
     public function index()
     {
         //
+        if (session()->has('user'))
+        {
+            return redirect("/event");
+        }
         return view("user.login");
     }
 
@@ -32,6 +36,10 @@ class UserController extends Controller
     public function create()
     {
         //
+        if (session()->has('user'))
+        {
+            return redirect("/event");
+        }
         return view("user.register");
     }
 
@@ -129,7 +137,7 @@ class UserController extends Controller
         {
             session()->push('user', $user->id);
         }
-        return redirect('/register');
+        return redirect('/event');
 
        
 
