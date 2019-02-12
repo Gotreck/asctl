@@ -2,29 +2,39 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\role; 
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
-class User extends Authenticatable
+
+class user extends Model
 {
-    use Notifiable;
+    //
+    protected $fillable = ['first_name', 'last_name', 'country', 'club', 'email', 'password'];
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    public function roles()
+    {
+        return $this->belongsToMany('App\Role', 'role_user');
+    }
+
+    public function addRole($rolename)
+    {
+        $role = role::where('name', $rolename)->first();
+        DB::table('role_user')->insert([
+            ['role_id' => $role->id, 'user_id' => $this->id],
+        ]);
+
+    }
+
+    public function hasRole($rolename)
+    {
+        $roles = $this->roles;
+        foreach ($roles as $role) {
+            if (strtolower($role->name) == strtolower($rolename)) {
+                return true;
+            }
+        }
+
+    }
 }
