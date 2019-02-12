@@ -1,14 +1,6 @@
 @extends('layout.master')
 @section('content')
-@php
-    $connected = false;
-    if(session()->has('user')) {
-        $connected = true;
-        $user = App\user::find(session()->get('user')[0]);
-        $cart = $user->cart();
-        $tickets = $cart->ticket;
-    }
-@endphp
+
 
 <!-- Parralax image with border -->
 <div class="parallax-container center valign-wrapper borderdown">
@@ -33,12 +25,12 @@
                                 <div class="col s12 m12 l12">
                                     <div class="row valign-wrapper">
                                         <div class="col s6 m6 l6 left-align">
-                                            <p>Start : {{ $ticket->date }}</p>
+                                            <p>Start : {{ $ticket->type()->date }}</p>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col s12 m12 l12 center-align">
-                                            <h5>{{ $ticket->name }}</h5>
+                                            <h5>{{ $ticket->type()->name }}</h5>
                                         </div>
                                     </div>
                                     <hr class="divider">
@@ -46,11 +38,9 @@
                                     <div>
                                         <div class="row">
                                             <div class="col s12 m12 l12">
-                                            <p>{{ $ticket->description }}</p>
+                                            <p>{{ $ticket->type()->description }}</p>
                                             </div>
-                                            <div class="col s12 m12 l12">
-                                                    <p>{{ $ticket->pivot->quantity }} x {{ $ticket->price }}€ = {{$ticket->pivot->quantity *$ticket->price }}€ </p>
-                                                    </div>
+                                            
                                                     
                                         </div>
                                     </div>

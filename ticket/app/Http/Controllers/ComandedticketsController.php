@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\order;
-use App\user;
+use App\comandedtickets;
 use Illuminate\Http\Request;
 
-class OrderController extends Controller
+class ComandedticketsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,17 +15,6 @@ class OrderController extends Controller
     public function index()
     {
         //
-        if(session()->has('user')) {
-            $user = user::find(session()->get('user')[0]);
-            $cart = $user->cart();
-            $tickets = $cart->tickets;
-            
-            return view ("cart.show", compact('tickets'));
-    
-        }
-        else{
-            return redirect('/event');
-        }
     }
 
     /**
@@ -53,10 +41,10 @@ class OrderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\order  $order
+     * @param  \App\comandedtickets  $comandedtickets
      * @return \Illuminate\Http\Response
      */
-    public function show(order $order)
+    public function show(comandedtickets $comandedtickets)
     {
         //
     }
@@ -64,10 +52,10 @@ class OrderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\order  $order
+     * @param  \App\comandedtickets  $comandedtickets
      * @return \Illuminate\Http\Response
      */
-    public function edit(order $order)
+    public function edit(comandedtickets $comandedtickets)
     {
         //
     }
@@ -76,35 +64,21 @@ class OrderController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\order  $order
+     * @param  \App\comandedtickets  $comandedtickets
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, order $order)
+    public function update(Request $request, comandedtickets $comandedtickets)
     {
         //
-    }
-
-    public function addTicket(){
-
-        $user = user::find(session()->get('user')[0]);
-
-        $cart = $user->cart();
-        
-        
-        $cart->addticket(request()->ticket_id,request()->quantity);
-
-        return redirect('/');
-
-
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\order  $order
+     * @param  \App\comandedtickets  $comandedtickets
      * @return \Illuminate\Http\Response
      */
-    public function destroy(order $order)
+    public function destroy(comandedtickets $comandedtickets)
     {
         //
     }

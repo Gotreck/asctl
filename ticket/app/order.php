@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\DB;
 
 class order extends Model
 {
-    public function ticket(){
-        return $this->belongsToMany('App\ticket','ticket_order')->withPivot('quantity');
+    public function tickets(){
+       return $this->hasMany('App\comandedtickets','order_id');
     }
 
     public function price(){
@@ -21,12 +21,15 @@ class order extends Model
     }
     public function addticket($ticketid,$quantity){
         
-        DB::table('ticket_order')->where('order_id' , $this->id)->where('ticket_id' , $ticketid)->delete();
+        DB::table('comandedtickets')->where('order_id' , $this->id)->where('ticket_type_id' , $ticketid)->delete();
         
-        DB::table('ticket_order')->insert([
-            ['order_id' => $this->id, 'ticket_id' => $ticketid ,'quantity'=>$quantity]
-            
-            ]);
+        
+
+            for ($i=0; $i < $quantity; $i++) { 
+                DB::table('comandedtickets')->insert([
+                    ['order_id' => $this->id, 'ticket_type_id' => $ticketid ]]);
+            }
+               
             
     }
 

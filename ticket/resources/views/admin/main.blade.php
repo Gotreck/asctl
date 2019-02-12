@@ -5,6 +5,18 @@
     <script   src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+
+<script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.flash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+
+
+
+
+
+
 @endsection
 
 
@@ -44,14 +56,14 @@
                 @foreach ($orders as $order)
                 
 
-                @foreach ($order->ticket as $ticket)
-                    
+                @foreach ($order->tickets as $ticket)
+                    {{-- TODO : https://datatables.net/examples/api/form.html --}}
                 <tr>
                     <td>{{$ticket->id}}</td>
                     <td>{{$order->user()->first_name}}</td>
                     <td>{{$order->user()->last_name}}</td>
-                    <td>{{$ticket->category()->name}}</td>
-                    <td>{{$order->validate}}</td>
+                    <td>{{$ticket->type()->category()->name}}</td>
+                    <td><input type="text" name="" id="" value="{{$order->validate}}"></td>
                 </tr>
                 @endforeach
                 @endforeach
@@ -86,7 +98,7 @@
             },
             "dom": 'Bfrtip',
             "buttons": [
-                'print'
+                'copy', 'csv', 'excel', 'pdf', 'print'
             ]
             
         });

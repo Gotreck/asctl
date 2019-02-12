@@ -72,7 +72,7 @@
                                     <input type="hidden" class="validate" name="ticket_id" value="{{$ticket->id}}">
 
                                     <select name="quantity">
-                                            @for ($i = 1; $i <= 50; $i++)
+                                            @for ($i = 1; $i <= 5000; $i++)
                                                 <option value="{{$i}}">{{$i}}</option>
                                             @endfor
                                     </select>
