@@ -49,7 +49,9 @@
                     <th>Nom de l'acheteur</th>
                     <th>Prénom de l'acheteur</th>
                     <th>Catégory du ticket</th>
-                    <th>Validité</th>
+                    <th>Utilisé</th>
+                    <th>Valider</th>
+
                 </tr>
             </thead>
             <tbody >
@@ -63,7 +65,20 @@
                     <td>{{$order->user()->first_name}}</td>
                     <td>{{$order->user()->last_name}}</td>
                     <td>{{$ticket->type()->category()->name}}</td>
-                    <td><input type="text" name="" id="" value="{{$order->validate}}"></td>
+                    <td style="background-color: 
+                    @if ($ticket->validate)
+                        green">oui</td>
+                    @else
+                        red">non</td>
+                    @endif   
+                    
+                    @if ($ticket->validate)
+                    <td><a href="/admin/{{$ticket->id}}/rollback">annuler</a></td>
+
+                    @else
+                    <td><a href="/admin/{{$ticket->id}}/validate">valider</a></td>
+                    @endif  
+                   
                 </tr>
                 @endforeach
                 @endforeach

@@ -26,6 +26,10 @@
                 <input id="cat" type="text" class="validate" name="category" value="{{old('category')}}">
                 <label for="cat">New category</label>
             </div>
+            <div class="input-field col s12">
+                <input id="color" type="color" class="validate" name="color" value="{{old('color')}}">
+                <label for="color">Color</label>
+            </div>
             <button type="submit" class="btn">Add</button>
         </div>
 

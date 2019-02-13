@@ -17,6 +17,7 @@ class CreateComandedticketsTable extends Migration
             $table->increments('id');
             $table->integer('order_id');
             $table->integer('ticket_type_id');
+            $table->integer('validate');
             $table->timestamps();
         });
     }

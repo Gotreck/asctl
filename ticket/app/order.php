@@ -19,25 +19,46 @@ class order extends Model
         }
         return $price;
     }
-    public function addticket($ticketid,$quantity){
-        
-        DB::table('comandedtickets')->where('order_id' , $this->id)->where('ticket_type_id' , $ticketid)->delete();
-        
+    public function addticket($ticketid,$quantity){       
         
 
             for ($i=0; $i < $quantity; $i++) { 
                 DB::table('comandedtickets')->insert([
-                    ['order_id' => $this->id, 'ticket_type_id' => $ticketid ]]);
+                    ['order_id' => $this->id, 'ticket_type_id' => $ticketid, 'validate' => 0 ]]);
             }
                
             
     }
 
+    public function deleteticket($ticketid){       
+        DB::table('comandedtickets')->where('id' , $ticketid)->delete();         
+    }
+
+    public function validateticket($ticketid){       
+        DB::table('comandedtickets')->where('id' , $ticketid)->update(['validate' => 1]);         
+    }
+
+    public function rollbackticket($ticketid){       
+        DB::table('comandedtickets')->where('id' , $ticketid)->update(['validate' => 0]);         
+    }
+
+
+
 
     public function totalarticles(){
         $total = 0;
         foreach($this->tickets as $p){
-            $total+=$p->pivot->quantity;
+            $total+=1;
+
+        }
+        return $total;
+    }
+
+    public function totalprice(){
+        $total = 0;
+        $tickets = $this->tickets;
+        foreach($tickets as $p){
+            $total+=$p->type()->price;
 
         }
         return $total;

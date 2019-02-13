@@ -13,13 +13,6 @@
     <div class="parallax">
         <img src="/image/info.jpg" alt="parallax background">
     </div>
-    <div class="container white-text">
-        <div class="row">
-            <div class="col s12">
-                <h2>Prochain événement</h2>
-            </div>
-        </div>
-    </div>
 </div>
 <section>
     @foreach ($events as $event)
@@ -32,17 +25,18 @@
                         <div class="card-panel grey lighten-5 z-depth-1">
                             <div class= "row">
                                 <div class="col s12 m12 l12">
-                                    <div class="row valign-wrapper">
-                                        <div class="col s6 m6 l6 left-align">
-                                            <p>Start : {{ $event->start_date }}</p>
-                                        </div>
-                                        <div class="col s6 m6 l6 right-align">
-                                            <p>End : {{ $event->end_date }}</p>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="row">
                                         <div class="col s12 m12 l12 center-align">
                                             <h5>{{ $event->name }}</h5>
+                                        </div>
+                                    </div>
+                                    <div class="row valign-wrapper">
+                                        <div class="col s6 m6 l6 left-align">
+                                            <h6>Start : {{ $event->start_date }}</h6>
+                                        </div>
+                                        <div class="col s6 m6 l6 right-align">
+                                            <h6>End : {{ $event->end_date }}</h6>
                                         </div>
                                     </div>
                                     <hr class="divider">

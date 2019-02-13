@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/','EventController@index');
+
 
 Route::get('/login','UserController@index');
 Route::get('/register','UserController@create');
@@ -38,7 +38,13 @@ Route::post('/category','CategoryController@store');
 
 Route::get('/order','OrderController@index');
 Route::put('/order/add','OrderController@addTicket');
+Route::put('/order/delete','OrderController@deleteTicket');
 
 
 
+
+Route::get('/admin/{ticket}/validate','AdminController@edit');
+Route::get('/admin/{ticket}/rollback','AdminController@back');
 Route::get('/admin','AdminController@index');
+
+

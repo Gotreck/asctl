@@ -75,6 +75,10 @@ class CategoryController extends Controller
             }
         }
 
+        if(empty(request()->category)|| empty(request()->color)){
+            array_push($errors,"Merci de compléter tout les champs ");
+        }
+
 
         //if errors
         if(sizeof($errors)){
@@ -85,6 +89,7 @@ class CategoryController extends Controller
         $cat = new category();
                 //get the name
                 $cat->name=request()->category;
+                $cat->color=request()->color;
                 //save the new category
                 $cat->save();
 

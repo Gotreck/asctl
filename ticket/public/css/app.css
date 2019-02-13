@@ -12,7 +12,7 @@
     height: 6em;
     padding: 0px 20px;
     position: fixed;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(55, 132, 184, 0.8);
     margin: auto; 
     z-index: 999; 
        
@@ -29,12 +29,12 @@
 }
 
 .top ul li a:hover{
-    color:#ffc252;
+    color:#63a8d6;
     background-color: rgba(0, 0, 0, 0) !important;
 }
 
 .top ul li a.active {
-    color: #ffc252;
+    color: #63a8d6;
 }
 
 .top ul li:hover  {
@@ -44,7 +44,7 @@
 /* Style for Dropdown in Topnav */
 .drop{
     background: rgba(0, 0, 0, 0.5);
-    color: #ffc252;
+    color: #63a8d6;
     top:-1.08em;
 }
 
@@ -57,7 +57,7 @@
 }
 
 #slide-out ul li a:hover{
-    color:#ffc252;
+    color:#63a8d6;
 }
 
 #slide-out ul{
@@ -70,7 +70,7 @@
 }
 
 .sidenav li > a:hover > i.material-icons {
-    color:#ffc252 !important;
+    color:#63a8d6 !important;
 }
 
 
@@ -82,33 +82,33 @@
 /* Parallax and diviser height, border */
 
 .parallax-container{
-    height: 30em;
+    height: 50vh;
 }
 
 .diviser{
     height: 15em;
-    border-top: 10px solid #5a86dd;
+    border-top: 10px solid #63a8d6;
 }
 
 
 .border-down {
-    border-bottom: 10px solid #5a86dd;
+    border-bottom: 10px solid #63a8d6;
 }
 
 
 /* Color style for bg */
 .bg-blue{
-    background-color: #5a86dd;
+    background-color: #63a8d6;
 }
 
 .bg-blue:hover{
     background-color: white;
-    color: #5a86dd;
+    color: #63a8d6;
 }
 
 /* Color style for text */
 .color-blue{
-    color: #5a86dd;
+    color: #63a8d6;
 }
 
 /* Product img size and margin */
@@ -180,12 +180,12 @@
 }
 
 #pagination li a:hover{
-    color:#5a86dd;
+    color:#dd7f5a;
     background-color: rgba(0, 0, 0, 0) !important;
 } 
 #pagination li.active a {
     color:white!important;
-    background-color: #5a86dd!important;
+    background-color: #63a8d6!important;
 
 } 
 
@@ -193,7 +193,7 @@
 /* Chips Color */
 
 .chip:focus {
-   background-color: #5a86dd;
+   background-color: #63a8d6;
 }
 
 /* Cart style padding, color, position */
@@ -217,7 +217,7 @@
 
 /* Style for footer */
 .page-footer i:hover {
-    color: #ffc252 !important;
+    color: #63a8d6 !important;
 }
 
 .page-footer a {
@@ -225,7 +225,7 @@
 }
 
 .page-footer a:hover {
-    color: #ffc252 !important;
+    color: #63a8d6 !important;
 }
 
 .icon-footer {
@@ -295,25 +295,25 @@ hr.divider {
 }
 
 .borderdown {
-    border-bottom: 10px solid #5a86dd;
+    border-bottom: 10px solid #63a8d6;
 }
 
 .blueborders {
-    border-top: 10px solid #5a86dd;
-    border-bottom: 10px solid #5a86dd
+    border-top: 10px solid #63a8d6;
+    border-bottom: 10px solid #63a8d6
 }
 
 
 .fa-chevron-left {
-    color: #ffc252;
+    color: #63a8d6;
 }
 
 .fa-chevron-right {
-    color: #ffc252;
+    color: #63a8d6;
 }
 
 .btn-flat i {
-    color: #ffc252;
+    color: #63a8d6;
     font-size: 3em;
 }
 
@@ -470,20 +470,20 @@ a:focus{
 /* Styles for social button (like, download, edit, etc...) */
 .btn {
     color: black;
-    background: #ffc252;
+    background: #63a8d6;
 }
 
 .shuffleactive {
-    color: #ffc252 !important;
+    color: #63a8d6 !important;
     background: black !important;
 }
 
 .btn:hover {
-  background: #ffc252;
+  background: #63a8d6;
 }
 
 .btn:focus {
-    background: #ffc252;
+    background: #63a8d6;
 }
 
 /* Style for text inputs */
@@ -494,63 +494,63 @@ a:focus{
 
 /* label focus color */
 .input-field input[type=text]:focus + label {
-  color: #5a86dd !important;
+  color: #63a8d6 !important;
 }
 
 .input-field textarea:focus + label {
-    color: #5a86dd !important;
+    color: #63a8d6 !important;
 }
 
 .input-field input[type=email]:focus + label {
-    color: #5a86dd !important;
+    color: #63a8d6 !important;
 }
 
 .input-field input[type=password]:focus + label {
-  color: #5a86dd !important;
+  color: #63a8d6 !important;
 }
 
 .input-field input[type=date]:focus + label {
-    color: #5a86dd !important;
+    color: #63a8d6 !important;
 }
 
 .input-field input[type=number]:focus + label {
-    color: #5a86dd !important;
+    color: #63a8d6 !important;
 }
 
 /* label underline focus color */
 .input-field input[type=text]:focus {
-  border-bottom: 1px solid #5a86dd !important;
-  box-shadow: 0 1px 0 0 #5a86dd !important;
+  border-bottom: 1px solid #63a8d6 !important;
+  box-shadow: 0 1px 0 0 #63a8d6 !important;
 }
 
 .input-field textarea:focus {
-    border-bottom: 1px solid #5a86dd !important;
-    box-shadow: 0 1px 0 0 #5a86dd !important;
+    border-bottom: 1px solid #63a8d6 !important;
+    box-shadow: 0 1px 0 0 #63a8d6 !important;
 }
 
 .input-field input[type=email]:focus {
-    border-bottom: 1px solid #5a86dd !important;
-    box-shadow: 0 1px 0 0 #5a86dd !important;
+    border-bottom: 1px solid #63a8d6 !important;
+    box-shadow: 0 1px 0 0 #63a8d6 !important;
 }
 
 .input-field input[type=password]:focus {
-  border-bottom: 1px solid #5a86dd !important;
-  box-shadow: 0 1px 0 0 #5a86dd !important;
+  border-bottom: 1px solid #63a8d6 !important;
+  box-shadow: 0 1px 0 0 #63a8d6 !important;
 }
 
 .input-field input[type=date]:focus {
-  border-bottom: 1px solid #5a86dd !important;
-  box-shadow: 0 1px 0 0 #5a86dd !important;
+  border-bottom: 1px solid #63a8d6 !important;
+  box-shadow: 0 1px 0 0 #63a8d6 !important;
 }
 
 .input-field input[type=number]:focus {
-    border-bottom: 1px solid #5a86dd !important;
-    box-shadow: 0 1px 0 0 #5a86dd !important;
+    border-bottom: 1px solid #63a8d6 !important;
+    box-shadow: 0 1px 0 0 #63a8d6 !important;
 }
 
 /* icon prefix focus color */
   .input-field .prefix.active {
-    color: #5a86dd;
+    color: #63a8d6;
   }
 
   /* Admin page Style */
@@ -611,4 +611,22 @@ a:focus{
         margin-left: auto;
         margin-right: auto;
     }
+  }
+
+  hr.style18 { 
+    height: 30px; 
+    border-style: solid; 
+    border-color: #8c8b8b; 
+    border-width: 1px 0 0 0; 
+    border-radius: 20px; 
+  } 
+  hr.style18:before { 
+    display: block; 
+    content: ""; 
+    height: 30px; 
+    margin-top: -31px; 
+    border-style: solid; 
+    border-color: #8c8b8b; 
+    border-width: 0 0 1px 0; 
+    border-radius: 20px; 
   }

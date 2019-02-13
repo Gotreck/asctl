@@ -21,7 +21,7 @@ class OrderController extends Controller
             $cart = $user->cart();
             $tickets = $cart->tickets;
             
-            return view ("cart.show", compact('tickets'));
+            return view ("cart.show", compact('tickets'), compact('cart'));
     
         }
         else{
@@ -93,7 +93,18 @@ class OrderController extends Controller
         
         $cart->addticket(request()->ticket_id,request()->quantity);
 
-        return redirect('/');
+        return redirect('/event/1/tickets');
+
+
+    }
+
+    public function deleteTicket(){      
+
+        $user = user::find(session()->get('user')[0]);
+
+        $cart = $user->cart();
+        $cart->deleteticket(request()->ticket_id);
+        return redirect('/order');
 
 
     }

@@ -21,4 +21,6 @@ class ticket extends Model
         return $this->belongsToMany('App\order','product_order','product_id','order_id');
     }
 
+    
+
 }

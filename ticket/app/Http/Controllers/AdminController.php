@@ -68,9 +68,24 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($ticket)
     {
-        //
+        // 
+        $user = user::find(session()->get('user')[0]);
+        $cart = $user->cart();       
+        $cart->validateticket($ticket);
+
+        return redirect('/admin');
+    }
+
+    public function back($ticket)
+    {
+        // 
+        $user = user::find(session()->get('user')[0]);
+        $cart = $user->cart();       
+        $cart->rollbackticket($ticket);
+
+        return redirect('/admin');
     }
 
     /**
