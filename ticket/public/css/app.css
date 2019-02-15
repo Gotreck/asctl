@@ -114,10 +114,8 @@
 /* Product img size and margin */
 
 .img-product{
-    max-width: 15em;
-    max-height: 15em;
-    min-height: 15em;
-    min-width: 15em;
+    height: 25em;
+    width: auto;
     margin-top:10px;
     margin-left: auto;
     margin-right: auto;

@@ -60,6 +60,19 @@ $connected = false; if(session()->has('user')){
                 <p>Add event <a href="/event/create">here</a><p>
 
         </div>
+        <label>Image de présentation</label>
+		<div class="file-field input-field">
+			<div class="btn">
+				<span>Rechercher</span>
+				<input type="file" name="image" />
+			</div>
+
+			<div class="file-path-wrapper">
+				<input class="file-path validate" type="text" name="imagetext" placeholder="Importer un fichier" />
+			</div>
+</div>
+
+
         <div class="input-field center-align">
                 <button class="btn waves-effect waves-light" id="submit" type="submit" name="submit">Publier votre ticket</button>
             </div>

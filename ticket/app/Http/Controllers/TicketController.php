@@ -7,6 +7,7 @@ use App\user;
 use App\ticket;
 use App\category;
 use App\event;
+use App\picture;
 
 class TicketController extends Controller
 {
@@ -46,13 +47,40 @@ class TicketController extends Controller
           array_push($errors,"Merci de compléter tout les champs");
 
       }
+
+
+
+        $file = request()->file('image');
+      if($file){
+         $size = $file->getSize();
+       if($size > 5242880){
+            array_push($errors, "Le fichier est trop volumineux");
+        }
+        $ext = $file->getClientOriginalExtension();
+        if(!preg_match('/(jpg|jpeg|gif|png)$/',$ext)){
+           array_push($errors,'Seuls les gif png , jpg ou kpeg sont acceptés');
+        }
+       }
+
+
+
+
        //print the error in ticket create page
        if (sizeof($errors)) {
         return redirect('ticket/create')->withErrors($errors)->withInput(request()->input());
        }
+
+       
+       $picture = picture::storeFile(request()->image);
+      
+
+
+
+
+
        //create a new ticket object
         $ticket = new Ticket();
-
+        $ticket->picture_id = $picture->id;
         //complete the field with the data
         $ticket->name = request()->name;
         $ticket->description = request()->description;
