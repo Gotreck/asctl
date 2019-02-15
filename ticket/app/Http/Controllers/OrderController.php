@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\order;
 use App\user;
 use Illuminate\Http\Request;
+use PDF;
 
 class OrderController extends Controller
 {
@@ -28,6 +29,51 @@ class OrderController extends Controller
             return redirect('/event');
         }
     }
+
+    public function old()
+    {
+        //
+        if(session()->has('user')) {
+            $user = user::find(session()->get('user')[0]);
+            $carts = $user->oldCart();
+            
+            return view ("cart.old", compact('carts'));
+    
+        }
+        else{
+            return redirect('/event');
+        }
+    }
+
+
+    public function validateOrder()
+    {
+        //
+        $user = user::find(session()->get('user')[0]);
+        $cart = $user->cart();        
+        $cart->validateorder(request()->order_id);
+           
+        return redirect('/order');
+
+    }
+
+
+    public function orderPdf($id)
+    {
+        if(session()->has('user')) {
+            $user = user::find(session()->get('user')[0]);
+            $cart = $user->oneCart($id);
+            $pdf = PDF::loadView('pdf.order', compact('cart'), compact('id','user'));
+            $name = "commandeNo-".$id.".pdf";
+            return $pdf->download($name);
+                
+        }
+        else{
+            return redirect('/event');
+        }
+        
+    }
+
 
     /**
      * Show the form for creating a new resource.

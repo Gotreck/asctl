@@ -53,4 +53,23 @@ class user extends Model
         return $cart;
 
     }
+
+    public function oldCart(){
+        $orders = array();
+        foreach ($this->orders as $order) {
+            if($order->validate){
+                array_push($orders, $order);
+            }
+        }
+        return $orders;
+    }
+
+
+    public function oneCart($cartid){       
+        foreach ($this->orders as $order) {
+            if($order->id == $cartid){
+                return $order;
+            }
+        }
+    }
 }

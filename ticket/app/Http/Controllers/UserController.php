@@ -104,6 +104,8 @@ class UserController extends Controller
             $user->password = bcrypt(request()->password);
             $user->save();
             $user->addrole("User");
+            return redirect('/login');
+
 
         }
 

@@ -91,6 +91,7 @@ $connected = false; if(session()->has('user')){
 <script>
 $(document).ready(function(){
     $('select').formSelect();
+    $('.parallax').parallax();
   });
 
     $(document).ready(function() {

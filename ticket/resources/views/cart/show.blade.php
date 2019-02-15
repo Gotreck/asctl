@@ -13,12 +13,25 @@
         <h4 class="center-align">Your card</h4>
     </div>
     <div class="row">
-        <div class="col l6 m6 s6">
+        <div class="col l4 m6 s12">
             <h6 class="center-align">Number article : {{$cart->totalarticles()}} </h6>
         </div>
-        <div class="col l6 m6 s6">
+        <div class="col l4 m6 s12">
             <h6 class="center-align">Total Price : {{$cart->totalprice()}} €</h6>
         </div>
+        <div class="col l4 m6 s12">
+            <form method="POST" action="/order/validate">
+                @csrf
+                <input type="hidden" name="_method" value="put">
+                <div class="row">
+                    <input type="hidden" class="validate" name="order_id" value="{{$cart->id}}">
+                    <button class="btn waves-effect waves-light" type="submit">To order</button>
+                </div>
+            </form>       
+        </div>
+    </div>
+    <div class="row">
+        <a href="/order/old">Old order</a>
     </div>
     @foreach ($tickets as $ticket)
         <div class="card-panel grey lighten-5 z-depth-1">

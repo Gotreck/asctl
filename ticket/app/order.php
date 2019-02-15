@@ -38,6 +38,10 @@ class order extends Model
         DB::table('comandedtickets')->where('id' , $ticketid)->update(['validate' => 1]);         
     }
 
+    public function validateorder($ticketid){       
+        DB::table('orders')->where('id' , $ticketid)->update(['validate' => 1]); 
+    }
+
     public function rollbackticket($ticketid){       
         DB::table('comandedtickets')->where('id' , $ticketid)->update(['validate' => 0]);         
     }

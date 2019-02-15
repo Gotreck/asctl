@@ -14,7 +14,7 @@
         <img src="/image/info.jpg" alt="parallax background">
     </div>
 </div>
-<section>
+<section class="container">
     @foreach ($events as $event)
         @php
             $user=App\user::find($event->user_id);

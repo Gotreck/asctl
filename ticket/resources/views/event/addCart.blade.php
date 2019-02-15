@@ -5,8 +5,9 @@ if(session()->has('user')) {
     $connected = true; 
     $user= App\user::find(session()->get('user')[0]); 
     $cart = $user->cart(); 
-    $n=0;
+    
 } 
+$n=0;
 @endphp
 
 <!-- Parralax image with border -->
@@ -55,7 +56,7 @@ if(session()->has('user')) {
                                     <div class="row">
                                         <input type="hidden" class="validate" name="ticket_id" value="{{$ticket->id}}">
                                         <select name="quantity">
-                                            @for ($i = 1; $i <= 5000; $i++)
+                                            @for ($i = 1; $i <= 20; $i++)
                                                 <option value="{{$i}}">{{$i}}</option>
                                             @endfor
                                         </select>

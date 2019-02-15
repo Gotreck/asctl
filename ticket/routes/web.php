@@ -37,9 +37,12 @@ Route::post('/category','CategoryController@store');
 
 
 Route::get('/order','OrderController@index');
+Route::get('/order/old','OrderController@old');
 Route::put('/order/add','OrderController@addTicket');
 Route::put('/order/delete','OrderController@deleteTicket');
+Route::put('/order/validate','OrderController@validateOrder');
 
+Route::get('/order/pdf/{order}', 'OrderController@orderPdf');
 
 
 

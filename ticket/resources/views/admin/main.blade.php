@@ -39,6 +39,16 @@
 </section>
 
 {{-- DataTable with some info --}}
+<div class="container">
+    <div class="row">
+        <div class="col l6 m6 s6">
+            <a href="/ticket/create">Create ticket</a>
+        </div>
+        <div class="col l6 m6 s6 right-align">
+            <a href="/event/create">Create Event</a>
+        </div>
+    </div>
+</div>
 <div class="row datatable">
     <div class="col m12 l10 offset-l1">        
         <table id="tickettable" class='display'>
@@ -46,6 +56,8 @@
             <thead>
                 <tr>
                     <th>Id du ticket</th>
+                    <th>Acheté</th>
+                    <th>Id de la commande</th>
                     <th>Nom de l'acheteur</th>
                     <th>Prénom de l'acheteur</th>
                     <th>Catégory du ticket</th>
@@ -62,6 +74,13 @@
                     {{-- TODO : https://datatables.net/examples/api/form.html --}}
                 <tr>
                     <td>{{$ticket->id}}</td>
+                    <td style="background-color: 
+                    @if ($order->validate)
+                        green">oui</td>
+                    @else
+                        red">non</td>
+                    @endif  
+                    <td>{{$order->id}}</td> 
                     <td>{{$order->user()->first_name}}</td>
                     <td>{{$order->user()->last_name}}</td>
                     <td>{{$ticket->type()->category()->name}}</td>
