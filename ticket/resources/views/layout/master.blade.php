@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#5a86dd">
     <title>ASCTL Ticket </title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400" rel="stylesheet"> 
     <link rel="stylesheet" href="/css/materialize.css">
     <link rel="stylesheet" href="/css/app.css">
     <script src="/js/jquery.js"></script>

@@ -14,27 +14,42 @@ $connected = false; if(session()->has('user')){
 
 <!-- Top actualité -->
 <section class="container">
-    <h4 class="center-align">Event creation</h4>
-    <form method="POST" action="/event" id="event_form" enctype="multipart/form-data">
+    <h4 class="center-align">Create guest</h4>
+    <form method="POST" action="/guest" id="event_form" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="input-field">
-                <input id="name" type="text" class="validate" name="name" data-length="50" value="{{old('name')}}"">
-                <label for="name">Event name</label>
-            </div>
-            <div class="input-field">
-                <textarea id="description" class="validate materialize-textarea" name="description" data-length="500" value="{{old('description')}}"></textarea>
-                <label for="description">Event description</label>
+                <input id="name" type="text" class="validate" name="last_name" data-length="50" value="{{old('last_name')}}"">
+                <label for="name">guest name</label>
             </div>
 
             <div class="input-field">
-                <input id="start_date" type="text" class="validate datepicker" name="start_date" value="{{old('date')}}">
-                <label for="start_date">Event date</label>
+                <input id="name" type="text" class="validate" name="first_name" data-length="50" value="{{old('first_name')}}"">
+                <label for="name">guest name</label>
             </div>
+
+            <div class="input-field">
+                <textarea id="description" class="validate materialize-textarea" name="description" data-length="500" value="{{old('description')}}"></textarea>
+                <label for="description">guest description</label>
+            </div>               
+
         </div>
+        <label>Image de présentation</label>
+		<div class="file-field input-field">
+			<div class="btn">
+				<span>Rechercher</span>
+				<input type="file" name="image" />
+			</div>
+
+			<div class="file-path-wrapper">
+				<input class="file-path validate" type="text" name="imagetext" placeholder="Importer un fichier" />
+			</div>
+</div>
+
+
         <div class="input-field center-align">
-            <button class="btn waves-effect waves-light" id="submit" type="submit" name="submit">Add this event</button>
-        </div>
+                <button class="btn waves-effect waves-light" id="submit" type="submit" name="submit">Publier votre guest</button>
+            </div>
     </form>
     
 
@@ -61,11 +76,17 @@ $connected = false; if(session()->has('user')){
 
 
 <script>
-
-$(document).ready(function () {
+$(document).ready(function(){
+    $('select').formSelect();
     $('.parallax').parallax();
+  });
+
+    $(document).ready(function() {
     $('input#name, textarea#description').characterCounter();
-    $('#start_date, #end_date').datepicker({
+  });
+
+  $(document).ready(function(){
+    $('.datepicker').datepicker({
         i18n: {
         months: [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre' ],
 		monthsShort: [ 'Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec' ],
@@ -79,6 +100,8 @@ $(document).ready(function () {
         format: 'yyyy-mm-dd'
     });
   });
+
+  
 
 </script>
 @endsection

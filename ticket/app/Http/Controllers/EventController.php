@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\user;
 use App\event;
 use App\ticket;
+use App\guest;
 
 class EventController extends Controller
 {
@@ -19,6 +20,12 @@ class EventController extends Controller
         //
         $events= event::get();
         return view("event.show",compact('events'));
+    }
+
+
+    public function welcome(){
+        $guests = guest::get();
+        return view("welcome", compact('guests'));
     }
 
     /**
@@ -57,11 +64,11 @@ class EventController extends Controller
           array_push($errors,"Vous devez être admin pour créer un évènement");
       }
       //error if one of fields belows is not completed
-      if(empty(request()->name)|| empty(request()->start_date) || empty(request()->description) || empty(request()->end_date)){
+      if(empty(request()->name)|| empty(request()->description) || empty(request()->date)){
           array_push($errors,"Merci de compléter tout les champs ");
       }
        //print the error in event create page
-       if (sizeof($errors)) {
+       if (sizeof($errors, 0)) {
         return redirect('event/create')->withErrors($errors)->withInput(request()->input());
        }
         //create a new event object
@@ -72,8 +79,6 @@ class EventController extends Controller
         $event->name = request()->name;
         $event->user_id = session()->get('user')[0];
         $event->description = request()->description;
-        $event->start_date = request()->start_date;
-        $event->end_date = request()->end_date;
         //save all
         $event->save();
 

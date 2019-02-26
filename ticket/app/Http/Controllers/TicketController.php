@@ -66,7 +66,7 @@ class TicketController extends Controller
 
 
        //print the error in ticket create page
-       if (sizeof($errors)) {
+       if (sizeof($errors, 0)) {
         return redirect('ticket/create')->withErrors($errors)->withInput(request()->input());
        }
 

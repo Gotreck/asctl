@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/','EventController@index');
+Route::get('/','EventController@welcome');
 
 
 Route::get('/login','UserController@index');
@@ -31,6 +31,10 @@ Route::get('/event/{event}/tickets','EventController@buy');
 
 Route::get('/ticket/create','TicketController@create');
 Route::post('/ticket','TicketController@store');
+
+
+Route::get('/guest/create','GuestController@create');
+Route::post('/guest','GuestController@store');
 
 Route::get('/category/create','CategoryController@create');
 Route::post('/category','CategoryController@store');
