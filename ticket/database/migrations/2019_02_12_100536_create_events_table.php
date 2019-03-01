@@ -18,8 +18,8 @@ class CreateEventsTable extends Migration
             $table->integer('user_id');
             $table->string('name');
             $table->longText('description');
-            $table->timestamps();
             $table->date('date');
+            $table->timestamps();
         });
     }
 

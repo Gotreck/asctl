@@ -11,15 +11,61 @@
 
 <div class="circle"></div>
 
-<div class="container" id="description">
+<div class="container" id="descrip">
     Aikido Switzerland ist eine Dachorganisation und umfasst verschiedene Gruppen 
     von Dojos. Jede Gruppe ist eine eigene Organisation, muss jedoch die Regeln von Aikido Switzerland, welche sich auf das internationale Reglement des 
     Aikikai Hombu Dojo in Tokyo stützen, beachten.
 </div>
 
 
-<div class="red-bg">
-    <div class="container" style="height:1000px;"></div>
+<div class="red-bg" id="training">
+    <div class="container row">
+        <div class="row">
+            <div class="col l9 offset-l3 left-align">
+                <h2>Trainingsplan</h2>
+                <p>Die Trainingseinheiten in der Übersicht</p>
+            </div>
+        </div>
+        <div class="col l3 m3 s4 right-align" id="event-list">
+            <ul>
+                @foreach ($events as $event)
+                <li>
+                        <form method="POST" action="/#training" id="trainingform" enctype="multipart/form-data">
+                            @csrf
+                            <div class="input-field col s12 m6">
+                                <input id="club" type="text" class="hide" name="id" value="{{$event->id}}">
+                            </div>
+                            <div class="input-field center-align">
+                                <button class="btn @if ($id == $event->id)
+                                    act
+                                @endif " id="submit" type="submit" name="submit">{{$event->date}}</button>
+                            </div>
+                        </form>
+                </li>
+                @endforeach
+            </ul>
+        </div>
+
+        @php
+            $trainings = $display->training;
+        @endphp
+        @foreach ($trainings as $training)
+        <div class="col l9 m9 s8" id="training-list">
+            <div class="col l8 m8 s8" id="list">
+                    {{$training->guest()->last_name}}
+                    {{$training->guest()->first_name}}
+                <br>
+                
+                {{$training->begin_time}} -
+                {{$training->end_time}}
+            </div>
+            <div class="col l3 m3 s4">
+                <img class="img-training" src="/storage/{{$training->guest()->picture()->link}}" id="" alt="">
+            </div>
+        </div>
+        @endforeach
+
+    </div>
 </div>
 
 
@@ -42,7 +88,7 @@
                 @if ($i==1)
                     <div id="guest-list">
                 @endif
-                    <li class="description" id="{{$guest->picture()->id}}">
+                    <li class="descrip" id="{{$guest->picture()->id}}">
                         {{$guest->last_name}}
                         {{$guest->first_name}}
                     </li>
@@ -115,23 +161,6 @@ $('.img-guest').each(function()
     $(this).hover(function()
     {
         var id = "#" + $(this).attr('id');
-        console.log(id);
-        $(id).css("font-weight", "bold");
-},function() {
-    var id = "#" + $(this).attr('id');
-
-    $(id).css("font-weight", "normal");
-    });
-
-});
-
-
-$('.img-guest').each(function()
-{
-    $(this).onclick(function()
-    {
-        var id = "#" + $(this).attr('id');
-        console.log(id);
         $(id).css("font-weight", "bold");
 },function() {
     var id = "#" + $(this).attr('id');

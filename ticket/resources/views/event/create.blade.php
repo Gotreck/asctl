@@ -28,8 +28,8 @@ $connected = false; if(session()->has('user')){
             </div>
 
             <div class="input-field">
-                <input id="start_date" type="text" class="validate datepicker" name="start_date" value="{{old('date')}}">
-                <label for="start_date">Event date</label>
+                <input id="date" type="text" class="validate datepicker" name="date" value="{{old('date')}}">
+                <label for="date">Event date</label>
             </div>
         </div>
         <div class="input-field center-align">
@@ -65,7 +65,7 @@ $connected = false; if(session()->has('user')){
 $(document).ready(function () {
     $('.parallax').parallax();
     $('input#name, textarea#description').characterCounter();
-    $('#start_date, #end_date').datepicker({
+    $('#date').datepicker({
         i18n: {
         months: [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre' ],
 		monthsShort: [ 'Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec' ],

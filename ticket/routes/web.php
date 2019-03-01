@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/','EventController@welcome');
+
 
 
 Route::get('/login','UserController@index');
@@ -36,6 +36,9 @@ Route::post('/ticket','TicketController@store');
 Route::get('/guest/create','GuestController@create');
 Route::post('/guest','GuestController@store');
 
+Route::get('/training/create','TrainingController@create');
+Route::post('/trainig','TrainingController@store');
+
 Route::get('/category/create','CategoryController@create');
 Route::post('/category','CategoryController@store');
 
@@ -54,4 +57,8 @@ Route::get('/admin/{ticket}/validate','AdminController@edit');
 Route::get('/admin/{ticket}/rollback','AdminController@back');
 Route::get('/admin','AdminController@index');
 
+
+
+Route::get('/','EventController@welcome');
+Route::post('/','EventController@welcome_display');
 

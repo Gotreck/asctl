@@ -94,7 +94,7 @@ class UserController extends Controller
         
 
         //if no error
-        if (sizeof($errors) == 0) {
+        if (sizeof($errors, 0) == 0) {
             $user = new User;
             $user->first_name = request()->first_name;
             $user->last_name = request()->last_name;
@@ -139,7 +139,7 @@ class UserController extends Controller
         {
             session()->push('user', $user->id);
         }
-        return redirect('/event');
+        return redirect('/');
 
        
 

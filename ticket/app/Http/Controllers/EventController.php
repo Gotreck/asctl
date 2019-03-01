@@ -7,6 +7,9 @@ use App\user;
 use App\event;
 use App\ticket;
 use App\guest;
+use App\training;
+use Illuminate\Support\Facades\DB;
+
 
 class EventController extends Controller
 {
@@ -25,7 +28,22 @@ class EventController extends Controller
 
     public function welcome(){
         $guests = guest::get();
-        return view("welcome", compact('guests'));
+        $events = event::get();
+        $display = event::first();
+        $id = event::first()->id;
+
+
+        return view("welcome", compact('guests', 'events', 'display', 'id'));
+    }
+
+
+    public function welcome_display(){
+        $guests = guest::get();
+        $events = event::get();
+        $display= event::where('id',request()->id)->first();
+        $id = request()->id;
+
+        return view("welcome", compact('guests', 'events', 'display', 'id'));
     }
 
     /**
@@ -79,6 +97,8 @@ class EventController extends Controller
         $event->name = request()->name;
         $event->user_id = session()->get('user')[0];
         $event->description = request()->description;
+        $event->date = request()->date;
+
         //save all
         $event->save();
 
