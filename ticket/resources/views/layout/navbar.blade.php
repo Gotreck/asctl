@@ -35,9 +35,3 @@ if(session()->has('user')){
             </ul>
     </div>
 </nav>
-
-
-<script>
-        
-        
-        </script>

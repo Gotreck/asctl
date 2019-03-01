@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik:400" rel="stylesheet"> 
     <link rel="stylesheet" href="/css/materialize.css">
+    <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/app.css">
     <script src="/js/jquery.js"></script>
     <script src="/js/materialize.js"></script>

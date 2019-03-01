@@ -48,47 +48,14 @@
 
 
 .centered {
-    position: absolute;
-    top: 10vw;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Rubik', sans-serif;
-    font-size: 3vw;
-    color: #9f0909;
-    text-align: center;
+    top: 5vw!important;
+    font-family: 'Rubik', sans-serif!important;
+    font-size: 2.5vw!important;
+    color: #9f0909!important;
 
-    opacity:0;
-    -moz-animation: anim 3s linear forwards 0.5s;
-    -webkit-animation: anim 3s linear forwards 0.5s;
-    -o-animation: anim 3s linear forwards 0.5s;
-    -ms-animation: anim 3s linear forwards 0.5s;
-    animation: anim 3s linear forwards 0.5s;
+    opacity:1;
+    animation-duration: 1.3s;
 }
-
-@-moz-keyframes anim {
-   0%  {opacity:0;}
-   100% {opacity:1;}
-}
-@-webkit-keyframes anim {
-   0%  {opacity:0;}
-   100% {opacity:1;}
-}
-@-o-keyframes anim {
-   0%  {opacity:0;}
-   100% {opacity:1;}
-}
-@-ms-keyframes anim {
-   0%  {opacity:0;}
-   100% {opacity:1;}
-}
-@keyframes anim {
-   0%  {opacity:0;}
-   100% {opacity:1;}
-}
-  
-
-/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
-
 
 
 #descrip{
@@ -99,6 +66,8 @@
     font-size: 15px;
     color: #9f0909;
     text-align: center;
+    animation-duration: 1.4s;
+
 }
 .circle{
     position: relative;
@@ -111,6 +80,8 @@
     border : 0.5vw solid #9f0909;
     width:12vw;
     height:12vw;
+    animation-duration: 1.2s;
+
 }
 
 
@@ -136,34 +107,58 @@
 
 }
 
+.item{
+    margin-top: 1vw;
+    overflow: hidden;
+    height: 10vw;
+    width: 10vw;
+    border-radius: 100%;
+}
+
 .img-guest{
-    margin-top: 1.5vw;
-    margin-right: 0vw;
-    height: 13vw;
-    width: 13vw;
-    border-radius: 200px;
+    
+    height: 10vw;
+    width: 10vw;
+    border-radius: 100%;
+
 
 }
 
 .img-guest:hover{
-    transform: scale(1.06);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
     transition-duration: 0.7s;
 
 }
 .descrip{
-    margin-right:auto;
-    margin-top:2vw;
-    margin-bottom:2vw;
     font-family: 'Rubik', sans-serif;
-    font-size: 15px;
+    font-size: 0.9vw!important;
     color: #9f0909;
     text-align: right;
-}
+    height: 2vw;
+    margin: 0.1vw;
+    }
+  
+  
 
 #guest-list{
-    margin-top:4vw;
-    margin-bottom:7vw
+    padding-top:2.2vw;
+    padding-bottom:2.2vw;
+    margin:0;
+}
+.mobile-guest-name div{
+    font-family: 'Rubik', sans-serif;
+    font-size: 4vw;
+    color: #9f0909;
+    text-align: center;
+
+}
+
+.mobile-guest-name:hover div{
+    font-weight: bold;
+    text-align: center;
 }
 
 
@@ -176,15 +171,23 @@
     color: white;
     font-family: 'Rubik', sans-serif;
     font-size: 15px;
+
 }
 
-#event-list li{
+#event-list form{
     padding-top: 1.5vw;
 }
 
 
 /* Training list */
+#training-title{
+    animation-duration: 1.5s;
+    opacity: 0;
+}
+
+
 #training{
+padding-top: 3vw;
 padding-bottom : 5vw; 
 
 }
@@ -276,13 +279,35 @@ padding-bottom : 5vw;
     background-color: #a83d3d!important;
     border-radius: 30px!important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 600px){
  #descrip{
-    font-size: 10px;
+    font-size: 12px;
  }
 
- .centered{
-     font-size: 4.5vw;
+ #title{
+     font-size: 5vw!important;
+     margin-top:5vw;
  }
 
  #guest h2{
@@ -308,16 +333,237 @@ padding-bottom : 5vw;
     font-size: 10px;
 }
 
-#guest-list{
-    margin-top:-2vw;
-    margin-bottom: 8vw
+#event-list{
+    margin-top:-5vw;
+
 }
+#training-list{
+    margin-top:0vw;
+    margin-bottom:5vw;
+    margin-left:5vw;
+    margin-right:3vw;
+    height: 22vw;
+    width: 50vw;
+}
+
+#training-list #list{
+    margin-top: 1vw;
+    font-size: 12px;
+}
+
+.img-training{
+    margin-right:0;
+    height: 22vw;
+    width: 22vw;
+}
+
+
+#training h2{
+    font-size: 6vw;
+}
+
+#training p{
+    font-size: 3.5vw;
+}
+
+#training .input-field{
+    margin: 0!important;
+    padding: 0!important;
+}
+
+#training .btn{
+    font-size: 11px;;
+}
+
+#training-title{
+    opacity: 1;
+}
+
+#trainingform{
+    margin-bottom: 5vw; 
+}
+
+
+
+
+
+.item{
+    margin-top: 5vw;
+    height: 35vw;
+    width: 35vw;
+
+}
+
+.img-guest{
+    
+    height: 35vw;
+    width: 35vw;
+
+
+}
+.descrip{
+    font-family: 'Rubik', sans-serif;
+    color: #9f0909;
+    text-align: right;
+    height: 2vw;
+    margin: 0.1vw;
+    }
+
+
+#top-nav{
+    height: 15vw; 
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none!important;
+}
+.carousel{
+    height:35vw!important;
+}
+
+    .carousel img{
+        height:35vw;
+    }
+
+.top ul .navitem{ 
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.top ul i{ 
+    padding-left: 25px!important;
+
+    color: #aa5252
+}
+
 }
 
 
 
 @media screen and (max-width: 1000px) and (min-width :600px){
+    #top-nav{
+        height: 15vw; 
+        background-color: rgba(0, 0, 0, 0);
+        box-shadow: none!important;
+    }
+    .carousel{
+        height:25vw!important;
+    }
+    
+        .carousel img{
+            height:25vw;
+        }
+    
+    .top ul .navitem{ 
+        margin-top: 0;
+        font-size: 1.5em;
+    }
+    
+    .top ul i{ 
+        padding-left: 25px!important;
+    
+        color: #aa5252
+    }
 
+    
+    #descrip{
+        font-size: 15px;
+     }
+    
+     #title{
+         font-size: 3.5vw!important;
+     }
+    
+     #guest h2{
+        font-size: 3vw;
+    }
+    
+    #guest p{
+        font-size: 2.3vw;
+    
+    
+    }
+
+    
+    
+    #event-list{
+        margin-top:-2vw;
+    
+    }
+
+    #training-list{
+        margin-top:0vw;
+        margin-bottom:5vw;
+        margin-left:5vw;
+        margin-right:3vw;
+        height: 15vw;
+        width: 45vw;
+    }
+    
+    #training-list #list{
+        margin-top: 2vw;
+        font-size: 15px;
+    }
+    
+    .img-training{
+        height: 15vw;
+        width: 15vw;
+    }
+    
+    
+    #training h2{
+        font-size: 3vw;
+    }
+    
+    #training p{
+        font-size: 2.3vw;
+    }
+    
+    
+    
+    #training .btn{
+        font-size: 13px;;
+    }
+    
+    #training-title{
+        opacity: 1;
+    }
+    
+    #trainingform{
+        margin-bottom: 3vw; 
+    }
+    
+    
+    
+    
+    
+    .item{
+        margin-top: 2.5vw;
+        height: 18vw;
+        width: 18vw;
+    
+    }
+    
+    .img-guest{
+        
+        height: 18vw;
+        width: 18vw;
+    
+    
+    }
+    .descrip{
+        font-family: 'Rubik', sans-serif;
+        color: #9f0909;
+        text-align: right;
+        font-size:13px!important;
+        height: 3vw;
+        margin: 0.1vw;
+    }
+
+    #guest-list{
+        padding-top:5.45vw;
+        padding-bottom:5.45vw;
+        margin:0;
+    }
+    
 }
 
 @media screen and (min-width: 1024px){
@@ -349,6 +595,8 @@ padding-bottom : 5vw;
 
 
 }
+
+
 
 }
 
