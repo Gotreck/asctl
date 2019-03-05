@@ -19,19 +19,23 @@ $connected = false; if(session()->has('user')){
         @csrf
         <div class="row">
             <div class="input-field">
-                <input id="name" type="text" class="validate" name="last_name" data-length="50" value="{{old('last_name')}}"">
-                <label for="name">guest name</label>
+                <input id="name" type="text" class="validate" name="last_name" value="{{old('last_name')}}">
+                <label for="name">guest last name</label>
             </div>
 
             <div class="input-field">
-                <input id="name" type="text" class="validate" name="first_name" data-length="50" value="{{old('first_name')}}"">
-                <label for="name">guest name</label>
+                <input id="name" type="text" class="validate" name="first_name" value="{{old('first_name')}}">
+                <label for="name">guest first name</label>
             </div>
 
-            <div class="input-field">
-                <textarea id="description" class="validate materialize-textarea" name="description" data-length="500" value="{{old('description')}}"></textarea>
-                <label for="description">guest description</label>
-            </div>               
+            <label>guest description de</label>
+            <textarea id="description" class="validate materialize-textarea" name="description" value="{{old('description')}}"></textarea>
+
+            <label>guest description fr</label>
+            <textarea id="description_fr" class="validate materialize-textarea" name="description_fr" value="{{old('description')}}"></textarea>
+            
+            <label>guest description en</label>
+            <textarea id="description_en" class="validate materialize-textarea" name="description_en" value="{{old('description')}}"></textarea>
 
         </div>
         <label>Image de présentation</label>
@@ -74,32 +78,15 @@ $connected = false; if(session()->has('user')){
 
 @section('scripts')
 
+<script> 
 
-<script>
 $(document).ready(function(){
     $('select').formSelect();
     $('.parallax').parallax();
-  });
-
-    $(document).ready(function() {
-    $('input#name, textarea#description').characterCounter();
-  });
-
-  $(document).ready(function(){
-    $('.datepicker').datepicker({
-        i18n: {
-        months: [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre' ],
-		monthsShort: [ 'Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jun', 'Jul', 'Aou', 'Sep', 'Oct', 'Nov', 'Dec' ],
-		weekdays: [ 'Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi' ],
-		weekdaysShort: [ 'Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam' ],
-        weekdaysAbbrev: [ 'D', 'L', 'M', 'M', 'J', 'V', 'S' ],
-		today: 'Aujourd\'hui',
-		clear: 'Réinitialiser',
-        close: 'Fermer'
-        },
-        format: 'yyyy-mm-dd'
-    });
-  });
+    CKEDITOR.replace( 'description' );
+    CKEDITOR.replace( 'description_fr' );
+    CKEDITOR.replace( 'description_en' );
+});
 
   
 

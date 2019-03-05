@@ -12,9 +12,10 @@
 <div class="circle hide-on-small-only" id="logo"></div>
 
 <div class="container" id="descrip">
-    Aikido Switzerland ist eine Dachorganisation und umfasst verschiedene Gruppen 
-    von Dojos. Jede Gruppe ist eine eigene Organisation, muss jedoch die Regeln von Aikido Switzerland, welche sich auf das internationale Reglement des 
-    Aikikai Hombu Dojo in Tokyo stützen, beachten.
+    {{ __("Aikido Switzerland ist eine Dachorganisation und umfasst verschiedene Gruppen von Dojos. Jede Gruppe ist eine eigene Organisation, muss jedoch die Regeln von Aikido Switzerland, welche sich auf das internationale Reglement des Aikikai Hombu Dojo in Tokyo stützen, beachten.") }}
+    <a href="locale/en">English</a>
+    <a href="locale/de">Deutsch</a>
+    <a href="locale/fr">fr</a>
 </div>
 
 
@@ -22,8 +23,8 @@
     <div class="container row">
         <div class="row">
             <div class="col l9 offset-l3 left-align" id="training-title">
-                <h2>Trainingsplan</h2>
-                <p>Die Trainingseinheiten in der Übersicht</p>
+                <h2>{{__("Trainingsplan")}}</h2>
+                <p>{{__("Die Trainingseinheiten in der Übersicht")}}</p>
             </div>
         </div>
         <div class="row">
@@ -52,6 +53,7 @@
                         <div class="col l8 m8 s8" id="list">
                                 {{$training->guest()->last_name}}
                                 {{$training->guest()->first_name}}
+                                
                             <br>
                             
                             {{$training->begin_time}} -
@@ -71,8 +73,8 @@
 <div class="container" id="guest">
     <div class="row">
         <div class="col l9 offset-l3 left-align" id="guest-title">
-            <h2>Our Gaste</h2>
-            <p>Mehr uber und freunde und Gaste</p>
+            <h2>{{__("Our Gaste")}}</h2>
+            <p>{{__("Mehr uber und freunde und Gaste")}}</p>
         </div>
     </div>
 
@@ -116,7 +118,7 @@
                     @endphp
                     <div class="mobile-guest-name">
                         <div class="item" id="{{$guest->picture()->id}}">
-                            <img class="img-guest" src="/storage/{{$guest->picture()->link}}"  alt="">
+                            <a href="/guest/{{$guest->id}}"><img class="img-guest" src="/storage/{{$guest->picture()->link}}"  alt=""></a>
                         </div>
                         <div class="hide-on-med-and-up" id="small{{$guest->picture()->id}}">
                             {{$guest->last_name}}
@@ -235,13 +237,7 @@ $(document).ready(function () {
     
 
 $(window).scroll(function () {
-    var opacity = $(window).scrollTop()/300 ; 
-    if ($(window).width()>1020) {
-        $("#top-nav").css("opacity", opacity);
-    } 
-    anim();
-
-        
+    anim();        
 });
 
 $('.item').each(function()

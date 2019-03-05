@@ -14,9 +14,11 @@ class GuestController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
         //
+        $guest = guest::where('id',$id)->first();
+        return view("guest.index", compact('guest'));
     }
 
     /**
@@ -98,6 +100,9 @@ class GuestController extends Controller
         $guest->last_name = request()->last_name;
         $guest->first_name = request()->first_name;
         $guest->description = request()->description;
+        $guest->description_fr = request()->description_fr;
+        $guest->description_en = request()->description_en;
+
 
         $guest->save();
 

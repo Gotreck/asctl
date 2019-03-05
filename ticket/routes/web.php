@@ -32,8 +32,8 @@ Route::get('/event/{event}/tickets','EventController@buy');
 Route::get('/ticket/create','TicketController@create');
 Route::post('/ticket','TicketController@store');
 
-
 Route::get('/guest/create','GuestController@create');
+Route::get('/guest/{guest}','GuestController@index');
 Route::post('/guest','GuestController@store');
 
 Route::get('/training/create','TrainingController@create');
@@ -62,3 +62,10 @@ Route::get('/admin','AdminController@index');
 Route::get('/','EventController@welcome');
 Route::post('/','EventController@welcome_display');
 
+
+
+// Route qui permet de connaître la langue active
+Route::get('locale', 'LocalizationController@getLang')->name('getlang');
+
+// Route qui permet de modifier la langue
+Route::get('locale/{lang}', 'LocalizationController@setLang')->name('setlang');

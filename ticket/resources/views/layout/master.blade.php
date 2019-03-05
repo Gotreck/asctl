@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/app.css">
     <script src="/js/jquery.js"></script>
+    <script src="https://cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
     <script src="/js/materialize.js"></script>
     @yield('additionalheader')
 </head>
@@ -22,6 +23,16 @@
     @yield('content') 
     @yield('scripts')
     @include('layout.footer')
+    <script>
+        
+    $(window).scroll(function () {
+        
+            var opacity = $(window).scrollTop()/250 ;
+            if ($(window).width()>1020) {
+                $("#top-nav").css("opacity", opacity);
+            }       
+                
+        });</script>
 </body>
 
 </html>
