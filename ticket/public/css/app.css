@@ -35,6 +35,30 @@
 } 
 
 
+#lang-flag{
+    margin-top:0.9em;
+    width: 2vw;
+    height: 1.5vw;
+}
+
+.lang-flag{
+    width: 2vw;
+    height: 1.5vw;
+    margin: auto;
+    padding: auto;
+}
+
+.lang-item{
+    background-color: #a83d3d;
+}
+
+.lang-item:hover{
+    background-color: #9f0909!important;
+}
+
+
+
+
 
   /* Carousel */
 
@@ -163,6 +187,7 @@
 
 
 #guest-index{
+    margin-top:5vw;
     padding-top: 2vw;
     padding-bottom: 2vw;
 
@@ -366,7 +391,6 @@ padding-bottom : 5vw;
 
 
 
-
 @media screen and (max-width: 600px){
  #descrip{
     font-size: 12px;
@@ -496,10 +520,16 @@ padding-bottom : 5vw;
 }
 
 .top ul i{ 
-    padding-left: 25px!important;
-
     color: #aa5252
 }
+
+
+.lang-flag{
+    margin-bottom:0.5em;
+    width: 3vw;
+    height: 2vw;
+}
+
 
 }
 

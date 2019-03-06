@@ -11,14 +11,6 @@
 
 <div class="circle hide-on-small-only" id="logo"></div>
 
-<div class="container" id="descrip">
-    {{ __("Aikido Switzerland ist eine Dachorganisation und umfasst verschiedene Gruppen von Dojos. Jede Gruppe ist eine eigene Organisation, muss jedoch die Regeln von Aikido Switzerland, welche sich auf das internationale Reglement des Aikikai Hombu Dojo in Tokyo stützen, beachten.") }}
-    <a href="locale/en">English</a>
-    <a href="locale/de">Deutsch</a>
-    <a href="locale/fr">fr</a>
-</div>
-
-
 <div class="red-bg" id="training">
     <div class="container row">
         <div class="row">

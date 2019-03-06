@@ -14,22 +14,25 @@
 </div>
 
 <div class="circle hide-on-small-only" id="logo"></div>
-<div class="container" id="descrip">
-        <a href="../locale/en">English</a>
-        <a href="../locale/de">Deutsch</a>
-        <a href="../locale/fr">fr</a>
-        
-    </div>
+
 
 <div id="guest-index">
 <div class="container">
-    <div class="col l9 offset-l3 left-align">
-        <h2>{{__("Our Gaste")}} : {{$guest->last_name}} {{$guest->first_name}}</h2>
+    <div class="row">
+        <div class="col l9 left-align">
+            <h2>{{__("Our Gaste")}} : {{$guest->last_name}} {{$guest->first_name}}</h2>
+        </div>  
+        <div class="s12 hide-on-med-and-up ">
+            <div class="item-detail center-align" id="{{$guest->picture()->id}}">
+                <img class="img-guest-detail" src="/storage/{{$guest->picture()->link}}"  alt="">
+            </div>
+        </div>
     </div>
+   
 
     <div class="row">
 
-        <div class="col l8 guest-description">
+        <div class="col l8 m6 s12 guest-description">
             @if ($lang == "en")
                 {!! $guest->description_en !!}
             @elseif($lang == "fr")
@@ -38,7 +41,7 @@
                 {!! $guest->description !!}
             @endif
         </div>
-        <div class="col l4 m9 s12">
+        <div class="col l4 m6 hide-on-small-only">
             <div class="item-detail" id="{{$guest->picture()->id}}">
                 <img class="img-guest-detail" src="/storage/{{$guest->picture()->link}}"  alt="">
             </div>

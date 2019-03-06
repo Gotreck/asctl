@@ -3,63 +3,76 @@ $connected = false;
 if(session()->has('user')){ 
     $connected = true;
     $user = App\user::find(session()->get('user')[0]);
-} 
+}
+    $lang = \App::getLocale()
 @endphp
 
 <nav id="top-nav">
     <div class="nav-wrapper top">
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="navitem"><a href="/event">Home</a></li>
-            <li class="navitem"><a href="/event/1/tickets">Ticket</a></li>
+            <li class="navitem"><a href="/">{{__("Zuhause")}}</a></li>
+            <li class="navitem"><a href="/event/1/tickets">{{__("Fahrkarte")}}</a></li>
             @if(!$connected)
-                <li class="navitem"><a href="/login">Login</a></li>
-                <li class="navitem"><a href="/register">Sign in</a></li>
+                <li class="navitem"><a href="/login">{{__("Anmeldung")}}</a></li>
+                <li class="navitem"><a href="/register">{{__("Einloggen")}}</a></li>
             @endif
 
             @if($connected)
-                <li class="navitem"><a href="/order">Cart</a></li>
-                <li class="navitem"><a href="/logout">Logout</a></li>
+                <li class="navitem"><a href="/order">{{__("Wagen")}}</a></li>
+                <li class="navitem"><a href="/logout">{{__("Ausloggen")}}</a></li>
             @endif
 
             @if($connected && $user->hasRole('admin'))
-                <li class="navitem"><a href="/admin">Admin</a></li>
+                <li class="navitem"><a href="/admin">{{__("Admin")}}</a></li>
             @endif
-            {{-- <li class="navitem">
-                    <a href="" class="dropdown-button" data-activates="services-dropdown"><img alt="German"src="https://lipis.github.io/flag-icon-css/flags/4x3/de.svg" class="paises">  <span >€</span>
-                    <!-- <i class="material-icons right">arrow_drop_down</i> -->
-                      
-                    </a>             
-                    </li> --}}
+            <li class="navitem">
+                @if ($lang =="")
+                <a class='dropdown-trigger' href='#' data-target='dropdown1'><img id="lang-flag"alt="de"src="\image\de.jpg">
+                </a> 
+                @else
+                <a class='dropdown-trigger' href='#' data-target='dropdown1'><img id="lang-flag"alt="{{$lang}}"src="\image\{{$lang}}.jpg">
+                </a>
+                @endif
+                
+            </li>
         </ul>
         
             
         <ul class="navitem sidenav-trigger right hide-on-large-only" data-target="slide-out">
                 <li class="navitem">
+                    <a class='dropdown-trigger' href='#' data-target='dropdown2'><img id="lang-flag"alt="{{$lang}}"src="\image\{{$lang}}.jpg">
+                    </a>
+                </li>
+                <li class="navitem">
                     <a href="#">
                         <i class="material-icons">menu</i>
                     </a>
                 </li>
+                
             </ul>
     </div>
 </nav>
 
 
-<div id="services-dropdown" class="dropdown-content">
-        <ul class="vertical-tabs col s4">
-            <li><a href="hl?=gb" style="font-weight: bolder"><img alt="English"src="https://lipis.github.io/flag-icon-css/flags/4x3/gb.svg" class="paises"><span  class="moedas">£</span></a></li>
-            <li><a href="?hl=ka" style="font-weight: bolder"><img alt="English"src="https://lipis.github.io/flag-icon-css/flags/4x3/ge.svg" class="paises"><span  class="moedas">₾</span></a></li>
-            <li><a href="?hl=us" style="font-weight: bolder"><img alt="English"src="https://lipis.github.io/flag-icon-css/flags/4x3/us.svg" class="paises"><span  class="moedas">$</span></a></li>
-            <li><a href="hl=jp" style="font-weight: bolder"><img alt="English"src="https://lipis.github.io/flag-icon-css/flags/4x3/jp.svg" class="paises"><span  class="moedas">¥</span></a></li>
-        </ul>
-      </div>
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+        <a class="lang-item" href="/locale/fr"><img class="lang-flag"alt="france"src="\image\fr.jpg"></a>
+        <a class="lang-item" href="/locale/de"><img class="lang-flag"alt="france"src="\image\de.jpg"></a>
+        <a class="lang-item" href="/locale/en"><img class="lang-flag"alt="france"src="\image\en.jpg"></a>
+  </ul>
 
-      <script>$('.dropdown-button').dropdown({
-            inDuration: 300,
-            outDuration: 225,
-            constrainWidth: false,
-            hover: true, // Activate on hover
-            gutter: 0, // Spacing from edge
-            belowOrigin: true, // Displays dropdown below the button
-        stopPropogation: true
-            }
-        );</script>
+  <ul id='dropdown2' class='dropdown-content'>
+        <a class="lang-item" href="/locale/fr"><img class="lang-flag"alt="france"src="\image\fr.jpg"></a>
+        <a class="lang-item" href="/locale/de"><img class="lang-flag"alt="france"src="\image\de.jpg"></a>
+        <a class="lang-item" href="/locale/en"><img class="lang-flag"alt="france"src="\image\en.jpg"></a>
+  </ul>
+
+<script>
+
+$('.dropdown-trigger').each(function()
+    {
+       $(this).dropdown({
+           coverTrigger : false
+           });
+    })
+</script>
