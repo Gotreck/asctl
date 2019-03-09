@@ -25,7 +25,9 @@
                 <input type="hidden" name="_method" value="put">
                 <div class="row">
                     <input type="hidden" class="validate" name="order_id" value="{{$cart->id}}">
-                    <button class="btn waves-effect waves-light" type="submit">To order</button>
+                    <button class="btn @if ($cart->totalarticles() == 0)
+                        disabled
+                    @endif waves-effect waves-light" type="submit">To order</button>
                 </div>
             </form>       
         </div>

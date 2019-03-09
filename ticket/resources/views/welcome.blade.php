@@ -11,7 +11,9 @@
 
 <div class="circle hide-on-small-only" id="logo"></div>
 
-<div class="red-bg" id="training">
+<div class="container" id="descrip">     "Aikido Switzerland ist eine Dachorganisation und umfasst verschiedene Gruppen von Dojos. Jede Gruppe ist eine eigene Organisation, muss jedoch die Regeln von Aikido Switzerland, welche sich auf das internationale Reglement des Aikikai Hombu Dojo in Tokyo stützen, beachten.
+</div>
+    <div class="red-bg" id="training">
     <div class="container row">
         <div class="row">
             <div class="col l9 offset-l3 left-align" id="training-title">
@@ -81,10 +83,10 @@
                 @if ($i==1)
                     <div id="guest-list">
                 @endif
-                    <li>
-                     
-                            <p class="descrip" id="text{{$guest->picture()->id}}">{{$guest->last_name}}
-                            {{$guest->first_name}}</p>
+                    <li>   
+                            <div class="descrip" id="text{{$guest->picture()->id}}">{{$guest->last_name}}
+                            {{$guest->first_name}}</div>
+                            <br>
                     </li>
                 @if ($i==3)
                 </div>

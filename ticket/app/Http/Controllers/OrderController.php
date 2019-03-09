@@ -6,6 +6,8 @@ use App\order;
 use App\user;
 use Illuminate\Http\Request;
 use PDF;
+use Illuminate\Support\Facades\Mail;
+
 
 class OrderController extends Controller
 {
@@ -52,7 +54,20 @@ class OrderController extends Controller
         $user = user::find(session()->get('user')[0]);
         $cart = $user->cart();        
         $cart->validateorder(request()->order_id);
-           
+
+
+        $data = array('last_name'=>$user->last_name, 'first_name'=>$user->first_name);
+
+        Mail::send('emails.mail', $data, function($message) {
+            $user = user::find(session()->get('user')[0]);
+            $id =request()->order_id;
+            $cart = $user->oneCart($id);
+            $pdf = PDF::loadView('pdf.order', compact('cart'), compact('id','user'));
+            $message->to($user->email)
+                    ->subject('Validation de commande');
+            $message->attachData($pdf->output(), "Order n°$id .pdf");
+            $message->from('obigame68@gmail.com', 'ASCTL');
+        });
         return redirect('/order');
 
     }

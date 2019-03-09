@@ -10,20 +10,26 @@ if(session()->has('user')){
 <nav id="top-nav">
     <div class="nav-wrapper top">
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="navitem"><a href="/">{{__("Zuhause")}}</a></li>
-            <li class="navitem"><a href="/event/1/tickets">{{__("Fahrkarte")}}</a></li>
+            <li class="navitem underline"><a href="/">{{__("Startseite")}}</a></li>
+            <li class="navitem underline"><a href="/training">{{__("Ort")}}</a></li>
+
+            <li class="navitem underline"><a href="/training">{{__("Trainingsplan")}}</a></li>
+            <li class="navitem underline"><a href="/training">{{__("Gäste")}}</a></li>
+
+            {{-- <li class="navitem underline"><a href="/event/1/tickets">{{__("Tickets")}}</a></li> --}}
+
             @if(!$connected)
-                <li class="navitem"><a href="/login">{{__("Anmeldung")}}</a></li>
-                <li class="navitem"><a href="/register">{{__("Einloggen")}}</a></li>
+                <li class="navitem underline"><a href="/login">{{__("Log in")}}</a></li>
+                <li class="navitem underline"><a href="/register">{{__("Tickets kaufen")}}</a></li>
             @endif
 
             @if($connected)
-                <li class="navitem"><a href="/order">{{__("Wagen")}}</a></li>
-                <li class="navitem"><a href="/logout">{{__("Ausloggen")}}</a></li>
+                <li class="navitem underline"><a href="/order">{{__("Warenkorb")}}</a></li>
+                <li class="navitem underline"><a href="/logout">{{__("Ausloggen")}}</a></li>
             @endif
 
             @if($connected && $user->hasRole('admin'))
-                <li class="navitem"><a href="/admin">{{__("Admin")}}</a></li>
+                <li class="navitem underline"><a href="/admin">{{__("Admin")}}</a></li>
             @endif
             <li class="navitem">
                 @if ($lang =="")

@@ -12,7 +12,7 @@
 */
 
 
-
+Route::get('/mail', 'MailController@sendEmail');
 // Route qui permet de connaître la langue active
 Route::get('locale', 'LocalizationController@getLang')->name('getlang');
 
