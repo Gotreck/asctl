@@ -75,19 +75,15 @@
     <div class="row">
 
         <div class="col l3 hide-on-small-only">
-            <ul>
                 @php
                     $i=1;
                 @endphp
                 @foreach ($guests as $guest)
                 @if ($i==1)
-                    <div id="guest-list">
+                <div id="guest-list">
                 @endif
-                    <li>   
-                            <div class="descrip" id="text{{$guest->picture()->id}}">{{$guest->last_name}}
-                            {{$guest->first_name}}</div>
-                            <br>
-                    </li>
+                    <div class="descrip" id="text{{$guest->picture()->id}}">{{$guest->last_name}}
+                    {{$guest->first_name}}</div>
                 @if ($i==3)
                 </div>
                 @php
@@ -99,7 +95,6 @@
                     $i=$i+1;
                 @endphp
                 @endforeach
-            </ul>
         </div>
         <div class="col l8 m9 s12">
                 @php
@@ -116,7 +111,8 @@
                         </div>
                         <div class="hide-on-med-and-up" id="small{{$guest->picture()->id}}">
                             {{$guest->last_name}}
-                            {{$guest->first_name}}</div>
+                            {{$guest->first_name}}
+                        </div>
                     </div>
                 </div>
                 @endforeach

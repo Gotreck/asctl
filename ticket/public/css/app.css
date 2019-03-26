@@ -177,6 +177,7 @@ li{
     transition-duration: 0.7s;
 
 }
+
 .descrip{
     font-family: 'Rubik', sans-serif;
     font-size: 0.9vw!important;
@@ -189,10 +190,13 @@ li{
   
 
 #guest-list{
-    padding-top:2.2vw;
-    padding-bottom:2.2vw;
+    padding-top:2.6vw;
+    padding-bottom:2.3vw;
     margin:0;
 }
+
+
+
 .mobile-guest-name div{
     font-family: 'Rubik', sans-serif;
     font-size: 4vw;
