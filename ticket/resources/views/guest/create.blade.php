@@ -15,7 +15,7 @@ $connected = false; if(session()->has('user')){
 <!-- Top actualité -->
 <section class="container">
     <h4 class="center-align">Create guest</h4>
-    <form method="POST" action="/guest" id="event_form" enctype="multipart/form-data">
+    <form method="POST" action="/guest/create" id="event_form" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="input-field">
@@ -26,6 +26,16 @@ $connected = false; if(session()->has('user')){
             <div class="input-field">
                 <input id="name" type="text" class="validate" name="first_name" value="{{old('first_name')}}">
                 <label for="name">guest first name</label>
+            </div>
+
+            <div class="input-field">
+                <input id="movie" type="text" class="validate" name="movie" value="{{old('movie')}}">
+                <label for="movie">movie</label>
+            </div>
+
+            <div class="input-field">
+                <input id="website" type="text" class="validate" name="website" value="{{old('website')}}">
+                <label for="website">website</label>
             </div>
 
             <label>guest description de</label>

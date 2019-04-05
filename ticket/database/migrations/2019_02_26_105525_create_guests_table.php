@@ -20,6 +20,8 @@ class CreateGuestsTable extends Migration
             $table->longText('description');
             $table->longText('description_fr');
             $table->longText('description_en');
+            $table->string('website');
+            $table->string('movie');
             $table->integer('picture_id');
             $table->timestamps();
         });

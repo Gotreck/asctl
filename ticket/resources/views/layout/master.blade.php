@@ -24,7 +24,10 @@
     @yield('scripts')
     @include('layout.footer')
     <script>
-        
+    var opacity = $(window).scrollTop()/250 ;
+            if ($(window).width()>1020) {
+                $("#top-nav").css("opacity", opacity);
+            }      
     $(window).scroll(function () {
         
             var opacity = $(window).scrollTop()/250 ;

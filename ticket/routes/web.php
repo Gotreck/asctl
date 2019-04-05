@@ -39,8 +39,10 @@ Route::get('/ticket/create','TicketController@create');
 Route::post('/ticket','TicketController@store');
 
 Route::get('/guest/create','GuestController@create');
-Route::get('/guest/{guest}','GuestController@index');
-Route::post('/guest','GuestController@store');
+Route::get('/guest/{guest}','GuestController@show');
+Route::get('/guest','GuestController@index');
+Route::post('/guest/create','GuestController@store');
+
 
 Route::get('/training/create','TrainingController@create');
 Route::post('/trainig','TrainingController@store');

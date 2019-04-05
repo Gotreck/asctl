@@ -14,7 +14,7 @@ if(session()->has('user')){
             <li class="navitem underline"><a href="/training">{{__("Ort")}}</a></li>
 
             <li class="navitem underline"><a href="/training">{{__("Trainingsplan")}}</a></li>
-            <li class="navitem underline"><a href="/training">{{__("Gäste")}}</a></li>
+            <li class="navitem underline"><a href="/guest">{{__("Gäste")}}</a></li>
 
             {{-- <li class="navitem underline"><a href="/event/1/tickets">{{__("Tickets")}}</a></li> --}}
 

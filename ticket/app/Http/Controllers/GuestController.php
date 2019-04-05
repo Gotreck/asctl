@@ -14,12 +14,27 @@ class GuestController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index()
+    {
+        //
+        $guests = guest::get();
+        return view("guest.index", compact('guests'));
+    }
+
+    public function show($id)
     {
         //
         $guest = guest::where('id',$id)->first();
-        return view("guest.index", compact('guest'));
+        return view("guest.show", compact('guest'));
     }
+
+    public function display_more($id)
+    {
+        //
+        $guest = guest::where('id', request(id))->first();
+        return view("guest.show", compact('guest'));
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -102,7 +117,8 @@ class GuestController extends Controller
         $guest->description = request()->description;
         $guest->description_fr = request()->description_fr;
         $guest->description_en = request()->description_en;
-
+        $guest->website = request()->website;
+        $guest->movie = request()->movie;
 
         $guest->save();
 
@@ -120,10 +136,7 @@ class GuestController extends Controller
      * @param  \App\guest  $guest
      * @return \Illuminate\Http\Response
      */
-    public function show(guest $guest)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
