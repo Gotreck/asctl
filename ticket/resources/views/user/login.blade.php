@@ -1,23 +1,13 @@
 @extends('layout.master') 
 @section('content')
-<section id="section">
-    <div class="parallax-container center valign-wrapper border-down">
-        <div class="parallax"><img src="/image/info.jpg" alt="background parallax">
-        </div>
-        <div class="container white-text">
-            <div class="row">
-                <div class="col s12">
-                    <h3>Connexion</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<div id="title-guest" class="row">
+    <div class="col l4 offset-l3"><h2 id="title">{{__("Login")}}</h2></div>
+</div>
 
-<div class="row">
-    <div class="col s10 offset-s1">
-        <h3 class="center-align">Veuillez entrez vos identifiants</h3>
-        <form class="col s12" method="POST" action="/login" id="login_form">
+
+<div class="row" id="login">
+    <div class="row">
+        <form class="col l6 offset-l3" method="POST" action="/login" id="login_form">
             @csrf
             <div class="row">
                 <div class="input-field col s12">
@@ -28,12 +18,10 @@
                     <input id="password" type="password" class="validate" name="password">
                     <label for="password">Mot de passe</label>
                 </div>
-                <div class="input-field col s12 m12 l2">
-                    <button class="btn waves-effect waves-dark" id="submit" type="submit" name="submit">Se connecter</button>
+                <div class="input-field col s12 m12 l12 right-align">
+                    <button class="btn waves-effect waves-dark" id="" type="submit" name="submit">Se connecter</button>
                 </div>
-                <div class="input-field col s12 m12 l2 offset-l8 right-align">
-                    <a class="btn waves-effect waves-dark" href="/register">S'enregister</a>
-                </div>
+                <
             </div>
         </form>
     </div>

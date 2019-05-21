@@ -154,7 +154,7 @@ class OrderController extends Controller
         
         $cart->addticket(request()->ticket_id,request()->quantity);
 
-        return redirect('/event/1/tickets');
+        return redirect('/order');
 
 
     }

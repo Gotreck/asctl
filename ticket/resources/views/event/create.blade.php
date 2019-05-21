@@ -7,9 +7,8 @@ $connected = false; if(session()->has('user')){
 }
 @endphp
 
-<div class="parallax-container center valign-wrapper borderdown">
-    <div class="parallax"><img src="/image/info.jpg">
-    </div>
+<div id="title-guest" class="row ">
+    <div class="col l6 offset-l3"><h2 id="title">{{__("Create ticket")}}</h2></div>
 </div>
 
 <!-- Top actualité -->

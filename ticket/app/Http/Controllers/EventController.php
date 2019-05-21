@@ -25,6 +25,15 @@ class EventController extends Controller
         return view("event.show",compact('events'));
     }
 
+    public function programm(){
+        return view("event.programm");
+    }
+
+    public function ort(){
+        return view("event.ort");
+    }
+
+
 
     public function welcome(){
         $guests = guest::get();

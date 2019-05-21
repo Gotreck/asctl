@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\role;
+use App\event;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Session;
@@ -104,7 +105,11 @@ class UserController extends Controller
             $user->password = bcrypt(request()->password);
             $user->save();
             $user->addrole("User");
-            return redirect('/login');
+            $event = event::first();
+            $tickets = $event->tickets();
+            $user = DB::table('users')->where('email', request()->email)->first();
+            session()->push('user', $user->id);
+            return view('/event.addCart', compact('tickets'));
 
 
         }

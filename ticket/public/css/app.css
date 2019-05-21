@@ -1,5 +1,10 @@
   /* ASCTL */
     /* Top nav */
+#logo-navbar{
+    margin-top: 0.5vw;
+    height: 3.5vw;
+    border-radius: 100%
+}
 
 #top-nav{
     height: 6em;
@@ -55,6 +60,455 @@ li{
     background-color: rgba(0, 0, 0, 0) !important;  
 }  */
 
+/* Footer */
+
+#footer {
+    padding-top: 1vw;
+    padding-bottom: 0vw;
+    background-color: #9f0909;
+    animation-duration: 0.1s;
+}
+
+#footer p{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+}
+
+.footer-pic{
+    margin-top: 20px;
+    max-height: 5vw;
+    background-color: white;
+    border-radius: 50px;
+}
+
+
+/* ______________________________StartSeite_______________________________________ */
+
+
+.centered {
+    top: 5vw!important;
+    font-family: 'Rubik', sans-serif!important;
+    font-size: 2.3vw!important;
+    color: #9f0909!important;
+    margin: 0;
+    opacity:1;
+    animation-duration: 1.3s;
+}
+
+.centered br{
+
+}
+
+
+
+/* Red Circle */
+
+.circle{
+    position: relative;
+    display: block;
+    margin-top: -6vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #9f0909;
+    background-image: url("../image/event_logo.jpg");
+    border-radius:50%;
+    border : 0.2vw solid #9f0909;
+    width:10vw;
+    height:10vw;
+    animation-duration: 1.2s;
+
+}
+
+
+/* _____Intro_____ */
+
+#intro h2{
+    color: #9f0909;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.8vw;
+}
+
+#descrip{
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    color: #9f0909;
+    text-align: center;
+    animation-duration: 1.4s;
+}
+
+#descrip p{
+    margin-top: 1vw;
+    text-align: justify;
+}
+
+#descrip img{
+    width: 60%
+}
+
+#intro-text{
+    margin-top: 2vw;
+}
+
+/* Button Kaufen */
+
+
+#kaufen-button{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    background-color: #9f0909;
+    width: 100%;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw; 
+    font-size: 1.2vw;
+    text-align: center;
+}
+
+#kaufen-button a {
+    color: white
+}
+
+
+/* Guest section */
+
+
+#guest {
+    background-color: #9f0909;
+}
+
+#guest h2{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2vw;
+}
+
+#guest p{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2vw;
+}
+
+#guest a{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1vw;
+
+}
+
+#guest i{
+    color: white;
+
+}
+
+.guest-name{
+    margin-top: 1.5vw;
+    margin-bottom :1.5vw;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1vw;
+    color: white;
+    text-align: center;
+    /* color: transparent;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8); */
+    transition: all 0.5s;
+}
+
+.img-guest-container{
+    margin: auto;
+    margin-top: 1vw;
+    overflow: hidden;
+    height: 12vw;
+    width: 12vw;
+    border-radius: 100%;
+}
+
+
+.img-guest{
+    height: 12vw;
+    width: 12vw;
+    border-radius: 100%;
+}
+
+.img-guest:hover{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+    transition-duration: 0.7s;
+}
+
+
+
+/* Programm */
+
+
+#programm{
+    margin-top: 1.5vw;
+}
+
+#programm p{
+    color: #9f0909;
+}
+
+#programm h2{
+    color: #9f0909;
+    font-size: 2vw;
+}
+
+
+#programm a{
+    color: #9f0909;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+#programm i{
+    color: #9f0909;
+
+}
+
+#kaufen-button a {
+    color: white
+}
+
+
+
+.programm-pic{
+    margin-top: 0.5vw;
+    /* margin-left: 15%; */
+    width: 100%;
+    height: 100%;
+    /* margin-left: 10%; */
+    padding: auto;
+}
+
+
+#see-more-btn{
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    color: #9f0909;
+    /* border-radius: 30px; */
+}
+
+#see-more-btn:focus{
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    /* border-radius: 30px; */
+}
+
+#see-more-btn:hover{
+    box-shadow: 0 rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    /* border-radius: 30px; */
+}
+
+/* ------------------Ort--------------- */
+
+#ort{
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    background-color: #9f0909;
+}
+
+#ort h2{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2vw;
+}
+
+#ort p{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+#ort a{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+#ort i{
+    color: white;
+    
+}
+
+.ort-pic{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+
+    max-width: 100%;
+}
+
+#basel{
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+#basel h2{
+    color: #9f0909;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2vw;
+}
+
+#basel p{
+    color: #9f0909;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+#basel a{
+    color: #9f0909;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+#basel i{
+    color: #9f0909;
+    
+}
+
+
+
+
+
+
+
+/* _____________________________ Senseï ______________________________________ */
+
+#title-guest {
+    padding-top: 5vw;
+    padding-bottom: 1vw;
+    background-color: #9f0909;
+    animation-duration: 0.1s;
+}
+
+#title-guest h2{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2.5vw;
+}
+
+
+.item-detail{
+    margin-top: 5vw;
+    margin-left: 1.5vw;
+    overflow: hidden;
+    height: 15vw;
+    width: 15vw;
+    border-radius: 100%;
+    opacity: 0;
+}
+
+.item-info{
+    margin-top: 5vw;
+    margin-left: 1.5vw;
+    overflow: hidden;
+    height: 15vw;
+    width: 15vw;
+    border-radius: 100%;
+}
+
+.text {
+    opacity: 0;
+}
+
+.media {
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+/* _______________________Ticket shop_____________________________ */
+
+
+#ticket-shop {
+
+}
+
+#ticket-shop p{
+    padding: 0 0 0 0!important;
+    margin: 0 0 0 0!important;
+}
+
+#ticket-shop h2{
+    color: #9f0909
+}
+
+#ticket-shop p{
+    color: #9f0909
+}
+
+#ticket-list hr{
+    border-bottom: 1px solid #9f0909;
+    color: #9f0909;
+    box-shadow: none!important;
+}
+
+#ticket-list h3{
+    color: #9f0909;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1vw;
+}
+
+
+#ticket-list  span{
+    color: black
+}
+
+#ticket-list input.select-dropdown{
+    padding-top: 5px;
+
+}
+
+#ticket-list .btn{
+    background-color: #9f0909
+}
+
+#ticket-list ul{
+    max-height: 300px;
+}
+
+#ticket-list p{
+   color: #9f0909
+}
+
+#ticket-list a{
+    color: #9f0909;
+    text-decoration: underline
+ }
+
+ #ticket-list h2{
+    color: #9f0909;
+    font-size: 1.5vw 
+
+}
+
+#jetz-kaufen > h3:nth-child(1){
+    margin-top: -1px;
+    margin-left: 25px;
+
+    font-size: 20px!important;
+}
+
+.bold-info{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 1px!important;
+
+}
+
+.no-space{
+    margin: 0!important;
+}
+
+
+
+
 
 #lang-flag{
     margin-top:0.9em;
@@ -90,43 +544,11 @@ li{
     }
 
 
-.centered {
-    top: 5vw!important;
-    font-family: 'Rubik', sans-serif!important;
-    font-size: 2.5vw!important;
-    color: #9f0909!important;
-    margin: 0;
-    opacity:1;
-    animation-duration: 1.3s;
-}
 
 
-#descrip{
-    margin-top:5vw;
-    margin-bottom:5vw;
 
-    font-family: 'Rubik', sans-serif;
-    font-size: 15px;
-    color: #9f0909;
-    text-align: center;
-    animation-duration: 1.4s;
 
-}
 
-.circle{
-    position: relative;
-    display: block;
-    margin-top: -6vw;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: url("../image/logo.jpg");
-    border-radius:50%;
-    border : 0.2vw solid #9f0909;
-    width:12vw;
-    height:12vw;
-    animation-duration: 1.2s;
-
-}
 
 
 
@@ -139,45 +561,11 @@ li{
 
 
 
-#guest h2{
-    color: #9f0909;
-    font-family: 'Rubik', sans-serif;
-    font-size: 3vw;
-}
-
-#guest p{
-    color: #9f0909;
-    font-family: 'Rubik', sans-serif;
-    font-size: 2vw;
 
 
-}
-
-.item{
-    margin-top: 1vw;
-    overflow: hidden;
-    height: 10vw;
-    width: 10vw;
-    border-radius: 100%;
-}
-
-.img-guest{
-    
-    height: 10vw;
-    width: 10vw;
-    border-radius: 100%;
 
 
-}
 
-.img-guest:hover{
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
-    transition-duration: 0.7s;
-
-}
 
 .descrip{
     font-family: 'Rubik', sans-serif;
@@ -198,18 +586,6 @@ li{
 
 
 
-.mobile-guest-name div{
-    font-family: 'Rubik', sans-serif;
-    font-size: 4vw;
-    color: #9f0909;
-    text-align: center;
-
-}
-
-.mobile-guest-name:hover div{
-    font-weight: bold;
-    text-align: center;
-}
 
 
 #guest-index{
@@ -335,14 +711,6 @@ li{
 
 
 
-.item-detail{
-    margin-top: 5vw;
-    margin-left: 1.5vw;
-    overflow: hidden;
-    height: 15vw;
-    width: 15vw;
-    border-radius: 100%;
-}
 
 .img-guest-detail{
     height: 15vw;
@@ -352,15 +720,6 @@ li{
 
 }
 
-
-.title-guest{
-    background-color: #9f0909;
-    color: white;
-    margin: 0!important;
-    padding-top: 1.5vw;
-    padding-bottom: 2vw;
-    height: 12vw;
-}
 
 
 
@@ -450,7 +809,7 @@ padding-bottom : 5vw;
 
 /* Button */
 
-.guest-name{
+/* .guest-name{
     background-color: rgba(0, 0, 0, 0);
     border-radius: 30px;
     color:black;
@@ -462,7 +821,7 @@ padding-bottom : 5vw;
     color:black;
     box-shadow: none;
     cursor: default!important;
-}
+} */
 
 #submit{
     background-color: rgba(0, 0, 0, 0);
@@ -505,6 +864,161 @@ padding-bottom : 5vw;
 	height: 100%;
 }
 
+
+
+
+/* Programm */
+
+
+
+#plan{
+    margin-top: 2.5vw;
+    padding-bottom: 1.5vw;
+    background-color: #9f0909
+}
+
+#plan h2{
+    color: white;
+    font-size: 2vw;
+}
+
+#plan p{
+    color: white
+}
+
+#plan a{
+    color: white
+}
+
+.plan-pic{
+    width: 100%;
+    height: 15vw;
+}
+
+
+
+/* Register */
+
+#register{
+    margin-top : 2vw;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #9f0909 !important;
+  }
+  
+  .input-field textarea:focus + label {
+      color: #9f0909 !important;
+  }
+  
+  .input-field input[type=email]:focus + label {
+      color: #9f0909 !important;
+  }
+  
+  .input-field input[type=password]:focus + label {
+    color: #9f0909 !important;
+  }
+  
+  .input-field input[type=date]:focus + label {
+      color: #9f0909 !important;
+  }
+  
+  .input-field input[type=number]:focus + label {
+      color: #9f0909 !important;
+  }
+  
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #9f0909 !important;
+    box-shadow: 0 1px 0 0 #9f0909 !important;
+  }
+  
+  .input-field textarea:focus {
+      border-bottom: 1px solid #9f0909 !important;
+      box-shadow: 0 1px 0 0 #9f0909 !important;
+  }
+
+  .input-field input[type=email]:focus {
+      border-bottom: 1px solid #9f0909 !important;
+      box-shadow: 0 1px 0 0 #9f0909 !important;
+  }
+  
+  .input-field input[type=password]:focus {
+    border-bottom: 1px solid #9f0909 !important;
+    box-shadow: 0 1px 0 0 #9f0909 !important;
+  }
+  
+  .input-field input[type=date]:focus {
+    border-bottom: 1px solid #9f0909 !important;
+    box-shadow: 0 1px 0 0 #9f0909 !important;
+  }
+  
+  .input-field input[type=number]:focus {
+      border-bottom: 1px solid #9f0909 !important;
+      box-shadow: 0 1px 0 0 #9f0909 !important;
+  }
+
+  
+  
+  /* icon prefix focus color */
+    .input-field .prefix.active {
+      color: #9f0909;
+  }
+
+  #register button{
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    color: #9f0909;
+  }
+
+
+
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #1a8a04 !important;
+    box-shadow: 0 1px 0 0 #1a8a04 !important;
+  }
+  
+  .input-field textarea.valid {
+      border-bottom: 1px solid #1a8a04 !important;
+      box-shadow: 0 1px 0 0 #1a8a04 !important;
+  }
+
+  .input-field input[type=email].valid {
+      border-bottom: 1px solid #1a8a04 !important;
+      box-shadow: 0 1px 0 0 #1a8a04 !important;
+  }
+  
+  .input-field input[type=password].valid {
+    border-bottom: 1px solid #1a8a04 !important;
+    box-shadow: 0 1px 0 0 #1a8a04 !important;
+  }
+  
+  .input-field input[type=date].valid {
+    border-bottom: 1px solid #1a8a04 !important;
+    box-shadow: 0 1px 0 0 #1a8a04 !important;
+  }
+  
+  .input-field input[type=number].valid {
+      border-bottom: 1px solid #1a8a04 !important;
+      box-shadow: 0 1px 0 0 #1a8a04 !important;
+  }
+  
+
+
+
+
+
+#login {
+    padding-top: 2vw;
+    padding-bottom: 8vw;
+}
+
+  #login button{
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    color: #9f0909;
+  }
 
 
 
@@ -599,13 +1113,6 @@ padding-bottom : 5vw;
 
 
 
-
-.item{
-    margin-top: 5vw;
-    height: 35vw;
-    width: 35vw;
-
-}
 
 .img-guest{
     

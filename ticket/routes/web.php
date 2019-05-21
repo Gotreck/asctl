@@ -32,11 +32,16 @@ Route::get('/event','EventController@index');
 Route::get('/event/create','EventController@create');
 Route::post('/event','EventController@store');
 Route::get('/event/{event}/tickets','EventController@buy');
+Route::get('/event/programm','EventController@programm');
+Route::get('/event/ort','EventController@ort');
+
 
 
 
 Route::get('/ticket/create','TicketController@create');
 Route::post('/ticket','TicketController@store');
+Route::get('/ticket/info','TicketController@info');
+
 
 Route::get('/guest/create','GuestController@create');
 Route::get('/guest/{guest}','GuestController@show');

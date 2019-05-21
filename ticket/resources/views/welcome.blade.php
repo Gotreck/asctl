@@ -1,19 +1,302 @@
 @section('content')
 @extends('layout.master') 
 <div class="carousel carousel-slider" id="top-carousel">
-    <div class="carousel-item"><img src="\image\slide_1.jpg"></div>
-    <div class="carousel-item" href="#two!"><img src="\image\slide_2.jpg"></div>
+    <div class="carousel-item"><img src="\image\slide_2.jpg"></div>
+    <div class="carousel-item" href="#two!"><img src="\image\slide_1.jpg"></div>
     <div class="carousel-item" href="#three!"><img src="\image\slide_3.jpg"></div>
     <div class="carousel-fixed-item center centered" id="title">
             AIKIDO SWITZERLAND <br>10TH ANNIVERSARY
           </div>
 </div>
 
+
 <div class="circle hide-on-small-only" id="logo"></div>
 
-<div class="container" id="descrip">     "Aikido Switzerland ist eine Dachorganisation und umfasst verschiedene Gruppen von Dojos. Jede Gruppe ist eine eigene Organisation, muss jedoch die Regeln von Aikido Switzerland, welche sich auf das internationale Reglement des Aikikai Hombu Dojo in Tokyo stützen, beachten.
+<div id="intro" class="row">
+    <div class="col l6 offset-l3 center-align">
+        <h2>{{__("Herzlich willkommen zum 10-jährigen Jubiläum von Aikido Switzerland.")}}</h2>
+        <div class="col l12" id="descrip"> 
+            {{__("19 – 21 June 2020 Basel")}}   
+            <div class="row" id="intro-text">
+                <div class="col l6">
+                    <p>{{__("Der Dachverband «Aikido Switzerland» besteht aus aktiven Aikidokas und Dojos, in denen Aikido geübt, gefördert und verbreitet wird. Der Verband ist vom Hombu Dojo anerkannt und gewährleistet die Verbindung mit dem Hombu Dojo. Die Dojos, die dem Verband angehören, sind in Gruppierungen organisiert, die in ihrem Stil, ihrer Organisation und Didaktik frei sind.")}}</p>
+                </div>
+                <div class="col l6">
+                    <p>{{__("Unser Verband charakterisiert sich durch eine Vielfalt einzelner Aikidostile. Er basiert auf gegenseitigem Respekt gegenüber persönlichen Unterschieden und Ausdrucksweisen von Ai, Ki & Do.")}}</p>
+                    <img src="\image\Logo_AS.png" alt="Logo_AS.png">
+                </div>
+                <div class="col l12" id="kaufen-button">
+                    <a href="/ticket/info">{{__("Jetzt «Early Bird Ticket» kaufen!")}}</a> 
+                </div> 
+            </div>
+        </div>
+    </div>
 </div>
-    <div class="red-bg" id="training">
+    
+
+<div class="row" id="guest">
+    <div class="col l6 offset-l3">
+        <div class="col l12 left-align" id="guest-title">
+                <h2>{{__("Senseïs")}}</h2>
+        </div>
+
+        <div class="row">
+            <div class="col l12">
+                    @foreach ($guests as $guest)
+                    <div class="col l4" class="guest">
+                        <div class="img-guest-container" id="{{$guest->picture()->id}}">
+                            <a href="/guest/{{$guest->id}}"><img class="img-guest" src="/storage/{{$guest->picture()->link}}"  alt=""></a>
+                        </div>
+                        <div class="guest-name" id="text{{$guest->picture()->id}}">
+                            {{$guest->last_name}}
+                            {{$guest->first_name}}
+                        </div>
+                    </div>
+                    @endforeach     
+            </div>
+            <div class="row">
+                <div class="col l1 offset-l9 right-align"><i class="Tiny material-icons">arrow_forward</i> </div>
+                <div class="col l2 left-align"> <a href="/guest">{{__("Zur Zeite guest")}}</a></div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row" id="programm">
+    <div class="col l6 offset-l3">
+        <h2>{{__("Trainingsplan")}}</h2>
+        <p>{{__("Wir sind glücklich, dass uns eine Vielzahl von Senseis zugesagt haben. Jeder von ihnen wird zwei Trainings leiten. Einige Trainings sind unterteilt. Dies erlaubt es allen Teilnehmern mit unterschiedlichen Lehrern zu trainieren und bietet die Möglichkeit, die großartige Ausdruckvielfalt des Aikido an diesem Anlass zu erleben.")}}</p>
+        <div class="row">
+            <div class="col l1 offset-l8 right-align"><i class="Tiny material-icons">file_download</i> </div>
+            
+            <div class="col l3 left-align"> <a href="\storage\programm.pdf">{{__("Download Programm")}}</a></div>
+        </div>
+        
+        <div class="row">
+            <img class="programm-pic" src="\image\freitag.jpg" alt="">
+        </div>
+        <div class="row">
+            <img class="programm-pic" src="\image\Samstag.jpg" alt="">
+        </div>
+        <div id="more-about-programm" class="row hide">
+            <img class="programm-pic" src="\image\Sonntag.jpg" alt="">
+        </div>
+        <div class="row">
+            <div class="col l1  right-align"><i class="Tiny material-icons">arrow_forward</i> </div>
+            <div class="col l3 left-align"> <a href="/event/programm">{{__("Zur Zeite : Programm")}}</a></div>
+            <div class="col l3 offset-l5 left-align">
+                <button class="btn" id="see-more-btn" type="submit" name="submit"><i class="Tiny material-icons left">arrow_downward</i>Read more</button>
+            </div>
+        </div>
+        <div class="col l12" id="kaufen-button">
+            <a href="/ticket/info">{{__("Zum Ticket Shop")}}</a> 
+        </div> 
+    </div>
+</div>
+
+
+
+
+<div class="row" id="ort">
+        <div class="col l6 offset-l3">
+            <h2>{{__("Veranstaltungsort")}}</h2>
+            <p>{{__("Die ganze Jubiläumsveranstaltung wird in der St. Jakobshalle stattfinden.")}}</p>
+            <i class="Tiny material-icons left">arrow_forward</i><a href="http://www.stjakobshalle.ch">www.stjakobshalle.ch</a>
+
+            <div class="col l12">
+                <div class="col l6">
+                    <img class="ort-pic" src="\image\StJakobshalle2018_Aussenansicht.jpg" alt="">
+                </div>
+                <div class="col l6">
+                    <img class="ort-pic" src="\image\StJakobshalle2018_Halle_3.jpg" alt="">
+                </div>
+               
+            
+            </div> 
+            <div class="row">
+                <div class="col l1  right-align"><i class="Tiny material-icons">arrow_forward</i> </div>
+                <div class="col l3 left-align"> <a href="/event/ort">{{__("Zur Zeite : Ort")}}</a></div> 
+            </div>
+           
+        </div>
+    </div>
+    
+           
+<div class="row" id="basel">
+        <div class="col l6 offset-l3">
+            <h2>{{__("Basel")}}</h2>
+            <p>{{__("Am Rheinknie zwischen Schweiz, Deutschland und Frankreich gelegen, zeichnet sich durch ein reges wirtschaftliches und kulturelles Leben aus. Die Universität ist durch humanistische Tradition geprägt. Die Kunst- und Musikinstitutionen der Stadt sind weltbekannt. Die Museen sind schier unzählbar, einige davon einmalig. Benutzt euer Besuch, um Basel zu entdecken, es lohnt sich. In Basel kommt man überall bequem, schnell und günstig mit dem öffentlichen Verkehr hin.")}}</p>
+
+            <div class="col l12">
+                <img class="ort-pic" src="\image\slide_1.jpg" alt="">
+            </div> 
+            <div class="row">
+                <div class="col l1  right-align"><i class="Tiny material-icons">arrow_forward</i> </div>
+                <div class="col l3 left-align"> <a href="/event/ort">{{__("Zur Zeite : Ort")}}</a></div> 
+            </div>
+           
+        </div>
+    </div>
+    
+           
+              
+
+
+@endsection
+ 
+@section('scripts')
+<script>
+
+if(n == undefined){
+    var n=0;
+}
+
+
+    var click =0;
+
+    $("#see-more-btn").click(function()
+    {
+        
+        if (click == 0) {
+            document.getElementById("see-more-btn").innerHTML = "<i class='Tiny material-icons left'>arrow_upward</i>See less"; 
+            $("#more-about-programm").removeClass('hide '); 
+            click = 1;     
+        } else {
+            document.getElementById("see-more-btn").innerHTML = "<i class='Tiny material-icons left'>arrow_downward</i>See more"; 
+            $("#more-about-programm").addClass('hide'); 
+            click = 0;       
+
+        }
+        
+    });
+
+
+
+// function anim() {
+//     var scroll = $(window).scrollTop();
+//     var win_height = jQuery( window ).height();
+//     var win= win_height+scroll;
+//     // Anim title
+
+//     if (win > jQuery("#title").offset().top) {
+//         $("#title").addClass('animated zoomIn')
+//     };
+
+//     // Anim logo
+//     if (win > jQuery("#logo").offset().top) {
+//         $("#logo").addClass('animated zoomIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
+//             if (win > jQuery("#descrip").offset().top) {
+                
+//             };
+//         });
+//     };
+
+//     if (win > jQuery("#title").offset().top) {
+//         $("#descrip").addClass('animated slideInUp')
+//     };
+
+
+//     // Anim training
+
+//     if (win > jQuery("#event-list").offset().top) {
+//         $("#training-title").addClass('animated fadeInDown'); 
+//     };
+
+//     if (win > jQuery("#event-list").offset().top) {
+//         $("#event-list").addClass('animated slideInLeft')  
+//     };
+
+//     if (win > jQuery("#event-list").offset().top) {
+//         $("#event-detail").addClass('animated slideInRight');    
+//     };
+    
+
+    
+
+//     // Anim guest
+
+    
+    
+//     if ($(window).width()>1020) {
+    
+//         if (win > jQuery("#guest-title").offset().top) {
+//             $("#guest-title").addClass('animated fadeInDown'); 
+//         };
+//         $('.item').each(function()
+//         {
+//             var id = "#text" + $(this).attr('id');
+
+//             if (win > jQuery(this).offset().top) {
+//                 $(this).addClass('animated slideInRight'); 
+//                 $(this).css("opacity", 1);
+//                 $(id).addClass('animated slideInLeft'); 
+
+
+//             };
+//         });    
+//     };
+
+    
+//         // $("#descrip").addClass('animated fadeIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
+//         //     // $("#descrip").removeClass('animated fadeIn');
+//         //     // $("#descrip").css("opacity", 1);
+//         // });
+// }
+
+function autoplay() {
+        if(n!=1){
+            setTimeout(autoplay, 3000);
+            n=1;
+        }
+        else {
+            $('.carousel').carousel('next');
+            setTimeout(autoplay, 4000);
+        }
+    };
+
+$(document).ready(function () {
+    // if ($(window).width()>1020) {
+    //     $("#top-nav").css("opacity", 0);   
+    // }
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+    });
+    autoplay();
+    // anim();
+
+    
+
+// $(window).scroll(function () {
+//     // anim();  
+//     var opacity = $(window).scrollTop()/250 ;
+//             if ($(window).width()>1020) {
+//                 $("#top-nav").css("opacity", opacity);
+//             }        
+// });
+
+// $('.img-guest-container').each(function()
+// {
+//     var id = "#text" + $(this).attr('id');
+//     $(this).hover(function()
+//     {
+//         $(id).css({"color": "white", "text-shadow": "none"});
+//     },function() {
+//         $(id).css({"color": "transparent", "text-shadow": "0 0 2px rgba(255, 255, 255, 0.8)"});
+//         }
+//     );
+
+// });
+
+});
+
+</script>
+@endsection
+
+
+{{-- <div class="red-bg" id="training">
     <div class="container row">
         <div class="row">
             <div class="col l9 offset-l3 left-align" id="training-title">
@@ -62,188 +345,4 @@
         </div>
     </div>
 </div>
-
-
-<div class="container" id="guest">
-    <div class="row">
-        <div class="col l9 offset-l3 left-align" id="guest-title">
-            <h2>{{__("Our Gaste")}}</h2>
-            <p>{{__("Mehr uber und freunde und Gaste")}}</p>
-        </div>
-    </div>
-
-    <div class="row">
-
-        <div class="col l3 hide-on-small-only">
-                @php
-                    $i=1;
-                @endphp
-                @foreach ($guests as $guest)
-                @if ($i==1)
-                <div id="guest-list">
-                @endif
-                    <div class="descrip" id="text{{$guest->picture()->id}}">{{$guest->last_name}}
-                    {{$guest->first_name}}</div>
-                @if ($i==3)
-                </div>
-                @php
-                    $i=0;
-                @endphp
-                @endif
-                
-                @php
-                    $i=$i+1;
-                @endphp
-                @endforeach
-        </div>
-        <div class="col l8 m9 s12">
-                @php
-                    $i = 0
-                @endphp
-                @foreach ($guests as $guest)
-                <div class="col l4 m4 s6">
-                    @php
-                        $i = $i+1
-                    @endphp
-                    <div class="mobile-guest-name">
-                        <div class="item" id="{{$guest->picture()->id}}">
-                            <a href="/guest/{{$guest->id}}"><img class="img-guest" src="/storage/{{$guest->picture()->link}}"  alt=""></a>
-                        </div>
-                        <div class="hide-on-med-and-up" id="small{{$guest->picture()->id}}">
-                            {{$guest->last_name}}
-                            {{$guest->first_name}}
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-        </div>
-    </div>
-    
-</div>
-       
-
-
-@endsection
- 
-@section('scripts')
-<script>
-
-if(n == undefined){
-    var n=0;
-}
-
-function anim() {
-    var scroll = $(window).scrollTop();
-    var win_height = jQuery( window ).height();
-    var win= win_height+scroll;
-    // Anim title
-
-    if (win > jQuery("#title").offset().top) {
-        $("#title").addClass('animated zoomIn')
-    };
-
-    // Anim logo
-    if (win > jQuery("#logo").offset().top) {
-        $("#logo").addClass('animated zoomIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
-            if (win > jQuery("#descrip").offset().top) {
-                
-            };
-        });
-    };
-
-    if (win > jQuery("#title").offset().top) {
-        $("#descrip").addClass('animated slideInUp')
-    };
-
-
-    // Anim training
-
-    if (win > jQuery("#event-list").offset().top) {
-        $("#training-title").addClass('animated fadeInDown'); 
-    };
-
-    if (win > jQuery("#event-list").offset().top) {
-        $("#event-list").addClass('animated slideInLeft')  
-    };
-
-    if (win > jQuery("#event-list").offset().top) {
-        $("#event-detail").addClass('animated slideInRight');    
-    };
-    
-
-    
-
-    // Anim guest
-
-    
-    
-    if ($(window).width()>1020) {
-    
-        if (win > jQuery("#guest-title").offset().top) {
-            $("#guest-title").addClass('animated fadeInDown'); 
-        };
-        $('.item').each(function()
-        {
-            var id = "#text" + $(this).attr('id');
-
-            if (win > jQuery(this).offset().top) {
-                $(this).addClass('animated slideInRight'); 
-                $(this).css("opacity", 1);
-                $(id).addClass('animated slideInLeft'); 
-
-
-            };
-        });    
-    };
-
-    
-        // $("#descrip").addClass('animated fadeIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
-        //     // $("#descrip").removeClass('animated fadeIn');
-        //     // $("#descrip").css("opacity", 1);
-        // });
-}
-
-function autoplay() {
-        if(n!=1){
-            setTimeout(autoplay, 3000);
-            n=1;
-        }
-        else {
-            $('.carousel').carousel('next');
-            setTimeout(autoplay, 4000);
-        }
-    };
-
-$(document).ready(function () {
-    if ($(window).width()>1020) {
-        $("#top-nav").css("opacity", 0);   
-    }
-    $('.carousel.carousel-slider').carousel({
-        fullWidth: true,
-    });
-    autoplay();
-    anim();
-
-    
-
-$(window).scroll(function () {
-    anim();        
-});
-
-$('.item').each(function()
-{
-    var id = "#text" + $(this).attr('id');
-    $(this).hover(function()
-    {
-        $(id).css({"font-weight": "bold",   "transform" : "translate(-15px, 0)", "transition-duration": "0.5s"});
-    },function() {
-        $(id).css({"font-weight": "normal",   "transform" : "translate(0, 0)"});
-        }
-    );
-
-});
-
-});
-
-</script>
-@endsection
+ --}}

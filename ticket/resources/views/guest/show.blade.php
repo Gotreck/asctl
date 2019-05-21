@@ -15,19 +15,16 @@
 
 <div class="circle hide-on-small-only" id="logo"></div> --}}
 
-<div class="row title-guest">
-        <div class="col l6 offset-l4">            <h3>{{__("Our Gaste")}} : {{$guest->last_name}} {{$guest->first_name}}</h3>
-        </div>
-    
-        <div class="col l4 offset-l4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div>
+<div id="title-guest" class="row ">
+        <div class="col l6 offset-l3"><h2 id="title">{{__("Senseï")}}</h2></div>
     </div>
 
 <div id="guest-index-white">
   
 
     <div class="row">
-            <div class="col l3 m3 offset-l1 hide-on-small-only">
-                <div class="item-detail" id="{{$guest->picture()->id}}">
+            <div class="col l3 m3 offset-l1">
+                <div class="item-info" id="{{$guest->picture()->id}}">
                     <img class="img-guest-detail" src="/storage/{{$guest->picture()->link}}"  alt="">
                 </div>
             </div>

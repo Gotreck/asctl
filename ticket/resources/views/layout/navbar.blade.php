@@ -9,21 +9,25 @@ if(session()->has('user')){
 
 <nav id="top-nav">
     <div class="nav-wrapper top">
+        <a href="/" class="brand-logo"><img id="logo-navbar" src="\image\Event_logo.jpg" alt="Logo_AS.png"</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="navitem underline"><a href="/">{{__("Startseite")}}</a></li>
-            <li class="navitem underline"><a href="/training">{{__("Ort")}}</a></li>
+            {{-- <li class="navitem underline"><a href="/training">{{__("Ort")}}</a></li> --}}
 
-            <li class="navitem underline"><a href="/training">{{__("Trainingsplan")}}</a></li>
-            <li class="navitem underline"><a href="/guest">{{__("Gäste")}}</a></li>
+            <li class="navitem underline"><a href="/guest">{{__("Senseïs")}}</a></li>
+            <li class="navitem underline"><a href="/event/programm">{{__("Programm")}}</a></li>
+            <li class="navitem underline"><a href="/event/ort">{{__("Ort")}}</a></li>
+
 
             {{-- <li class="navitem underline"><a href="/event/1/tickets">{{__("Tickets")}}</a></li> --}}
 
             @if(!$connected)
+                <li class="navitem underline"><a href="/ticket/info">{{__("Kosten")}}</a></li>
                 <li class="navitem underline"><a href="/login">{{__("Log in")}}</a></li>
-                <li class="navitem underline"><a href="/register">{{__("Tickets kaufen")}}</a></li>
             @endif
 
             @if($connected)
+                <li class="navitem underline"><a href="/event/1/tickets">{{__("Tickets shop")}}</a></li>
                 <li class="navitem underline"><a href="/order">{{__("Warenkorb")}}</a></li>
                 <li class="navitem underline"><a href="/logout">{{__("Ausloggen")}}</a></li>
             @endif

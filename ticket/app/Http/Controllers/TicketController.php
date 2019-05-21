@@ -29,6 +29,10 @@ class TicketController extends Controller
         return redirect("/event");
     }
 
+    public function info(){
+        return view("ticket.info");
+    }
+
 
     public function store()
     {
@@ -95,5 +99,7 @@ class TicketController extends Controller
 
     }
 
+
    
 }
+

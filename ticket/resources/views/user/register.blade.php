@@ -1,23 +1,13 @@
 @extends('layout.master') 
 @section('content')
-<section id="section">
-	<div class="parallax-container center valign-wrapper border-down">
-		<div class="parallax"><img src="/image/info.jpg" alt="background parallax">
-		</div>
-		<div class="container white-text">
-			<div class="row">
-				<div class="col s12">
-					<h3>S'enregistrer</h3>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
 
+<div id="title-guest" class="row ">
+    <div class="col l8 offset-l2"><h2 id="title">{{__("Register")}}</h2></div>
+</div>
 
-<div class="container">
+<div id="register">
 	<div class="row">
-		<form class="col s12" method="POST" action="/user" id="register_form">
+		<form class="col l8 offset-l2" method="POST" action="/user" id="register_form">
 			@csrf
 			<div class="row">
 				<div class="input-field col s12 m6">
@@ -29,11 +19,11 @@
 					<label for="last_name">Nom</label>
 				</div>
 				<div class="input-field col s12 m6">
-					<input id="country" type="text" class="validate" minlength=5 name="country" value="{{old('country')}}">
+					<input id="country" type="text" class="validate" name="country" value="{{old('country')}}">
 					<label for="country">Pays</label>
 				</div>
 				<div class="input-field col s12 m6">
-					<input id="club" type="text" class="validate" minlength=5 name="club" value="{{old('club')}}">
+					<input id="club" type="text" class="validate" name="club" value="{{old('club')}}">
 					<label for="club">Club</label>
 				</div>
 				<div class="input-field col s12 m6">
@@ -60,12 +50,12 @@
 					<label for="password_confirm">Confirmation</label>
 				</div>
 				<label>
-						<input type="checkbox" name="accept" value="true"/>
-						<span class="black-text">Je reconnais avoir lu et compris les <a href="/gcu">CGU</a> et je les accepte.</span>
-					  </label>
+					<input type="checkbox" name="accept" value="true"/>
+					<span class="black-text">Je reconnais avoir lu et compris les <a href="/gcu">CGU</a> et je les accepte.</span>
+				</label>
 
-				<div class="input-field col s12">
-					<button class="btn waves-effect waves-light" id="submit" type="submit" name="submit">S'inscrire</button>
+				<div class="input-field col s12 right-align">
+					<button class="btn waves-effect waves-light" id="" type="submit" name="submit">Continuer</button>
 				</div>
 
 			</div>

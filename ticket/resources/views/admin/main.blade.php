@@ -24,19 +24,9 @@
 @section('content')
 
 {{-- Parallax header --}}
-<section id="section">
-    <div class="parallax-container center valign-wrapper border-down">
-        <div class="parallax"><img src="/image/info.jpg" alt="background-parallax">
-        </div>
-        <div class="container white-text">
-            <div class="row">
-                <div class="col s12">
-                    <h3>Page d'administration</h3>
-                </div>
-            </div>
-        </div>
+<div id="title-guest" class="row ">
+        <div class="col l6 offset-l3"><h2 id="title">{{__("Admin")}}</h2></div>
     </div>
-</section>
 
 {{-- DataTable with some info --}}
 <div class="container">

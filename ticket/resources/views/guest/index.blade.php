@@ -5,30 +5,20 @@
     $lang = \App::getLocale();
     $color = 0
 @endphp
-{{-- <div class="carousel carousel-slider" id="top-carousel">
-    <div class="carousel-item"><img src="\image\slide_1.jpg"></div>
-    <div class="carousel-item" href="#two!"><img src="\image\slide_2.jpg"></div>
-    <div class="carousel-item" href="#three!"><img src="\image\slide_3.jpg"></div>
-    <div class="carousel-fixed-item center centered" id="title">
-            AIKIDO SWITZERLAND <br>10TH ANNIVERSARY
-          </div>
-</div> --}}
 
-<div class="row title-guest">
-    <div class="col l4 offset-l4"><h3>{{__("Our Gaste")}}</h3></div>
 
-    <div class="col l4 offset-l4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div>
+<div id="title-guest" class="row ">
+    <div class="col l4 offset-l3"><h2 id="title">{{__("Senseï")}}</h2></div>
 </div>
 
 @foreach ($guests as $guest)
     
 
-<div id=@if($color%2 == 1)
+<div class="guest" id=@if($color%2 == 1)
         "guest-index"
         @else
         "guest-index-white"
     @endif>
-
 
     <div class="row">
         <div class="col l3 m3 offset-l1 hide-on-small-only">
@@ -36,7 +26,7 @@
                 <img class="img-guest-detail" src="/storage/{{$guest->picture()->link}}"  alt="">
             </div>
         </div>
-        <div  class="col l4 m6 s12  guest-description">
+        <div  class="col l4 m6 s12  guest-description text">
             <h2>{{$guest->last_name}} {{$guest->first_name}}</h2>
                 <div id="text_min{{$guest->id}}">
                     @if ($lang == "en")
@@ -72,20 +62,20 @@
                           
                 </div>
             <div class="col l9 offset-l3 right-align">
-                <button class="btn read-btn" id="{{$guest->id}}" type="submit" name="submit">Read more</button>
+                <button class="btn read-btn" id="{{$guest->id}}" type="submit" name="submit"><i class="Tiny material-icons left">arrow_downward</i>Read more</button>
             </div>
         </div>
         
 
-        <div class="col l2 offset-l1 m3 s12  guest-description">
+        <div class="col l2 offset-l1 m3 s12  guest-description media">
                 <div class="row">
-                    <h2>Website</h2>
-                    <a href="{{$guest->website}}">{{$guest->website}}</a>
+                    <h2>Youtube Channel</h2>
+                    <a href="{{$guest->website}}">youtube.com   <i class="material-icons left">link</i></a>
                 </div>
-                <div class="row">
+                {{-- <div class="row">
                     <h2>Media</h2>
                     <a href="{{$guest->movie}}">{{$guest->movie}}</a>
-                </div>
+                </div> --}}
         
         </div>
     
@@ -113,29 +103,6 @@ return $newstr;
 @section('scripts')
 <script>
 
-if(n == undefined){
-    var n=0;
-};
-
-
-    
-
-function autoplay() {
-        if(n!=1){
-            setTimeout(autoplay, 3000);
-            n=1;
-        }
-        else {
-            $('.carousel').carousel('next');
-            setTimeout(autoplay, 4000);
-        }
-    };
-
-$(document).ready(function () {
-    $('.carousel').carousel();
-    autoplay();         
-});
-
 $('.btn').each(function()
 {
     var id = $(this).attr('id');
@@ -143,20 +110,17 @@ $('.btn').each(function()
     var min = "#text_min" + $(this).attr('id');
     var click =0;
 
-    
-
-
     $(this).click(function()
     {
         
         if (click == 0) {
             $(min).addClass('hide ');
-            document.getElementById(id).innerHTML = "Read less"; 
+            document.getElementById(id).innerHTML = "<i class='Tiny material-icons left'>arrow_upward</i>Read less"; 
             $(full).removeClass('hide '); 
             click = 1;     
         } else {
             $(full).addClass('hide');
-            document.getElementById(id).innerHTML = "Read more"; 
+            document.getElementById(id).innerHTML = "<i class='Tiny material-icons left'>arrow_downward</i>Read more"; 
             $(min).removeClass('hide'); 
             click = 0;       
 
@@ -164,6 +128,55 @@ $('.btn').each(function()
         
     });
 });
+
+
+function anim() {
+    var scroll = $(window).scrollTop();
+    var win_height = jQuery( window ).height();
+    var win= win_height+scroll;
+    // Anim title
+
+    if (win > jQuery("#title").offset().top) {
+        $("#title").addClass('animated fadeIn')
+    };
+    
+
+    // Anim guest
+
+    
+    
+    if ($(window).width()>1020 && $("#title").hasClass('animated fadeIn')) {
+        $('.item-detail').each(function()
+        {
+            if (win > jQuery(this).offset().top) {
+                $(this).addClass('animated fadeInLeft'); 
+            };
+        }); 
+        $('.text').each(function()
+        {
+            if (win > jQuery(this).offset().top) {
+                $(this).addClass('animated fadeIn'); 
+            };
+        }); 
+        $('.media').each(function()
+        {
+            if (win > jQuery(this).offset().top) {
+                $(this).addClass('animated fadeInRight'); 
+            };
+        });          
+    };
+}
+
+
+$(document).ready(function () {
+    anim();
+});
+
+$(window).scroll(function () {
+    anim();        
+});
+
+
 
 
 
