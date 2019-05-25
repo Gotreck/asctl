@@ -56,6 +56,13 @@ Route::get('/category/create','CategoryController@create');
 Route::post('/category','CategoryController@store');
 
 
+
+Route::post('/paypal-transaction-complete/{id}/{cartid}','PaypalController@capture');
+
+
+
+
+
 Route::get('/order','OrderController@index');
 Route::get('/order/old','OrderController@old');
 Route::put('/order/add','OrderController@addTicket');

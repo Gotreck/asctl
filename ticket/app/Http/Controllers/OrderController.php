@@ -48,26 +48,26 @@ class OrderController extends Controller
     }
 
 
-    public function validateOrder()
+    public function validateOrder($Orderid)
     {
         //
         $user = user::find(session()->get('user')[0]);
         $cart = $user->cart();        
-        $cart->validateorder(request()->order_id);
+        $cart->validateorder($Orderid);
 
 
         $data = array('last_name'=>$user->last_name, 'first_name'=>$user->first_name);
 
-        Mail::send('emails.mail', $data, function($message) {
-            $user = user::find(session()->get('user')[0]);
-            $id =request()->order_id;
-            $cart = $user->oneCart($id);
-            $pdf = PDF::loadView('pdf.order', compact('cart'), compact('id','user'));
-            $message->to($user->email)
-                    ->subject('Validation de commande');
-            $message->attachData($pdf->output(), "Order n°$id .pdf");
-            $message->from('obigame68@gmail.com', 'ASCTL');
-        });
+        // Mail::send('emails.mail', $data, function($message) {
+        //     $user = user::find(session()->get('user')[0]);
+        //     $id = $Orderid;
+        //     $cart = $user->oneCart($id);
+        //     $pdf = PDF::loadView('pdf.order', compact('cart'), compact('id','user'));
+        //     $message->to($user->email)
+        //             ->subject('Validation de commande');
+        //     $message->attachData($pdf->output(), "Order n°$id .pdf");
+        //     $message->from('obigame68@gmail.com', 'ASCTL');
+        // });
         return redirect('/order');
 
     }

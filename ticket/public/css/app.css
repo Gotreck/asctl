@@ -64,7 +64,9 @@ li{
 
 #footer {
     padding-top: 1vw;
-    padding-bottom: 0vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    bottom: 0;
     background-color: #9f0909;
     animation-duration: 0.1s;
 }

@@ -6,147 +6,49 @@
     <title>Order : {{$id}}</title>
 
     <style type="text/css">
-        @page {
-            margin: 0px;
-        }
-
-        body {
-            margin: 0px;
-        }
-
-        * {
-            font-family: Roboto;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        table {
-            font-size: x-small;
-        }
-
-        .tab table {
-            margin: 15px;
-        }
-
-        .header table {
-            padding: 10px;
-        }
-
-        h3 {
-            text-align: center;
-        }
-        
-        .description {
-            padding-left: 40px;
-            
-        }
-
-        .clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-a {
-  color: #5D6975;
-  text-decoration: underline;
-}
-
-body {
-  position: relative;
-  width: 21cm;  
-  height: 29.7cm; 
-  margin: 0 auto; 
-  color: #001028;
-  background: #FFFFFF; 
-  font-family: Arial, sans-serif; 
-  font-size: 12px; 
-  font-family: Arial;
-}
-
-header {
-  padding: 10px 0;
-  margin-bottom: 30px;
-}
-
-#logo {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-#logo img {
-  width: 90px;
-}
-
-h1 {
-  border-top: 1px solid  #5D6975;
-  border-bottom: 1px solid  #5D6975;
-  color: #5D6975;
-  font-size: 2.4em;
-  line-height: 1.4em;
-  font-weight: normal;
-  text-align: center;
-  margin: 0 0 20px 0;
-  background: url(dimension.png);
-}
-
-#project {
-  float: left;
-}
-
-#project span {
-  color: #5D6975;
-  text-align: right;
-  width: 52px;
-  margin-right: 10px;
-  display: inline-block;
-  font-size: 0.8em;
-}
-
-#company {
-  float: right;
-  text-align: right;
-}
-
-#project div,
-#company div {
-  white-space: nowrap;        
-}
 
 table {
-  width: 100%;
+  margin-left : 190px;
+  margin-top:50px;
+  width: 90%;
   border-collapse: collapse;
   border-spacing: 0;
   margin-bottom: 20px;
 }
 
-table tr:nth-child(2n-1) td {
-  background: #F5F5F5;
+table tr td {
+  border: solid black 0.5px;
 }
 
 table th,
 table td {
-  text-align: center;
+  text-align: left;
 }
 
 table th {
-  padding: 5px 20px;
-  color: #5D6975;
-  border-bottom: 1px solid #C1CED9;
-  white-space: nowrap;        
-  font-weight: normal;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 5px;
+  background-color: #9f0909;
+  color: white;
+  border: 0.5px solid black;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+
 }
 
 table .service,
 table .desc {
   text-align: left;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
 }
 
 table td {
   padding: 20px;
-  text-align: right;
+  text-align: left;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
 }
 
 table td.service,
@@ -158,35 +60,153 @@ table td.unit,
 table td.qty,
 table td.total {
   font-size: 1.2em;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
 }
 
 table td.grand {
   border-top: 1px solid #5D6975;;
 }
 
-#notices .notice {
-  color: #5D6975;
-  font-size: 1.2em;
+
+#logoAS{
+  height: 200px;
+  position: absolute;
 }
 
-footer {
-  color: #5D6975;
-  width: 100%;
-  height: 30px;
-  position: absolute;
-  bottom: 0;
-  border-top: 1px solid #C1CED9;
-  padding: 8px 0;
-  text-align: center;
+
+#logoAS h4{
+  color: #9f0909;
+  margin-top: 50px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+
+#pdf-table h4{
+  
+  color: #9f0909;
+  margin-left: 250px;
+  margin-top: 300px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#pdf-body #gultig{
+  
+  color: #9f0909;
+  margin-top: 400px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#pdf-body h4{
+  color: #9f0909;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#pdf-table h4{
+  font-size: 16;
+  margin-top: -200px;
+  margin-bottom: 15px;
+  color: #9f0909;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+p{
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #696969;
+}
+
+#pdf-table p{
+  margin-left: 250px;
+}
+
+a{
+  color: #696969;
+}
+#QRCode{
+  margin-left: 600px;
+  height: 200px;
+  position: absolute;}
+
+.img{
+  height: 100px;;
+}
+
     </style>
 </head>
 
 <body>
+  <div id="logoAS">
+    <img class="img"src="..\public\image\Event_logo.jpg">
+    <h4>TICKET FÜR</h4>
+    <p>{{ $user->last_name}} {{ $user->first_name}}</p>
+    <p><a href="mailto:{{ $user->email}}">{{ $user->email}}</a></p>
+  </div>
+  <div id="QRCode">
+    <img class="img"src="..\public\image\qr_code.jpg">
+  </div>
+
+  <div id="pdf-body">
+    <div id="body-info">
+      <h4 id="gultig">GÜLTIG FÜR</h4>
+      <p>19 - 21 Juni 2020</p>
+
+      <h4>INFO & KONTAKT</h4>
+      <p>info@10anniversary-as.fr</p>
+    </div>
+    <div id="pdf-table"> 
+      <h4>RECHNUNG</h4>
+      <p>Voverkauf: Early Bird Ticket</p>
+      <p>Bestellnummer: {{ $cart->id }}</p>
+      <p>Status: Bezahlt</p>
+        <table>
+            <thead>
+              <tr>
+                <th>Beschreibung</th>
+                <th>Menge</th>
+                <th>Einzelpreis</th>
+              </tr>
+            </thead>
+            <tbody>
+                @php
+                  $tickets = $cart->tickets;
+              @endphp
+            @for ($i = 0; $i < 1; $i++)
+            @php
+                $ticket = $tickets[$i]
+            @endphp
+            <tr>
+              <td>
+                  {{$ticket->type()->name}}
+              </td>
+              <td>
+                  {{$cart->totalarticles()}}
+              </td>
+              <td>
+                  {{$ticket->type()->price}}
+              </td>
+          </tr>
+          @endfor
+              
+              <tr>
+                <td></td>
+                <td>Gesamt</td>
+                <td>{{$cart->totalprice()}} €</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>
+  </div>
+
+    {{-- </div>
+    <div class="col l6 right-align">
+        <div class="logo">
+          <img src="..\public\image\aikido.jpg">
+        </div>
+      </div>
+  </div>
         <header class="clearfix">
-                <div id="logo">
-                  <img src="..\public\image\aikido.jpg">
-                </div>
                 <h1>Order n° {{ $id }}</h1>
                 <div id="project">
                 <div><span>ORDER ID</span> {{ $cart->id }}</div>
@@ -243,6 +263,6 @@ footer {
                 </div>
               </main>
               <footer>
-Any information here              </footer>
+Any information here              </footer> --}}
 </body>
 </html>
