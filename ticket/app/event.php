@@ -5,6 +5,11 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\ticket;
 
+/**
+ * @method static get()
+ * @method static first()
+ * @method static where(string $string, $id)
+ */
 class event extends Model
 {
     public function tickets(){

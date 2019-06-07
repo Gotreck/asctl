@@ -12,26 +12,26 @@ $n=0;
 
 
 <div id="title-guest" class="row ">
-        <div class="col l6 offset-l3"><h2 id="title">{{__("Ticket Shop")}}</h2></div>
+        <div class="col l6 offset-l3 m10 s10 offset-s1"><h2 id="title">{{__("Ticketshop")}}</h2></div>
     </div>
 
 <div class="row" id="ticket-list">
-    <div class="col l6 offset-l3">
-        <div class="col l3">
+    <div class="col l6 offset-l3 m10 offset-m1 s10 offset-s1">
+        <div class="col l3 m2 s4">
             <h3>{{__("Artikel")}}</h3>
         </div>
-        <div class="col l3">
+        <div class="col l3 m3 s4 hide-on-small-only">
             <h3>{{__("Beschreibung")}}</h3>  
         </div>
-        <div class="col l2">
-            <h3>{{__("Einzelpreis")}}</h3>
+        <div class="col l1 m2 s4">
+            <h3>{{__("Preis")}}</h3>
         </div>
-        <div class="col l2">
+        <div class="col l2 m2 s4">
             <h3>{{__("Anzahl")}}</h3>
         </div>
     </div>
 
-    <div class="col l6 offset-l3">
+    <div class="col l6 offset-l3 m10 offset-m1 s10 offset-s1">
         <hr>
         <br>
     </div>
@@ -40,17 +40,17 @@ $n=0;
     <form method="POST" action="/order/add">
         @csrf
         <input type="hidden" name="_method" value="put">
-        <div class="col l6 offset-l3">
-        <div class="col l3">
+        <div class="col l6 offset-l3 m10 offset-m1 s10 offset-s1">
+        <div class="col l3 m2 s2 s4">
             <h3>{{ $ticket->category()->name }}</h3>
         </div>
-        <div class="col l3">
+        <div class="col l3 m3 s3 hide-on-small-only">
             <h3>{{ $ticket->description }}</h3>  
         </div>
-        <div class="col l2">
+        <div class="col l1 m2 s2 s4">
             <h3>{{ $ticket->price }} €</h3>
         </div>
-        <div class="col l1">
+        <div class="col l1 m1 s4">
             <input type="hidden" class="validate" name="ticket_id" value="{{$ticket->id}}">
             <select name="quantity">
                 @for ($i = 1; $i <= 20; $i++)
@@ -58,10 +58,10 @@ $n=0;
                 @endfor
             </select>
         </div>
-        <div class="col l2 offset-l1">
+        <div class="col l3 offset-l1 m2 offset-m1 s12 ">
             @if (session()->has('user'))
                 <div class="row">
-                    <div class="input-field s6 m6 l6 textyellow">
+                    <div class="input-field s6 m6 l12 textyellow">
                         <button class="btn waves-effect waves-light" type="submit">Zum Warenkorb</button>
                     </div>
                 </div>
@@ -71,21 +71,19 @@ $n=0;
    @endforeach
    
 </div>
-<div class="col l6 offset-l3">
+<div class="col l6 offset-l3 m10 offset-m1 s10 offset-s1">
         <hr>
         <br>
     </div>
     
-    <div class="col l6 offset-l3">
-            <br><br><br><br>
-            <p>{{__("Onlinebezahlung")}}</p>
-                <p>{{__("
-                Die Online-Zahlung erfolgt über PayPal. Keine Registrierung bei PayPal notwendig. 
-                Es braucht nur eine Kreditkarte.")}}</p>
+    <div class="col l6 offset-l3 m10 offset-m1 s10 offset-s1">
+            <br><br class="hide-on-small-only">
+            <p style="font-weight:bold">{{__("Onlinebezahlung")}}</p>
+                <p>{{__("Die Online-Zahlung erfolgt über PayPal. Keine Registrierung bei PayPal notwendig. Es braucht nur eine Kreditkarte.")}}</p>
                 <br>
-                <p>{{__("Rechnung ")}}</p>
+                <p style="font-weight:bold">{{__("Rechnung ")}}</p>
                 <p>{{__("Die Rechnungsbestätigung erhaltet ihr per E-Mail und ist gleichzeitig das Eintrittsticket für den Lehrgang. Bitte mitbringen und an der Kasse vorweisen!")}}</p>
-        
+
             </div>
     </div>
     </section>

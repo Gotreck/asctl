@@ -4,16 +4,7 @@
 @php
     $lang = \App::getLocale()
 @endphp
-{{-- <div class="carousel carousel-slider" id="top-carousel">
-    <div class="carousel-item"><img src="\image\slide_1.jpg"></div>
-    <div class="carousel-item" href="#two!"><img src="\image\slide_2.jpg"></div>
-    <div class="carousel-item" href="#three!"><img src="\image\slide_3.jpg"></div>
-    <div class="carousel-fixed-item center centered" id="title">
-            AIKIDO SWITZERLAND <br>10TH ANNIVERSARY
-          </div>
-</div>
 
-<div class="circle hide-on-small-only" id="logo"></div> --}}
 
 <div id="title-guest" class="row ">
         <div class="col l6 offset-l3"><h2 id="title">{{__("Senseï")}}</h2></div>

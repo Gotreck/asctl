@@ -28,7 +28,7 @@ table td {
 table th {
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-left: 5px;
+  padding-left: 20px;
   background-color: #9f0909;
   color: white;
   border: 0.5px solid black;
@@ -131,6 +131,10 @@ a{
 .img{
   height: 100px;;
 }
+      #info-text{
+        position: absolute;
+        bottom: 10px;
+      }
 
     </style>
 </head>
@@ -195,6 +199,17 @@ a{
               </tr>
             </tbody>
           </table>
+    </div>
+    <div id="info-text">
+      <p>
+        Die Rechnung ist gleichzeitig das Eintrittsticket. Bitte mitbringen und an der Kasse vorweisen! Bei nicht Teilnahme sind keine Rückerstattungen möglich.
+        Wir bedanken uns für deinen Auftrag. Mit freundlichen Grüssen
+      </p>
+      <br>
+      <br>
+      <p>
+        Wir bedanken uns für deinen Auftrag. Mit freundlichen Grüssen
+      </p>
     </div>
   </div>
   </div>

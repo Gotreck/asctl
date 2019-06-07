@@ -37,7 +37,7 @@ class user extends Model
     }
 
     public function orders(){
-        return $this->hasMany('App\order','user_id');
+        return $this->hasMany('App\order','user_id')->orderby('updated_at','desc');
     }
  
     public function cart(){

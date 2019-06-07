@@ -18,10 +18,13 @@
                     <input id="password" type="password" class="validate" name="password">
                     <label for="password">Mot de passe</label>
                 </div>
-                <div class="input-field col s12 m12 l12 right-align">
+                <div class="input-field col s6 m6 l6 left-align">
+                    <button class="btn waves-effect waves-dark" style="font-size: 12px; text-transform: none; padding: 0"><a style="color: darkred" href = "/password/reset">Mot de passe oublié</a></button>
+                </div>
+                <div class="input-field col s6 m6 l6 right-align">
                     <button class="btn waves-effect waves-dark" id="" type="submit" name="submit">Se connecter</button>
                 </div>
-                <
+
             </div>
         </form>
     </div>

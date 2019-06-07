@@ -26,14 +26,17 @@ Route::get('/register','UserController@create');
 Route::post('/login',"UserController@processlogin");
 Route::post('/user','UserController@store');
 Route::get('/logout','UserController@logout');
+Route::get('/password/reset','UserController@passwordReset');
+Route::get('/password/reset/form','UserController@passwordResetForm');
+Route::post('/password/reset/mail','UserController@passwordResetEmail');
+Route::post('/password/reset','UserController@passwordResetStore');
 
 
-Route::get('/event','EventController@index');
-Route::get('/event/create','EventController@create');
 Route::post('/event','EventController@store');
-Route::get('/event/{event}/tickets','EventController@buy');
+Route::get('/event/create','EventController@create');
 Route::get('/event/programm','EventController@programm');
 Route::get('/event/ort','EventController@ort');
+Route::get('/event/{event}/tickets','EventController@buy');
 
 
 
@@ -71,6 +74,7 @@ Route::put('/order/validate','OrderController@validateOrder');
 
 Route::get('/order/pdf/{order}', 'OrderController@orderPdf');
 
+Route::get('/test/{id}','OrderController@validateOrder');
 
 
 Route::get('/admin/{ticket}/validate','AdminController@edit');
@@ -80,6 +84,6 @@ Route::get('/admin','AdminController@index');
 
 
 Route::get('/','EventController@welcome');
-Route::post('/','EventController@welcome_display');
+//Route::post('/','EventController@welcome_display');
 
 
