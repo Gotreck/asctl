@@ -89,7 +89,7 @@
 
 
             <div id = "jetz-kaufen" class = "col l3 offset-l6 m3 offset-m3 ">
-                <h3>Jetzt kaufen</h3>
+                <h3>{{__("Jetzt kaufen")}}</h3>
             </div>
             <div id = "paypal-button-wrapper" class = "col l3">
             </div>
@@ -148,7 +148,7 @@
 
 
         <div class = "col l6 offset-l3 m10 offset-m1 s10 offset-s1">
-            <a href = "/order/old">Old order</a>
+            <a href = "/order/old">{{__("Old order")}}</a>
 
             <br><br>
             <p class = "bold-info">{{__("Onlinebezahlung")}}</p>

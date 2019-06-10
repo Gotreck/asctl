@@ -7,11 +7,11 @@
 
 
 <div id="title-guest" class="row ">
-        <div class="col l6 offset-l3"><h2 id="title">{{__("Senseï")}}</h2></div>
+        <div class="col l6 offset-l3"><h2 id="title">{{__("Senseïs")}}</h2></div>
     </div>
 
 <div id="guest-index-white">
-  
+
 
     <div class="row">
             <div class="col l3 m3 offset-l1">
@@ -23,43 +23,47 @@
                 <h2>{{$guest->last_name}} {{$guest->first_name}}</h2>
                     <div id="text_full{{$guest->id}}">
                             @if ($lang == "en")
-                                {!! $guest->description_en !!}              
+                                {!! $guest->description_en !!}
                             @elseif($lang == "fr")
-                                {!! $guest->description_fr !!} 
+                                {!! $guest->description_fr !!}
                             @else
-                                {!! $guest->description !!} 
+                                {!! $guest->description !!}
                             @endif
                             <hr>
                             <h2>Media</h2>
                             <div class="video-container">
                                 <iframe width="560" height="315" src={{ $guest->movie}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                              
+
                     </div>
             </div>
-            
-    
-            <div class="col l2 offset-l1 m3 s12  guest-description">
-                    <div class="row">
-                        <h2>Website</h2>
-                        <a href="{{$guest->website}}">{{$guest->website}}</a>
-                    </div>
-                    <div class="row">
-                        <h2>Media</h2>
-                        <a href="{{$guest->movie}}">{{$guest->movie}}</a>
-                    </div>
-            
+
+
+        <div class = "col l2 offset-l1 m3 s12  guest-description media hide-on-med-and-down">
+            <div class = "row">
+                <h2 id = "guest-media">{{__("Link")}}</h2>
             </div>
-        
-        
+
+            <div class = "row">
+                <a target = "_blank" href = "{{$guest->youtube}}">youtube.com <i class = "material-icons left">link</i></a>
+            </div>
+            <div class = "row">
+                <a target = "_blank" href = "{{$guest->social}}">Social <i class = "material-icons left">link</i></a>
+            </div>
+            <div class = "row">
+                <a target = "_blank" href = "{{$guest->website}}">website <i class = "material-icons left">link</i></a>
+            </div>
+        </div>
+
+
     </div>
 
 
- 
+
 
 
 @endsection
- 
+
 @section('scripts')
 <script>
 
@@ -68,7 +72,7 @@ if(n == undefined){
 };
 
 
-    
+
 
 function autoplay() {
         if(n!=1){
@@ -83,7 +87,7 @@ function autoplay() {
 
 $(document).ready(function () {
     $('.carousel').carousel();
-    autoplay();         
+    autoplay();
 });
 
 

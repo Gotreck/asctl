@@ -23,7 +23,7 @@
             <h2>{{__("Veranstaltungsort")}}</h2>
             <p>{{__("Die ganze Jubiläumsveranstaltung wird in der St. Jakobshalle stattfinden.")}}</p>
             <div class="col l6 m6 s12 left-align">
-                    <i class="Tiny material-icons left">arrow_forward</i><a href="http://www.stjakobshalle.ch">www.stjakobshalle.ch</a>
+                    <i class="Tiny material-icons left">arrow_downward</i><a href="http://www.stjakobshalle.ch">{{__("Hallenplan")}}</a>
             </div>
             <div class="col l6 m6 s12 hide-on-med-and-up">
                 <div class="row">
@@ -153,7 +153,7 @@
                             <div class="col l6 m6">
                                 <h2>{{__("Aikidoschule Basel")}}</h2>
                                 <p>{{__("3.7 km vom St. Jakobshalle")}}</p>
-                                <p >{{__("Her ein paar Übernachtungsmöglichkeiten.")}}</p>
+{{--                                <p >{{__("Her ein paar Übernachtungsmöglichkeiten.")}}</p>--}}
                                 <p >{{__("Übernachtung im Dojo der Aikidoschule Basel € 5.-/Nacht")}}</p>
                                 <img class="ort-pic hide-on-med-and-up" src="\image\StJakobshalle2018_Halle_3.jpg" alt="">
 

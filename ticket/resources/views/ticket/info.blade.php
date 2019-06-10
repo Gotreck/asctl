@@ -21,11 +21,6 @@ $n=0;
             <p style = "font-weight:bold">{{__("Vorverkauf «Early Bird Ticket»")}}</p>
             <p>{{__("Nutzen Sie die Early Bird Preis von CHF 70.– (nur ganzes Weekend möglich).")}}</p>
             <p>{{__("Der Vorverkauf ist bis Ende Mai 2020 offen! ")}}</p><br>
-            <p style = "font-weight:bold">{{__("Reguläre Preise")}}</p>
-            <p>{{__("Ganzer Stage:CHF 90.–")}}</p>
-            <p>{{__("Ganzer Tag:CHF 60.–")}}</p>
-            <p>{{__("Halber Tag:CHF 30.–")}}</p>   <br>
-            <p>{{__("Im Preis ist alles inbegriffen (exkl. Essen & Trinken). Vor Ort nur Barzahlungen möglich. In CHF und € zum Tageskurs")}}</p>   <br>
             <p style = "font-weight:bold">{{__("Onlinebezahlung")}}</p>
             <p>{{__("Die Online-Zahlung erfolgt über PayPal. Keine Registrierung bei PayPal notwendig. Es braucht nur eine Kreditkarte.")}}</p>
             <div class = "cpl l12" id = "kaufen-button">
@@ -41,6 +36,11 @@ $n=0;
                         @endphp
                 >{{__("Jetzt Ticket kaufen")}}</a>
             </div>
+            <p style = "font-weight:bold">{{__("Reguläre Preise")}}</p>
+            <p>{{__("Ganzer Stage:CHF 90.–")}}</p>
+            <p>{{__("Ganzer Tag:CHF 60.–")}}</p>
+            <p>{{__("Halber Tag:CHF 30.–")}}</p>   <br>
+            <p>{{__("Im Preis ist alles inbegriffen (exkl. Essen & Trinken). Vor Ort nur Barzahlungen möglich. In CHF und € zum Tageskurs")}}</p>   <br>
             <p style = "font-weight:bold">{{__("Kontaktformulare")}}</p>
             <p>{{__("Das Ausfüllen des Kontaktformulars ist für eine Bestellung erforderlich.")}}</p>
             <p>{{__("Das Passwort ist gleichzeitig das Login zum Ticketshop. Bestellungen können nach Bezahlung nicht storniert werden. Bei nicht Teilnahme sind keine Rückerstattungen möglich.")}}</p>

@@ -21,6 +21,8 @@ class CreateGuestsTable extends Migration
             $table->longText('description_fr');
             $table->longText('description_en');
             $table->string('website');
+            $table->string('social');
+            $table->string('youtube');
             $table->string('movie');
             $table->integer('picture_id');
             $table->timestamps();

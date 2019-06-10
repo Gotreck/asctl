@@ -62,7 +62,7 @@ $n=0;
             @if (session()->has('user'))
                 <div class="row">
                     <div class="input-field s6 m6 l12 textyellow">
-                        <button class="btn waves-effect waves-light" type="submit">Zum Warenkorb</button>
+                        <button class="btn waves-effect waves-light" type="submit">{{__("Zum Warenkorb")}}</button>
                     </div>
                 </div>
             </form>

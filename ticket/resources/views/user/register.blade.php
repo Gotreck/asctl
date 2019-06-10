@@ -12,50 +12,50 @@
 			<div class="row">
 				<div class="input-field col s12 m6">
 					<input id="first_name" type="text" class="validate" name="first_name" value="{{old('first_name')}}">
-					<label for="first_name">Name</label>
+					<label for="first_name">{{__("Name")}}</label>
 				</div>
 				<div class="input-field col s12 m6">
 					<input id="last_name" type="text" class="validate" name="last_name" value="{{old('last_name')}}">
-					<label for="last_name">Vorname</label>
+					<label for="last_name">{{__("Vorname")}}</label>
 				</div>
 				<div class="input-field col s12 m6">
 					<input id="country" type="text" class="validate" name="country" value="{{old('country')}}">
-					<label for="country">Land</label>
+					<label for="country">{{__("Land")}}</label>
 				</div>
 				<div class="input-field col s12 m6">
 					<input id="club" type="text" class="validate" name="club" value="{{old('club')}}">
-					<label for="club">Klub</label>
+					<label for="club">{{__("Klub")}}</label>
 				</div>
 				<div class="input-field col s12 m6">
 					<i class="material-icons prefix">email</i>
 					<input id="email" type="email" class="validate" name="email" value="{{old('email')}}">
-					<label for="email">Email</label>
+					<label for="email">{{__("Email")}}</label>
 				</div>
 
 				<div class="input-field col s12 m6">
 					<i class="material-icons prefix">email</i>
 					<input id="email_confirm" type="email" class="validate" name="email_confirm">
-					<label for="email_confirm">Bestätigung</label>
+					<label for="email_confirm">{{__("Bestätigung")}}</label>
 				</div>
 
 				<div class="input-field col s12 m6">
 					<i class="material-icons prefix">lock</i>
 					<input id="password" type="password" class="validate" name="password">
-					<label for="password">Password</label>
+					<label for="password">{{__("Password")}}</label>
 				</div>
 
 				<div class="input-field col s12 m6">
 					<i class="material-icons prefix">lock</i>
 					<input id="password_confirm" type="password" class="validate" name="password_confirm">
-					<label for="password_confirm">Bestätigung</label>
+					<label for="password_confirm">{{__("Bestätigung")}}</label>
 				</div>
 				<label>
 					<input type="checkbox" name="accept" value="true"/>
-					<span class="black-text">Ich habe die <a href="/gcu">Datenschutzerklärung</a> gelesen und bin damit einverstanden.</span>
+					<span class="black-text">{{__("Ich habe die")}} <a href="/gcu">{{__("Datenschutzerklärung")}}</a> {{__("gelesen und bin damit einverstanden.")}}</span>
 				</label>
 
 				<div class="input-field col s12 right-align">
-					<button class="btn waves-effect waves-light" id="" type="submit" name="submit">Registrieren</button>
+					<button class="btn waves-effect waves-light" id="" type="submit" name="submit">{{__("Registrieren")}}</button>
 				</div>
 
 			</div>

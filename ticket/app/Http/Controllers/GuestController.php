@@ -118,6 +118,8 @@ class GuestController extends Controller
         $guest->description_fr = request()->description_fr;
         $guest->description_en = request()->description_en;
         $guest->website = request()->website;
+        $guest->social = request()->social;
+        $guest->youtube = request()->youtube;
         $guest->movie = request()->movie;
 
         $guest->save();

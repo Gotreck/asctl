@@ -54,10 +54,8 @@
                         </div>
                     @endforeach
                 </div>
-                <div id = "see-guest" class = "col l12 m4 offset-m4">
-                    <div class = "col l1 offset-l9 right-align"><i class = "Tiny material-icons">arrow_forward</i></div>
-                    <div class = "col l2 left-align"><a href = "/guest">{{__("Zur Seite Senseïs")}}</a></div>
-
+                <div id = "see-guest" class = "col l12 m4 offset-m4 s12 right-align">
+                    <a href = "/event/programm"><i class = "Tiny material-icons right">arrow_forward</i>{{__("Zur Seite : Senseï")}}</a>
                 </div>
             </div>
         </div>
@@ -72,10 +70,8 @@
             </div>
             <div class = "col l12 m12">
                 <p>{{__("Wir sind glücklich, dass uns eine Vielzahl von Senseis zugesagt haben. Jeder von ihnen wird zwei Trainings leiten. Einige Trainings sind unterteilt. Dies erlaubt es allen Teilnehmern mit unterschiedlichen Lehrern zu trainieren und bietet die Möglichkeit, die großartige Ausdruckvielfalt des Aikido an diesem Anlass zu erleben.")}}</p>
-                <div class = "row">
-                    <div class = "col l1 offset-l8 right-align"><i class = "Tiny material-icons">file_download</i></div>
-
-                    <div class = "col l3 left-align"><a href = "\storage\programm.pdf">{{__("Download Programm")}}</a></div>
+                <div class = "row right">
+                    <a href = "\storage\programm.pdf">{{__("Download Programm")}}<i class = "Tiny material-icons right">file_download</i></a>
                 </div>
             </div>
 
@@ -89,13 +85,15 @@
                 <img class = "programm-pic" src = "\image\Sonntag.jpg" alt = "">
             </div>
             <div class = "row">
-                <div class = "col m2 l1  right-align"><i class = "Tiny material-icons">arrow_forward</i></div>
-                <div class = "col m3 l3 left-align"><a href = "/event/programm">{{__("Zur Seite : Programm")}}</a></div>
-                <div class = "col m3 offset-m3 l3 offset-l5  left-align hide-on-small-only">
+                <div class = "col l6 m6 s6 left-align hide-on-small-only">
                     <button class = "btn" id = "see-more-btn" type = "submit" name = "submit"><i class = "Tiny material-icons left">arrow_downward</i>Read more
                     </button>
                 </div>
+                <div class = "col l6 m6 s12  right-align">
+                    <a href = "/event/programm">{{__("Zur Seite : Programm")}}<i class = "Tiny material-icons right">arrow_forward</i></a>
+                </div>
             </div>
+
             <div class = "col l12" id = "kaufen-button">
                 <a href = "/ticket/info">{{__("Zum Ticketshop")}}</a>
             </div>
@@ -128,18 +126,24 @@
 
 
             </div>
-            <div class = "row">
-                <div class = "col m2 l1 s2 right-align"><i class = "Tiny material-icons">arrow_forward</i></div>
-                <div class = "col m3 l3 s10 left-align"><a href = "/event/ort">{{__("Zur Seite : Ort")}}</a></div>
 
-                <div class = "col m2 l2 s2 offset-l3 offset-m1">
-                    <i class = "Tiny material-icons left">arrow_forward</i>
+            <div class = "row">
+                <div class = "col l6 m6 s6 left-align hide-on-small-only">
+                    <a href = "http://www.stjakobshalle.ch">{{__("Veranstalter :")}} stjakobshalle
+                        <i class = "Tiny material-icons left">arrow_forward</i>
+                    </a>
                 </div>
-                <div class = "col m3 l3 s10">
-                    <a href = "http://www.stjakobshalle.ch">Veranstalter : stjakobshalle</a>
+                <div class = "col s12 right-align hide-on-med-and-up">
+                    <a href = "http://www.stjakobshalle.ch">{{__("Veranstalter :")}} stjakobshalle
+                        <i class = "Tiny material-icons right">arrow_forward</i>
+                    </a>
+                </div>
+                <div class = "col l6 m6 s12  right-align">
+                    <a href = "/event/ort">{{__("Zur Seite : Ort")}}
+                        <i class = "Tiny material-icons right">arrow_forward</i>
+                    </a>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -179,19 +183,13 @@
         $("#see-more-btn").click(function () {
 
             if (click == 0) {
-                document.getElementById("see-more-btn").innerHTML = "<i class="
-                Tiny
-                material - icons
-                left
-                ">arrow_upward</i>See less";
+                var text = "<i class=\"Tiny material-icons left\"> arrow_upward </i>See less";
+                document.getElementById("see-more-btn").innerHTML = text ;
                 $("#more-about-programm").removeClass('hide ');
                 click = 1;
             } else {
-                document.getElementById("see-more-btn").innerHTML = "<i class="
-                Tiny
-                material - icons
-                left
-                ">arrow_downward</i>See more";
+                var text = "<i class=\"Tiny material-icons left\"> arrow_downward </i>See more";
+                document.getElementById("see-more-btn").innerHTML = text;
                 $("#more-about-programm").addClass('hide');
                 click = 0;
 

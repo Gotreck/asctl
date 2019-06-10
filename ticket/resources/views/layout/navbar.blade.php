@@ -18,11 +18,11 @@
 
             @if(!$connected)
                 <li class = "navitem underline"><a href = "/ticket/info">{{__("Kosten")}}</a></li>
-                <li class = "navitem underline"><a href = "/login">{{__("Log in")}}</a></li>
+                <li class = "navitem underline"><a href = "/login">{{__("Login")}}</a></li>
             @endif
 
             @if($connected)
-                <li class = "navitem underline"><a href = "/event/1/tickets">{{__("Tickets shop")}}</a></li>
+                <li class = "navitem underline"><a href = "/event/1/tickets">{{__("Ticketshop")}}</a></li>
                 <li class = "navitem underline"><a href = "/order">{{__("Warenkorb")}}</a></li>
                 <li class = "navitem underline"><a href = "/logout">{{__("Ausloggen")}}</a></li>
             @endif

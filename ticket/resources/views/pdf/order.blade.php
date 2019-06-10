@@ -17,7 +17,7 @@ table {
 }
 
 table tr td {
-  border: solid black 0.5px;
+  border: solid black 0.3px;
 }
 
 table th,
@@ -31,7 +31,7 @@ table th {
   padding-left: 20px;
   background-color: #9f0909;
   color: white;
-  border: 0.5px solid black;
+  border: 0.3px solid black;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 
@@ -65,7 +65,7 @@ table td.total {
 }
 
 table td.grand {
-  border-top: 1px solid #5D6975;;
+  border-top: 0.5px solid #5D6975;;
 }
 
 
