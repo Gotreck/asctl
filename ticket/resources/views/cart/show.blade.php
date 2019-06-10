@@ -91,7 +91,7 @@
             <div id = "jetz-kaufen" class = "col l3 offset-l6 m3 offset-m3 ">
                 <h3>{{__("Jetzt kaufen")}}</h3>
             </div>
-            <div id = "paypal-button-wrapper" class = "col l3">
+            <div id = "paypal-button-wrapper" class = "col l3 hide">
             </div>
 
 
