@@ -6,7 +6,7 @@ use App\role;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-
+//Patch lot of things
 class user extends Model
 {
     //
@@ -15,7 +15,7 @@ class user extends Model
 
     public function roles()
     {
-        return $this->belongsToMany('App\Role', 'role_user');
+        return $this->belongsToMany('App\role', 'role_user');
     }
 
     public function addRole($rolename)
