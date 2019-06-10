@@ -22,13 +22,13 @@
 
     <div class="row hide-on-small-only">
         <div class="col l6 m10 offset-m1 offset-l3">
-            <img class="programm-pic" src="\image\Samstag.jpg" alt="">
+            <img class="programm-pic" src="\image\samstag.jpg" alt="">
         </div>
     </div>
 
     <div class="row hide-on-small-only">
         <div class="col l6  m10 offset-m1 offset-l3">
-            <img class="programm-pic" src="\image\Sonntag.jpg" alt="">
+            <img class="programm-pic" src="\image\sonntag.jpg" alt="">
         </div>
     </div>
     <div class="row">
