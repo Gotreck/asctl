@@ -79,10 +79,10 @@
                 <img class = "programm-pic" src = "\image\freitag.jpg" alt = "">
             </div>
             <div class = "row hide-on-small-only">
-                <img class = "programm-pic" src = "\image\Samstag.jpg" alt = "">
+                <img class = "programm-pic" src = "\image\samstag.jpg" alt = "">
             </div>
             <div id = "more-about-programm" class = "row hide">
-                <img class = "programm-pic" src = "\image\Sonntag.jpg" alt = "">
+                <img class = "programm-pic" src = "\image\sonntag.jpg" alt = "">
             </div>
             <div class = "row">
                 <div class = "col l6 m6 s6 left-align hide-on-small-only">
