@@ -51,7 +51,7 @@
 				</div>
 				<label>
 					<input type="checkbox" name="accept" value="true"/>
-					<span class="black-text">{{__("Ich habe die")}} <a href="/gcu">{{__("Datenschutzerklärung")}}</a> {{__("gelesen und bin damit einverstanden.")}}</span>
+					<span class="black-text">{{__("Ich habe die")}} <a href="\image\Datenschutz DE FR EN.pdf">{{__("Datenschutzerklärung")}}</a> {{__("gelesen und bin damit einverstanden.")}}</span>
 				</label>
 
 				<div class="input-field col s12 right-align">

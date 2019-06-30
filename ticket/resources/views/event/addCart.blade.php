@@ -81,7 +81,7 @@ $n=0;
             <p style="font-weight:bold">{{__("Onlinebezahlung")}}</p>
                 <p>{{__("Die Online-Zahlung erfolgt über PayPal. Keine Registrierung bei PayPal notwendig. Es braucht nur eine Kreditkarte.")}}</p>
                 <br>
-                <p style="font-weight:bold">{{__("Rechnung ")}}</p>
+                <p style="font-weight:bold">{{__("Rechnung")}}</p>
                 <p>{{__("Die Rechnungsbestätigung erhaltet ihr per E-Mail und ist gleichzeitig das Eintrittsticket für den Lehrgang. Bitte mitbringen und an der Kasse vorweisen!")}}</p>
 
             </div>

@@ -91,7 +91,6 @@
     "Kontaktformulare": "Formulaire de contact",
     "Das Ausfüllen des Kontaktformulars ist für eine Bestellung erforderlich.": "Toute commande nécessite le remplissage du formulaire de contact.",
     "Das Passwort ist gleichzeitig das Login zum Ticketshop. Bestellungen können nach Bezahlung nicht storniert werden. Bei nicht Teilnahme sind keine Rückerstattungen möglich.": "Le mot de passe sert également de login pour la billetterie. Après paiement, les commandes ne peuvent plus être annulées. En cas de résignation à la participation, aucun remboursement n'est possible.",
-    "Rechnung": "Facture",
 
     "Die Rechnungsbestätigung erhaltet ihr per E-Mail und ist gleichzeitig das Eintrittsticket für den Lehrgang. Bitte mitbringen und an der Kasse vorweisen!": "Une confirmation de la facture vous sera envoyée par courrier électronique. Votre billet vous sera délivré à la caisse contre présentation de la facture",
     "Info & Kontakt": "Info et Contact",
@@ -122,8 +121,10 @@
     "Bestellwert": "Prix",
     "Dokumente": "Documents",
     "Deine Einkaufe": "Vos achats",
-    "Old order": "Anciennes commandes"
-
+    "Old order": "Anciennes commandes",
+    "Der Basel Flughafen ist 15 Minuten vom Stadtzentrum entfernt und ist bequem mit dem Bus erreichbar (Linie 50).": "L'aéroport de Bâle est à 15 minutes du centre-ville et est facilement accessible en bus (ligne 50)",
+    "Jetzt kaufen": "Acheter maintenant",
+    "Rechnung": "Facture"
 
 
 

@@ -72,16 +72,18 @@ class OrderController extends Controller
 			$data = array ( 'last_name' => $user->last_name, 'first_name' => $user->first_name );
 
 			Mail::send(
-				'emails.mail', $data, function ( $message ) use ( $Orderid, $user )
+				'emails.mail',
+				$data,
+				function ( $message ) use ( $Orderid, $user )
 			{
 				$cart = $user->oneCart( $Orderid );
-				$id   = $Orderid;
-				$pdf  = PDF::loadView( 'pdf.order', compact( 'cart' ), compact( 'id', 'user' ) );
+//				$id   = $Orderid;
+//				$pdf  = PDF::loadView( 'pdf.order', compact( 'cart' ), compact( 'id', 'user' ) );
 				$message->from( 'order@10anniversary-as.ch', 'ASCTL' );
 
 				$message->to( $user->email )
 					  ->subject( 'Validation de commande' );
-				$message->attachData( $pdf->output(), "Order n°$id .pdf" );
+//				$message->attachData( $pdf->output(), "Order n°$id .pdf" );
 			}
 			);
 

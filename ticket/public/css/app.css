@@ -1,5 +1,14 @@
 /* ASCTL */
 /* Top nav */
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
 #logo-navbar {
     margin-top: 0.2%;
     height: 93%;
@@ -89,7 +98,7 @@ li {
     margin-top: 20px;
     max-height: 5vw;
     background-color: white;
-    border-radius: 50px;
+    border-radius: 100%;
 }
 
 
@@ -434,6 +443,7 @@ li {
 
 
 #ticket-shop {
+    min-height: 60%;
 
 }
 
@@ -954,6 +964,13 @@ li {
     color: #9f0909;
 }
 
+#fbButton{
+    position: fixed;
+    right: 0;
+    bottom: 30%;
+    height: 15%;
+
+}
 
 .input-field input[type=text].valid {
     border-bottom: 1px solid #1a8a04 !important;
@@ -987,6 +1004,7 @@ li {
 
 
 #login {
+    min-height: 58%;
     padding-top: 2vw;
     padding-bottom: 8vw;
 }

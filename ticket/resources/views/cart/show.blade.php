@@ -91,7 +91,7 @@
             <div id = "jetz-kaufen" class = "col l3 offset-l6 m3 offset-m3 ">
                 <h3>{{__("Jetzt kaufen")}}</h3>
             </div>
-            <div id = "paypal-button-wrapper" class = "col l3 hide">
+            <div id = "paypal-button-wrapper" class = "col l3">
             </div>
 
 
@@ -101,15 +101,10 @@
             <script>
                 paypal.Buttons({
                     createOrder: function (data, actions) {
-                        M.toast({
-                            html: 'Transaction en cours veuillez patienter',
-                            classes: 'blue darken-3 rounded white-text',
-                            displayLength: 5000
-                        });
                         return actions.order.create({
                             purchase_units: [{
                                 amount: {
-                                    value: 0.01
+                                    value: 0.02
                                 }
                             }]
                         });
@@ -119,27 +114,26 @@
 
                     onApprove: function (data, actions) {
 
-                        return actions.order.capture().then(function (details) {
-                            // Call your server to save the transaction
+                        actions.order.capture();
 
-                            $.ajaxSetup({
-                                headers: {
-                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        $.ajax({
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                            },
+                            type: 'post',
+                            url: `/paypal-transaction-complete/${data.orderID}/` + <?php echo $cart->id ?> ,
+                        })
+                            .done(
+                                function () {
+                                    M.toast({
+                                        html: 'Transaction completed.', //details.payer.name.given_name,
+                                        classes: 'green darken-3 rounded white-text',
+                                        displayLength: 5000
+                                    });
+
+                                    setTimeout(() => location.reload(), 2000);
                                 }
-                            });
-                            $.ajax({
-                                type: 'post',
-                                url: '/paypal-transaction-complete/' + data.orderID + '/' + <?php echo $cart->id ?>,
-                            });
-
-                            M.toast({
-                                html: 'Transaction completed by ' + details.payer.name.given_name,
-                                classes: 'green darken-3 rounded white-text',
-                                displayLength: 5000
-                            });
-
-                            setTimeout(() => location.reload(), 1000);
-                        });
+                            );
                     }
                 }).render('#paypal-button-wrapper');
             </script>
@@ -152,11 +146,9 @@
 
             <br><br>
             <p class = "bold-info">{{__("Onlinebezahlung")}}</p>
-            <p class = "no-space">{{__("
-                Die Online-Zahlung erfolgt über PayPal. Keine Registrierung bei PayPal notwendig. 
-                Es braucht nur eine Kreditkarte.")}}</p>
+            <p class = "no-space">{{__("Die Online-Zahlung erfolgt über PayPal. Keine Registrierung bei PayPal notwendig. Es braucht nur eine Kreditkarte.")}}</p>
             <br>
-            <p class = "bold-info">{{__("Rechnung ")}}</p>
+            <p class = "bold-info">{{__("Rechnung")}}</p>
             <p class = "no-space">{{__("Die Rechnungsbestätigung erhaltet ihr per E-Mail und ist gleichzeitig das Eintrittsticket für den Lehrgang. Bitte mitbringen und an der Kasse vorweisen!")}}</p>
 
         </div>

@@ -23,7 +23,7 @@
             <h2>{{__("Veranstaltungsort")}}</h2>
             <p>{{__("Die ganze Jubiläumsveranstaltung wird in der St. Jakobshalle stattfinden.")}}</p>
             <div class="col l6 m6 s12 left-align">
-                    <i class="Tiny material-icons left">arrow_downward</i><a href="http://www.stjakobshalle.ch">{{__("Hallenplan")}}</a>
+                    <i class="Tiny material-icons left">arrow_downward</i><a href="\image\Hall plan.pdf">{{__("Hallenplan")}}</a>
             </div>
             <div class="col l6 m6 s12 hide-on-med-and-up">
                 <div class="row">
@@ -65,17 +65,14 @@
     <div class="row" id="basel">
         <div class="col l6 offset-l3 m10 offset-m1 s10 offset-s1">
             <h2>{{__("Anfahrt mit der ÖV")}}</h2>
-            <p>{{__("Das «Joggeli», wie die Basler das St Jakobshalle nennen, ist mit Tram Nr. 14 und 10 sowie mit Bus 36 und 37 bis Haltestelle «St.Jakob» bequem zu erreichen.  Siehe auch die BVB Website für spezielle Angebote")}}</p>
+            <p>{{__("Das «Joggeli», wie die Basler das St Jakobshalle nennen, ist mit Tram Nr. 14 und 10 sowie mit Bus 36 und 37 bis Haltestelle «St.Jakob» bequem zu erreichen.  Siehe auch die BVB Website für spezielle Angebote")}}.</p>
+            <p>{{__("Der Basel Flughafen ist 15 Minuten vom Stadtzentrum entfernt und ist bequem mit dem Bus erreichbar (Linie 50).")}}</p>
             <i class="Tiny material-icons left">arrow_forward</i><a href="www.bvb.ch">www.bvb.ch</a>
             <div class="row">
                 <div class="col l12">
                     <div class="row">
-                        <div class="col l6 m6">
-                            <img class="ort-pic" src="\image\StJakobshalle2018_Aussenansicht.jpg" alt="">
-                        </div>
-                    
-                        <div class="col l6 m6">
-                            <img class="ort-pic" src="\image\StJakobshalle2018_Halle_3.jpg" alt="">
+                        <div class="col s12">
+                            <img class="ort-pic" src="\image\Tram Flug Basel.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -114,7 +111,7 @@
                                 <i class="Tiny material-icons left">arrow_forward</i><a href=" https://www.accorhotels.com/de/hotel-8211-ibis-budget-basel-city/index.shtml"> https://www.accorhotels.com/</a>
                             </div>
                             <div class="col l6 m6 s12">
-                                <img class="ort-pic" src="\image\StJakobshalle2018_Halle_3.jpg" alt="">
+                                <img class="ort-pic" src="\image\Hotel ibis.jpg" alt="">
                             </div>
                         </div>
                     </div>  
@@ -128,7 +125,7 @@
                                 <i class="Tiny material-icons left">arrow_forward</i><a href=" https://www.cooptagungszentrum.ch/de/hotel.html">  https://www.cooptagungszentrum.ch    </a>
                             </div>
                             <div class="col l6 m6">
-                                <img class="ort-pic" src="\image\StJakobshalle2018_Halle_3.jpg" alt="">
+                                <img class="ort-pic" src="\image\Hotel coop.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -142,7 +139,7 @@
                                 <i class="Tiny material-icons left">arrow_forward</i><a href="https://www.youthhotstel.ch/de/hostels/basel/"> https://www.youthhotstel.ch  </a>
                             </div>
                             <div class="col l6 m6">
-                                <img class="ort-pic" src="\image\StJakobshalle2018_Halle_3.jpg" alt="">
+                                <img class="ort-pic" src="\image\Hotel Youth Hostel.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -155,14 +152,14 @@
                                 <p>{{__("3.7 km vom St. Jakobshalle")}}</p>
 {{--                                <p >{{__("Her ein paar Übernachtungsmöglichkeiten.")}}</p>--}}
                                 <p >{{__("Übernachtung im Dojo der Aikidoschule Basel € 5.-/Nacht")}}</p>
-                                <img class="ort-pic hide-on-med-and-up" src="\image\StJakobshalle2018_Halle_3.jpg" alt="">
+                                <img class="ort-pic hide-on-med-and-up" src="\image\Hotel Aikido Basel.jpg" alt="">
 
                                 <br>
                                 <h2>{{__("Weitere Hotels unter:")}}</h2>
                                 <i class="Tiny material-icons left">arrow_forward</i><a href="https://www.booking.com"> Booking</a>
                             </div>
                             <div class="col l6 m6 hide-on-small-only">
-                                <img class="ort-pic" src="\image\StJakobshalle2018_Halle_3.jpg" alt="">
+                                <img class="ort-pic" src="\image\Hotel Aikido Basel.jpg" alt="">
                             </div>
                         </div>
                     </div>

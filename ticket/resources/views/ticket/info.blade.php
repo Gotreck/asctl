@@ -42,8 +42,7 @@ $n=0;
             <p>{{__("Halber Tag:CHF 30.–")}}</p>   <br>
             <p>{{__("Im Preis ist alles inbegriffen (exkl. Essen & Trinken). Vor Ort nur Barzahlungen möglich. In CHF und € zum Tageskurs")}}</p>   <br>
             <p style = "font-weight:bold">{{__("Kontaktformulare")}}</p>
-            <p>{{__("Das Ausfüllen des Kontaktformulars ist für eine Bestellung erforderlich.")}}</p>
-            <p>{{__("Das Passwort ist gleichzeitig das Login zum Ticketshop. Bestellungen können nach Bezahlung nicht storniert werden. Bei nicht Teilnahme sind keine Rückerstattungen möglich.")}}</p>
+            <p>{{__("Das Ausfüllen des Kontaktformulars ist für eine Bestellung erforderlich.")}} {{__("Das Passwort ist gleichzeitig das Login zum Ticketshop. Bestellungen können nach Bezahlung nicht storniert werden. Bei nicht Teilnahme sind keine Rückerstattungen möglich.")}}</p>
 
 
         </div>
