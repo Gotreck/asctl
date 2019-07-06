@@ -12,17 +12,17 @@
             <div class="row">
                 <div class="input-field col s12">
                     <input id="email" type="text" class="validate" name="email">
-                    <label for="email">Email</label>
+                    <label for="email">{{__("Email")}}</label>
                 </div>
                 <div class="input-field col s12">
                     <input id="password" type="password" class="validate" name="password">
-                    <label for="password">Mot de passe</label>
+                    <label for="password">{{__("Passwort")}}</label>
                 </div>
                 <div class="input-field col s6 m6 l6 left-align">
-                    <button class="btn waves-effect waves-dark" style="font-size: 12px; text-transform: none; padding: 0"><a style="color: darkred" href = "/password/reset">Mot de passe oublié</a></button>
+                    <button class="btn waves-effect waves-dark" style="font-size: 12px; text-transform: none; padding: 0"><a style="color: darkred" href = "/password/reset">{{__("Passwort vergessen")}}</a></button>
                 </div>
                 <div class="input-field col s6 m6 l6 right-align">
-                    <button class="btn waves-effect waves-dark" id="" type="submit" name="submit">Se connecter</button>
+                    <button class="btn waves-effect waves-dark" id="" type="submit" name="submit">{{__("Einloggen")}}</button>
                 </div>
 
             </div>

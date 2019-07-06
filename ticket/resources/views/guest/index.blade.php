@@ -111,16 +111,20 @@
                 </div>
 
                 @if($guest->youtube != "none")
-                <div class = "row">
-                    <a target = "_blank" href = "{{$guest->youtube}}">youtube.com <i class = "material-icons left">link</i></a>
-                </div>
+                    <div class = "row">
+                        <a target = "_blank" href = "{{$guest->youtube}}">youtube.com <i class = "material-icons left">link</i></a>
+                    </div>
                 @endif
-                <div class = "row">
-                    <a target = "_blank" href = "{{$guest->social}}">Social <i class = "material-icons left">link</i></a>
-                </div>
-                <div class = "row">
-                    <a target = "_blank" href = "{{$guest->website}}">website <i class = "material-icons left">link</i></a>
-                </div>
+                @if($guest->social != "none")
+                    <div class = "row">
+                        <a target = "_blank" href = "{{$guest->social}}">Social <i class = "material-icons left">link</i></a>
+                    </div>
+                @endif
+                @if($guest->website != "none")
+                    <div class = "row">
+                        <a target = "_blank" href = "{{$guest->website}}">website <i class = "material-icons left">link</i></a>
+                    </div>
+                @endif
             </div>
 
         </div>

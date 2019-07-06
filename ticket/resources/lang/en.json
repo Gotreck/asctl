@@ -96,7 +96,10 @@
     "Die Rechnungsbestätigung erhaltet ihr per E-Mail und ist gleichzeitig das Eintrittsticket für den Lehrgang. Bitte mitbringen und an der Kasse vorweisen!": "An invoice confirmation will be sent to you by e-mail. You will receive your ticket at the cash register upon submission of the bill.",
     "Info & Kontakt": "Info & contact",
 
-    "Mot de passe": "Password",
+    "Passwort": "Password",
+    "Passwort vergessen": "Forget Password",
+    "Einloggen": "Connexion",
+    "Einreichen": "Send",
     "Email": "Email",
     "Se connecter": "Login",
     "Registrieren": "Register",

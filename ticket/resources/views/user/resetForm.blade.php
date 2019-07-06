@@ -32,7 +32,7 @@
                     </div>
 
                     <div class="input-field col s12 m12 l12 right-align">
-                        <button class="btn waves-effect waves-dark" id="" type="submit" name="submit">Envoyer</button>
+                        <button class="btn waves-effect waves-dark" id="" type="submit" name="submit">{{__("Einreichen")}}</button>
                     </div>
 
                 </div>
