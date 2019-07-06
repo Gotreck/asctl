@@ -26,7 +26,7 @@ class UserController extends Controller
 			//
 			if ( session()->has( 'user' ) )
 			{
-				return redirect( "/event" );
+				return redirect( "/" );
 			}
 			return view( "user.login" );
 		}
@@ -41,7 +41,7 @@ class UserController extends Controller
 			//
 			if ( session()->has( 'user' ) )
 			{
-				return redirect( "/event" );
+				return redirect( "/" );
 			}
 			return view( "user.register" );
 		}

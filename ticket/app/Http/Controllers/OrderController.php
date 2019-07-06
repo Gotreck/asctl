@@ -30,7 +30,7 @@ class OrderController extends Controller
 			}
 			else
 			{
-				return redirect( '/event' );
+				return redirect( '/' );
 			}
 		}
 
@@ -47,7 +47,7 @@ class OrderController extends Controller
 			}
 			else
 			{
-				return redirect( '/event' );
+				return redirect( '/' );
 			}
 		}
 
@@ -76,19 +76,19 @@ class OrderController extends Controller
 				$data,
 				function ( $message ) use ( $Orderid, $user )
 			{
-				$cart = $user->oneCart( $²Orderid );
+//				$cart = $user->oneCart( $Orderid );
 //				$id   = $Orderid;
 //				$pdf  = PDF::loadView( 'pdf.order', compact( 'cart' ), compact( 'id', 'user' ) );
-				$message->from( 'order@10anniversary-as.ch', 'ASCTL' );
+				$message->from( 'order@10anniversary-as.ch', '10-anniversary-asctl' );
 
 				$message->to( $user->email )
-					  ->subject( 'Validation de commande' );
+					  ->subject( 'New order' );
 //				$message->attachData( $pdf->output(), "Order n°$id .pdf" );
 			}
 			);
 
 
-			return redirect( '/order' );
+			return redirect( '/order/old' );
 
 		}
 

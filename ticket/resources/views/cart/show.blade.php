@@ -105,7 +105,7 @@
                             return actions.order.create({
                                 purchase_units: [{
                                     amount: {
-                                        value: 0.02
+                                        value: <?php echo $cart->totalprice() ?>
                                     }
                                 }]
                             });

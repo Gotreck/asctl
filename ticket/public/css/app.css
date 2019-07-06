@@ -42,6 +42,10 @@ body{
     font-size: 1em;
 }
 
+#ticket-list{
+    min-height: 60%;
+}
+
 .top ul li a {
     font-size: 1.2em;
     color: white;
