@@ -24,7 +24,7 @@
         <div class = "row">
             <div class = "col l3 m4 offset-l1 offset-m1 hide-on-small-only">
                 <div class = "item-detail" id = "{{$guest->picture()->id}}">
-                    <img class = "img-guest-detail" src = "/storage/{{$guest->picture()->link}}" alt = "">
+                    <img class = "img-guest-detail" src = "/{{$guest->picture()->link}}" alt = "">
                 </div>
                 <div class = "guest-description media hide-on-large-only col s10 offset-s1">
                     <h2 id = "guest-media">Youtube Channel</h2>

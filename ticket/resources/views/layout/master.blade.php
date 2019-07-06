@@ -14,7 +14,7 @@
     <link rel = "stylesheet" href = "/css/animate.css">
     <link rel = "stylesheet" href = "/css/app.css">
     <script src = "/js/jquery.js"></script>
-    <script src = "https://cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
+{{--    <script src = "https://cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>--}}
     <script src = "/js/materialize.js"></script>
     <link rel = "shortcut icon" type = "image/png" href = "/image/faviconAiki.png" />
     @yield('additionalheader')
