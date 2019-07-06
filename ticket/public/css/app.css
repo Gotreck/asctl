@@ -1178,6 +1178,12 @@ li {
 @media screen and (max-width: 1000px) and (min-width: 600px) {
 
     /* Index */
+
+    #logo-sidenav {
+        margin-top: 0.2%;
+        height: 5rem;
+        border-radius: 100%;
+    }
     #intro h2 {
         font-size: 22px;
     }
