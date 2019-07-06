@@ -49,7 +49,7 @@
                 </a>
             </li>
             <li class = "navitem">
-                <a href = "#" data-target = "mobile-demo" class = "sidenav-trigger"><i class = "material-icons">menu</i></a>
+                <a id="menu-sidenav" href = "#" data-target = "mobile-demo" class = "sidenav-trigger"><i class = "material-icons">menu</i></a>
             </li>
 
         </ul>

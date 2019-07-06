@@ -110,9 +110,11 @@
                     <h2 id = "guest-media">{{__("Link")}}</h2>
                 </div>
 
+                @if($guest->youtube != "none")
                 <div class = "row">
                     <a target = "_blank" href = "{{$guest->youtube}}">youtube.com <i class = "material-icons left">link</i></a>
                 </div>
+                @endif
                 <div class = "row">
                     <a target = "_blank" href = "{{$guest->social}}">Social <i class = "material-icons left">link</i></a>
                 </div>

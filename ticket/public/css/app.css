@@ -9,6 +9,12 @@ body{
     height: 100%;
 }
 
+#menu-sidenav{
+    position: fixed;
+    right: 0em;
+    top: 0.5em;
+}
+
 #logo-navbar {
     margin-top: 0.2%;
     height: 93%;
@@ -1160,9 +1166,9 @@ li {
 
 
     .lang-flag {
-        margin-bottom: 0.5em;
-        width: 3vw;
-        height: 2vw;
+        margin-top: 1rem;
+        width: 2rem;
+        height: 1.5rem;
     }
 
 
@@ -1518,6 +1524,12 @@ li {
 
 
     /* Index */
+    #logo-sidenav {
+        margin-top: 0.2%;
+        height: 5rem;
+        border-radius: 100%;
+    }
+
     #intro h2 {
         margin-top: 60px;
         font-size: 22px;
