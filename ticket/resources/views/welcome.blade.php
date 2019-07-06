@@ -45,7 +45,7 @@
                     @foreach ($guests as $guest)
                         <div class = "col l4 m4 s6" class = "guest">
                             <div class = "img-guest-container" id = "{{$guest->picture()->id}}">
-                                <a href = "/guest/{{$guest->id}}"><img class = "img-guest" src = "/storage/{{$guest->picture()->link}}" alt = ""></a>
+                                <a href = "/guest/{{$guest->id}}"><img class = "img-guest" src = "/{{$guest->picture()->link}}" alt = ""></a>
                             </div>
                             <div class = "guest-name" id = "text{{$guest->picture()->id}}">
                                 {{$guest->last_name}}
@@ -55,7 +55,7 @@
                     @endforeach
                 </div>
                 <div id = "see-guest" class = "col l12 m4 offset-m4 s12 right-align">
-                    <a href = "/event/programm"><i class = "Tiny material-icons right">arrow_forward</i>{{__("Zur Seite : Senseï")}}</a>
+                    <a href = "/guest"><i class = "Tiny material-icons right">arrow_forward</i>{{__("Zur Seite : Senseï")}}</a>
                 </div>
             </div>
         </div>

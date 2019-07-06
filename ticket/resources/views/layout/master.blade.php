@@ -22,7 +22,7 @@
 
 <body>
 
-<a href = "https://fr-fr.facebook.com/"><img id = "fbButton" src = "/image/Overlay Button fb.jpg" alt = "fb"></a>
+<a class="hide-on-med-and-down" href = "https://fr-fr.facebook.com/"><img id = "fbButton" src = "/image/Overlay Button fb.jpg" alt = "fb"></a>
 @include('layout.navbar')
 @yield('content')
 @yield('scripts')
