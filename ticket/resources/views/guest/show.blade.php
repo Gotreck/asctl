@@ -16,7 +16,7 @@
     <div class="row">
             <div class="col l3 m3 offset-l1">
                 <div class="item-info" id="{{$guest->picture()->id}}">
-                    <img class="img-guest-detail" src="/storage/{{$guest->picture()->link}}"  alt="">
+                    <img class="img-guest-detail" src="/{{$guest->picture()->link}}"  alt="">
                 </div>
             </div>
             <div  class="col l4 m6 s12  guest-description">

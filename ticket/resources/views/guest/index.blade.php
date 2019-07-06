@@ -34,7 +34,7 @@
             <div class = "col l4 m6 s10 offset-s1  guest-description text">
                 <div class = "col s12 hide-on-med-and-up center-align">
                     <div class = "item-detail " id = "{{$guest->picture()->id}}">
-                        <img class = "img-guest-detail" src = "/storage/{{$guest->picture()->link}}" alt = "">
+                        <img class = "img-guest-detail" src = "/{{$guest->picture()->link}}" alt = "">
                     </div>
                     <h2>{{$guest->last_name}} {{$guest->first_name}}</h2>
                 </div>
