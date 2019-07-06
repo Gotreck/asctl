@@ -72,8 +72,46 @@
     <a class = "lang-item" href = "/locale/en"><img class = "lang-flag" alt = "france" src = "\image\en.jpg"></a>
 </ul>
 
+<ul class="sidenav" id="mobile-demo">
+    <li class = "navitem underline"><a href = "/">{{__("Startseite")}}</a></li>
+    <li class = "navitem underline"><a href = "/guest">{{__("Senseïs")}}</a></li>
+    <li class = "navitem underline"><a href = "/event/programm">{{__("Programm")}}</a></li>
+    <li class = "navitem underline"><a href = "/event/ort">{{__("Ort")}}</a></li>
+
+    @if(!$connected)
+        <li class = "navitem underline"><a href = "/ticket/info">{{__("Kosten")}}</a></li>
+        <li class = "navitem underline"><a href = "/login">{{__("Login")}}</a></li>
+    @endif
+
+    @if($connected)
+        <li class = "navitem underline"><a href = "/event/1/tickets">{{__("Ticketshop")}}</a></li>
+        <li class = "navitem underline"><a href = "/order">{{__("Warenkorb")}}</a></li>
+        <li class = "navitem underline"><a href = "/logout">{{__("Ausloggen")}}</a></li>
+    @endif
+
+    @if($connected && $user->hasRole('admin'))
+        <li class = "navitem underline"><a href = "/admin">{{__("Admin")}}</a></li>
+    @endif
+    <li class = "navitem">
+        @if ($lang =="")
+            <a class = 'dropdown-trigger' href = '#' data-target = 'dropdown1'><img id = "lang-flag" alt = "de" src = "\image\de.jpg">
+            </a>
+        @else
+            <a class = 'dropdown-trigger' href = '#' data-target = 'dropdown1'><img id = "lang-flag" alt = "{{$lang}}" src = "\image\{{$lang}}.jpg">
+            </a>
+        @endif
+
+    </li>
+    <ul>
+        <a class = "lang-item" href = "/locale/fr"><img class = "lang-flag" alt = "france" src = "\image\fr.jpg"></a>
+        <a class = "lang-item" href = "/locale/de"><img class = "lang-flag" alt = "france" src = "\image\de.jpg"></a>
+        <a class = "lang-item" href = "/locale/en"><img class = "lang-flag" alt = "france" src = "\image\en.jpg"></a>
+    </ul>
+</ul>
+
 <script>
 
+    $('.sidenav').sidenav();
     $('.dropdown-trigger').each(function () {
         $(this).dropdown({
             coverTrigger: false
