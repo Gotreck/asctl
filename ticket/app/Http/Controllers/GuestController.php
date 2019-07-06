@@ -51,7 +51,7 @@ class GuestController extends Controller
             }
 
         }
-        return redirect("/event");
+        return redirect("/");
     }
 
     /**
@@ -125,7 +125,7 @@ class GuestController extends Controller
         $guest->save();
 
         //go to guest idea
-        return redirect("/event");
+        return redirect("/");
 
     }
 

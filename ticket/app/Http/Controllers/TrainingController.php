@@ -39,7 +39,7 @@ class TrainingController extends Controller
             }
 
         }
-        return redirect("/event");
+        return redirect("/");
     }
 
     /**
@@ -91,7 +91,7 @@ class TrainingController extends Controller
           $training->save();
   
           //go to training idea
-          return redirect("/event");
+          return redirect("/");
   
       }
 

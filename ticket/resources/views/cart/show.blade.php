@@ -27,118 +27,123 @@
             <hr>
             <br>
         </div>
-        @foreach ($tickets as $ticket)
+        @if($cart->totalarticles() != 0)
+            @foreach ($tickets as $ticket)
+
+
+                <div class = "col l6 offset-l3 m10 offset-m1 s10 offset-s1">
+                    <div class = "col l3 m2 s2">
+                        <h3>{{ $ticket->type()->category()->name }}</h3>
+                    </div>
+                    <div class = "col l3 m3 hide-on-small-only">
+                        <h3>{{ $ticket->type()->description}}</h3>
+                    </div>
+                    <div class = "col l2 m2 s2">
+                        <h3>{{ $ticket->type()->price }} €</h3>
+                    </div>
+                    <div class = "col l2 m2 s2">
+                        <h3>1</h3>
+                    </div>
+                    <div class = "col l2 m2 s2">
+                        <form method = "POST" action = "/order/delete">
+                            @csrf
+                            <input type = "hidden" name = "_method" value = "put">
+                            <div class = "row">
+                                <input type = "hidden" class = "validate" name = "ticket_id" value = "{{$ticket->id}}">
+                                <div class = "input-field s6 m6 l6 textyellow">
+                                    <button class = "btn waves-effect waves-light" type = "submit"><i class = "material-icons">delete</i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+
+            @endforeach
 
 
             <div class = "col l6 offset-l3 m10 offset-m1 s10 offset-s1">
-                <div class = "col l3 m2 s2">
-                    <h3>{{ $ticket->type()->category()->name }}</h3>
+                <hr>
+            </div>
+
+            <div class = "col l6 offset-l3 m10 offset-m1 s10 offset-s1">
+                <div class = "col l3 m2">
+                    <h3>Total</h3>
                 </div>
-                <div class = "col l3 m3 hide-on-small-only">
-                    <h3>{{ $ticket->type()->description}}</h3>
+
+                <div class = "col l2 offset-l3 m2 offset-m3">
+                    <h3>{{$cart->totalprice()}} €</h3>
                 </div>
-                <div class = "col l2 m2 s2">
-                    <h3>{{ $ticket->type()->price }} €</h3>
-                </div>
-                <div class = "col l2 m2 s2">
-                    <h3>1</h3>
-                </div>
-                <div class = "col l2 m2 s2">
-                    <form method = "POST" action = "/order/delete">
-                        @csrf
-                        <input type = "hidden" name = "_method" value = "put">
-                        <div class = "row">
-                            <input type = "hidden" class = "validate" name = "ticket_id" value = "{{$ticket->id}}">
-                            <div class = "input-field s6 m6 l6 textyellow">
-                                <button class = "btn waves-effect waves-light" type = "submit"><i class = "material-icons">delete</i></button>
-                            </div>
-                        </div>
-                    </form>
+                <div class = "col l3 m3">
+                    <h3>{{$cart->totalarticles()}}</h3>
                 </div>
             </div>
 
-
-
-        @endforeach
-
-
-        <div class = "col l6 offset-l3 m10 offset-m1 s10 offset-s1">
-            <hr>
-        </div>
-
-        <div class = "col l6 offset-l3 m10 offset-m1 s10 offset-s1">
-            <div class = "col l3 m2">
-                <h3>Total</h3>
+            <div class = "col l6 offset-l3 m10 offset-m1 s10 offset-s1">
+                <hr>
+                <br>
             </div>
+            {{--  echo $cart->totalprice()  --}}
 
-            <div class = "col l2 offset-l3 m2 offset-m3">
-                <h3>{{$cart->totalprice()}} €</h3>
+            <div class = "col l6 offset-l3 m10 offset-m1 s10 offset-s1 @if($cart->totalarticles() == 0)hide @endif">
+
+
+                <div id = "jetz-kaufen" class = "col l3 offset-l6 m3 offset-m3 ">
+                    <h3>{{__("Jetzt kaufen")}}</h3>
+                </div>
+                <div id = "paypal-button-wrapper" class = "col l3">
+                </div>
+
+
+                <script src = "https://www.paypal.com/sdk/js?client-id=AQPCOWbPf2QJwGeAt9gXPVOWSJLKNhlpRcNxzxRll9ABx5yohzYtmuLW0PgUj8QuG4YueBhmGlYLjh72&currency=CHF"></script>
+
+
+                <script>
+                    paypal.Buttons({
+                        createOrder: function (data, actions) {
+                            return actions.order.create({
+                                purchase_units: [{
+                                    amount: {
+                                        value: 0.02
+                                    }
+                                }]
+                            });
+
+                        },
+
+
+                        onApprove: function (data, actions) {
+
+                            actions.order.capture();
+
+                            $.ajax({
+                                headers: {
+                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                },
+                                type: 'post',
+                                url: `/paypal-transaction-complete/${data.orderID}/` + <?php echo $cart->id ?> ,
+                            })
+                                .done(
+                                    function () {
+                                        M.toast({
+                                            html: 'Transaction completed.', //details.payer.name.given_name,
+                                            classes: 'green darken-3 rounded white-text',
+                                            displayLength: 5000
+                                        });
+
+                                        setTimeout(() => location.reload(), 2000);
+                                    }
+                                );
+                        }
+                    }).render('#paypal-button-wrapper');
+                </script>
+
             </div>
-            <div class = "col l3 m3">
-                <h3>{{$cart->totalarticles()}}</h3>
+        @else
+            <div class="row" style="margin-bottom: 10rem">
             </div>
-        </div>
-
-        <div class = "col l6 offset-l3 m10 offset-m1 s10 offset-s1">
-            <hr>
-            <br>
-        </div>
-        {{--  echo $cart->totalprice()  --}}
-
-        <div class = "col l6 offset-l3 m10 offset-m1 s10 offset-s1 @if($cart->totalarticles() == 0)hide @endif">
-
-
-            <div id = "jetz-kaufen" class = "col l3 offset-l6 m3 offset-m3 ">
-                <h3>{{__("Jetzt kaufen")}}</h3>
-            </div>
-            <div id = "paypal-button-wrapper" class = "col l3">
-            </div>
-
-
-            <script src = "https://www.paypal.com/sdk/js?client-id=AQPCOWbPf2QJwGeAt9gXPVOWSJLKNhlpRcNxzxRll9ABx5yohzYtmuLW0PgUj8QuG4YueBhmGlYLjh72&currency=CHF"></script>
-
-
-            <script>
-                paypal.Buttons({
-                    createOrder: function (data, actions) {
-                        return actions.order.create({
-                            purchase_units: [{
-                                amount: {
-                                    value: 0.02
-                                }
-                            }]
-                        });
-
-                    },
-
-
-                    onApprove: function (data, actions) {
-
-                        actions.order.capture();
-
-                        $.ajax({
-                            headers: {
-                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                            },
-                            type: 'post',
-                            url: `/paypal-transaction-complete/${data.orderID}/` + <?php echo $cart->id ?> ,
-                        })
-                            .done(
-                                function () {
-                                    M.toast({
-                                        html: 'Transaction completed.', //details.payer.name.given_name,
-                                        classes: 'green darken-3 rounded white-text',
-                                        displayLength: 5000
-                                    });
-
-                                    setTimeout(() => location.reload(), 2000);
-                                }
-                            );
-                    }
-                }).render('#paypal-button-wrapper');
-            </script>
-
-        </div>
+        @endif
 
 
         <div class = "col l6 offset-l3 m10 offset-m1 s10 offset-s1">
@@ -155,7 +160,6 @@
     </div>
     <br>
     <br>
-    </section>
 
 @endsection
 

@@ -76,7 +76,7 @@ class OrderController extends Controller
 				$data,
 				function ( $message ) use ( $Orderid, $user )
 			{
-				$cart = $user->oneCart( $Orderid );
+				$cart = $user->oneCart( $²Orderid );
 //				$id   = $Orderid;
 //				$pdf  = PDF::loadView( 'pdf.order', compact( 'cart' ), compact( 'id', 'user' ) );
 				$message->from( 'order@10anniversary-as.ch', 'ASCTL' );

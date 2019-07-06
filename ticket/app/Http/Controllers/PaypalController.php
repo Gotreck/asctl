@@ -21,6 +21,6 @@ class PaypalController extends Controller
     public function Capture($data, $id)
     {
         $this->order->validateOrder($id);
-//        $this->order->sendEmail($id);
+        $this->order->sendEmail($id);
     }
 }

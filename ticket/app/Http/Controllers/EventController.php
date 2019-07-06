@@ -63,7 +63,7 @@ class EventController extends Controller
 
         }
 
-        return redirect("/event");
+        return redirect("/");
     }
 
     /**
@@ -106,7 +106,7 @@ class EventController extends Controller
         $event->save();
 
         //go to event idea
-        return redirect("/event");
+        return redirect("/");
 
     }
 

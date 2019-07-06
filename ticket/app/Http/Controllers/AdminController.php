@@ -27,7 +27,7 @@ class AdminController extends Controller
             }
 
         }
-        return redirect("/event");
+        return redirect("/");
     }
 
     /**

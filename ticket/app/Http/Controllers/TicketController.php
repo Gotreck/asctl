@@ -26,7 +26,7 @@ class TicketController extends Controller
             }
 
         }
-        return redirect("/event");
+        return redirect("/");
     }
 
     public function info(){
@@ -95,7 +95,7 @@ class TicketController extends Controller
         $ticket->save();
 
         //go to ticket idea
-        return redirect("/event");
+        return redirect("/");
 
     }
 
