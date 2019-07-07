@@ -7,7 +7,7 @@
 
 <div id="register">
 	<div class="row">
-		<form class="col l6 offset-l3 m10 offset-m1 s10 offset-s1" method="POST" action="/user" id="register_form">
+		<form class="col l6 offset-l3 m10 offset-m1 s10 offset-s1" method="POST" action="/user" id="register_form" style="min-height: 50vh">
 			@csrf
 			<div class="row">
 				<div class="input-field col s12 m6">
