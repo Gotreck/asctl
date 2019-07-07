@@ -9,16 +9,16 @@
 
     <div class = "row" id = "ticket-list">
         <div class = "col l6 offset-l3 m10 offset-m1 s10 offset-s1">
-            <div class = "col l3 m2 s2">
+            <div class = "col l3 m2 s4">
                 <h3>{{__("Artikel")}}</h3>
             </div>
             <div class = "col l3 m3 hide-on-small-only">
                 <h3>{{__("Beschreibung")}}</h3>
             </div>
-            <div class = "col l2 m2 s2">
+            <div class = "col l2 m2 s4">
                 <h3>{{__("Preis")}}</h3>
             </div>
-            <div class = "col l2 m2 s2">
+            <div class = "col l2 m2 s2 hide-on-small-only">
                 <h3>{{__("Anzahl")}}</h3>
             </div>
         </div>
@@ -32,16 +32,16 @@
 
 
                 <div class = "col l6 offset-l3 m10 offset-m1 s10 offset-s1">
-                    <div class = "col l3 m2 s2">
+                    <div class = "col l3 m2 s4">
                         <h3>{{ $ticket->type()->category()->name }}</h3>
                     </div>
                     <div class = "col l3 m3 hide-on-small-only">
                         <h3>{{ $ticket->type()->description}}</h3>
                     </div>
-                    <div class = "col l2 m2 s2">
+                    <div class = "col l2 m2 s4">
                         <h3>{{ $ticket->type()->price }} €</h3>
                     </div>
-                    <div class = "col l2 m2 s2">
+                    <div class = "col l2 m2 s2 hide-on-small-only">
                         <h3>1</h3>
                     </div>
                     <div class = "col l2 m2 s2">
@@ -68,11 +68,11 @@
             </div>
 
             <div class = "col l6 offset-l3 m10 offset-m1 s10 offset-s1">
-                <div class = "col l3 m2">
+                <div class = "col l3 m2 s4">
                     <h3>Total</h3>
                 </div>
 
-                <div class = "col l2 offset-l3 m2 offset-m3">
+                <div class = "col l2 offset-l3 m2 offset-m3 s4" >
                     <h3>{{$cart->totalprice()}} €</h3>
                 </div>
                 <div class = "col l3 m3">
@@ -89,10 +89,10 @@
             <div class = "col l6 offset-l3 m10 offset-m1 s10 offset-s1 @if($cart->totalarticles() == 0)hide @endif">
 
 
-                <div id = "jetz-kaufen" class = "col l3 offset-l6 m3 offset-m3 ">
+                <div id = "jetz-kaufen" class = "col l3 offset-l6 m3 offset-m5 s12 center-align ">
                     <h3>{{__("Jetzt kaufen")}}</h3>
                 </div>
-                <div id = "paypal-button-wrapper" class = "col l3">
+                <div id = "paypal-button-wrapper" class = "col l3 m4 s12 center-align">
                 </div>
 
 

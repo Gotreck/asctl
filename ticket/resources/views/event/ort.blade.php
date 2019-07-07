@@ -108,7 +108,7 @@
                             <div class="col l6 m6 s12">
                                 <h2>{{__("ibis budget Basel City")}}</h2>
                                 <p>{{__("1.6 km vom St. Jakobshalle")}}</p>
-                                <i class="Tiny material-icons left">arrow_forward</i><a href=" https://www.accorhotels.com/de/hotel-8211-ibis-budget-basel-city/index.shtml"> https://www.accorhotels.com/</a>
+                                <i class="Tiny material-icons left">arrow_forward</i><a href=" https://www.accorhotels.com/de/hotel-8211-ibis-budget-basel-city/index.shtml"> www.accorhotels.com</a>
                             </div>
                             <div class="col l6 m6 s12">
                                 <img class="ort-pic" src="\image\Hotel ibis.jpg" alt="">
@@ -122,7 +122,7 @@
                             <div class="col l6 m6">
                                 <h2>{{__("Coop Tagungshotel")}}</h2>
                                 <p>{{__("1.2 km vom St. Jakobshalle")}}</p>
-                                <i class="Tiny material-icons left">arrow_forward</i><a href=" https://www.cooptagungszentrum.ch/de/hotel.html">  https://www.cooptagungszentrum.ch    </a>
+                                <i class="Tiny material-icons left">arrow_forward</i><a href=" https://www.cooptagungszentrum.ch/de/hotel.html">www.cooptagungszentrum.ch    </a>
                             </div>
                             <div class="col l6 m6">
                                 <img class="ort-pic" src="\image\Hotel coop.jpg" alt="">
@@ -136,7 +136,7 @@
                             <div class="col l6 m6">
                                 <h2>{{__("Youth Hostel Basel")}}</h2>
                                 <p>{{__("2.3 km vom St. Jakobshalle")}}</p>
-                                <i class="Tiny material-icons left">arrow_forward</i><a href="http://youth-hostel-basel.basel-hotels.net"> http://youth-hostel-basel.basel-hotels.net  </a>
+                                <i class="Tiny material-icons left">arrow_forward</i><a href="http://youth-hostel-basel.basel-hotels.net">www.basel-hotels.net  </a>
                             </div>
                             <div class="col l6 m6">
                                 <img class="ort-pic" src="\image\Hotel Youth Hostel.jpg" alt="">
