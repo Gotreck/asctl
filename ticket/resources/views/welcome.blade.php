@@ -71,7 +71,7 @@
             <div class = "col l12 m12">
                 <p>{{__("Wir sind glücklich, dass uns eine Vielzahl von Senseis zugesagt haben. Jeder von ihnen wird zwei Trainings leiten. Einige Trainings sind unterteilt. Dies erlaubt es allen Teilnehmern mit unterschiedlichen Lehrern zu trainieren und bietet die Möglichkeit, die großartige Ausdruckvielfalt des Aikido an diesem Anlass zu erleben.")}}</p>
                 <div class = "row right">
-                    <a href = "\storage\programm.pdf">{{__("Download Programm")}}<i class = "Tiny material-icons right">file_download</i></a>
+                    <a href = "\document\programm.pdf">{{__("Download Programm")}}<i class = "Tiny material-icons right">file_download</i></a>
                 </div>
             </div>
 
