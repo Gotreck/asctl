@@ -104,10 +104,11 @@
                     @else
                         {!! $guest->description !!}
                     @endif
-                    <hr>
 
                         @if($guest->movie != "none")
-                    <h2>Media</h2>
+                            <hr>
+
+                            <h2>Media</h2>
                     <div class = "video-container">
                         <iframe width = "560" height = "315" src = {{ $guest->movie}} frameborder="0"
                                 allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
