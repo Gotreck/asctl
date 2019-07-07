@@ -30,7 +30,7 @@ class EventController extends Controller
 
 
     public function welcome(){
-        $guests = guest::get();
+        $guests = guest::orderby('id', 'asc')->get();
         $events = event::get();
         $display = event::first();
         $id = event::first()->id;

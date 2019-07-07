@@ -17,7 +17,7 @@ class GuestController extends Controller
     public function index()
     {
         //
-        $guests = guest::get();
+        $guests = guest::orderby('id', 'asc')->get();
         return view("guest.index", compact('guests'));
     }
 

@@ -113,6 +113,29 @@
                                 allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                             @endif
+
+                    <div class="hide-on-med-and-up">
+                        <hr>
+                        <div class = "col s12">
+                            <h2 id = "guest-media">{{__("Link")}}</h2>
+                        </div>
+
+                        @if($guest->youtube != "none")
+                            <div class = "col s12">
+                                <a target = "_blank" href = "{{$guest->youtube}}">youtube.com <i class = "material-icons left">link</i></a>
+                            </div>
+                        @endif
+                        @if($guest->social != "none")
+                            <div class = "col s12">
+                                <a target = "_blank" href = "{{$guest->social}}">Social <i class = "material-icons left">link</i></a>
+                            </div>
+                        @endif
+                        @if($guest->website != "none")
+                            <div class = "col s12">
+                                <a target = "_blank" href = "{{$guest->website}}">website <i class = "material-icons left">link</i></a>
+                            </div>
+                        @endif
+                    </div>
                 </div>
                 <div class = "col l9 offset-l3 right-align">
                     <button class = "btn read-btn" id = "{{$guest->id}}" type = "submit" name = "submit"><i
