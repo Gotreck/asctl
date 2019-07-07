@@ -67,7 +67,7 @@
             <h2>{{__("Anfahrt mit der ÖV")}}</h2>
             <p>{{__("Das «Joggeli», wie die Basler das St Jakobshalle nennen, ist mit Tram Nr. 14 und 10 sowie mit Bus 36 und 37 bis Haltestelle «St.Jakob» bequem zu erreichen.  Siehe auch die BVB Website für spezielle Angebote")}}.</p>
             <p>{{__("Der Basel Flughafen ist 15 Minuten vom Stadtzentrum entfernt und ist bequem mit dem Bus erreichbar (Linie 50).")}}</p>
-            <i class="Tiny material-icons left">arrow_forward</i><a href="www.bvb.ch">www.bvb.ch</a>
+            <i class="Tiny material-icons left">arrow_forward</i><a href="https://www.bvb.ch">www.bvb.ch</a>
             <div class="row">
                 <div class="col l12">
                     <div class="row">
@@ -101,7 +101,7 @@
                 <div class="hide-on-med-and-up"></div>
                 <p class="hide-on-small-only">{{__("Wir haben für euch ein paar Übernachtungsmöglichkeiten zusammengestellt.")}}</p>
                 <p class="hide-on-med-and-up">{{__("Her ein paar Übernachtungsmöglichkeiten.")}}</p>
-                <i class="Tiny material-icons left">arrow_forward</i><a href="www.bvb.ch">www.bvb.ch</a>
+                <i class="Tiny material-icons left">arrow_forward</i><a href="https://www.bvb.ch">www.bvb.ch</a>
                 <div  class="row hotel">
                     <div class="col l12 m12 s12">
                         <div class="row">
@@ -136,7 +136,7 @@
                             <div class="col l6 m6">
                                 <h2>{{__("Youth Hostel Basel")}}</h2>
                                 <p>{{__("2.3 km vom St. Jakobshalle")}}</p>
-                                <i class="Tiny material-icons left">arrow_forward</i><a href="https://www.youthhotstel.ch/de/hostels/basel/"> https://www.youthhotstel.ch  </a>
+                                <i class="Tiny material-icons left">arrow_forward</i><a href="http://youth-hostel-basel.basel-hotels.net"> http://youth-hostel-basel.basel-hotels.net  </a>
                             </div>
                             <div class="col l6 m6">
                                 <img class="ort-pic" src="\image\Hotel Youth Hostel.jpg" alt="">
