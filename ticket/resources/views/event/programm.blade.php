@@ -33,7 +33,7 @@
     </div>
     <div class="row">
         <div class="col l6 offset-l3 s10 offset-s1 m10 offset-m1">
-            <div class="right-align"> <a href="\storage\programm.pdf"><i class="Tiny material-icons right">file_download</i>{{__("Download Programm")}}</a></div>
+            <div class="right-align"> <a href="\document\programm.pdf"><i class="Tiny material-icons right">file_download</i>{{__("Download Programm")}}</a></div>
 
         </div>
     </div>
@@ -74,7 +74,7 @@
                     <p>{{__("Hall 4 und auf dem vorgelagerten Platz beim Parking. Samstag, 20. Juni.")}}</p>
                     <img class="plan-pic" src="\image\japanfestival.jpg" alt="">
                     <p>{{__("Es erwartet euch ein vielfältiges japanisches Kulturfestival mit japanischen Köstlichkeiten.")}} </p>
-                           <p> {{__("Mehr Informationen unter:")}} <a href="http://www.samourai-matsuri.ch">www.samurai-matsuri.ch</a> </p>
+                           <p> {{__("Mehr Informationen unter:")}} <a href="https://samurai-matsuri.ch">www.samurai-matsuri.ch</a> </p>
                 </div>
             </div>
 </div>  
