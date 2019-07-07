@@ -27,8 +27,25 @@
                     <img class = "img-guest-detail" src = "/{{$guest->picture()->link}}" alt = "">
                 </div>
                 <div class = "guest-description media hide-on-large-only col s10 offset-s1">
-                    <h2 id = "guest-media">Youtube Channel</h2>
-                    <a href = "{{$guest->website}}">youtube.com <i class = "material-icons left">link</i></a>
+                    <div class = "row">
+                        <h2 id = "guest-media">{{__("Link")}}</h2>
+                    </div>
+
+                    @if($guest->youtube != "none")
+                        <div class = "row">
+                            <a target = "_blank" href = "{{$guest->youtube}}">youtube.com <i class = "material-icons left">link</i></a>
+                        </div>
+                    @endif
+                    @if($guest->social != "none")
+                        <div class = "row">
+                            <a target = "_blank" href = "{{$guest->social}}">Social <i class = "material-icons left">link</i></a>
+                        </div>
+                    @endif
+                    @if($guest->website != "none")
+                        <div class = "row">
+                            <a target = "_blank" href = "{{$guest->website}}">website <i class = "material-icons left">link</i></a>
+                        </div>
+                    @endif
                 </div>
             </div>
             <div class = "col l4 m6 s10 offset-s1  guest-description text">
@@ -88,11 +105,14 @@
                         {!! $guest->description !!}
                     @endif
                     <hr>
+
+                        @if($guest->movie != "none")
                     <h2>Media</h2>
                     <div class = "video-container">
                         <iframe width = "560" height = "315" src = {{ $guest->movie}} frameborder="0"
                                 allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
+                            @endif
                 </div>
                 <div class = "col l9 offset-l3 right-align">
                     <button class = "btn read-btn" id = "{{$guest->id}}" type = "submit" name = "submit"><i
