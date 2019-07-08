@@ -9,7 +9,7 @@
             </div>
             <div class = "col l3">
                 <a href = "/ticket/info"><p>{{__("Ticketshop")}}</p></a>
-                <a href = "http://aikido-switzerland.org"></a><p>{{__("Verband")}}</p>
+                <a href = "http://aikido-switzerland.org"><p>{{__("Verband")}}</p></a>
                 <a href = "https://www.basel.com">                <p>{{__("Basel Tourismus")}}</p>
                 </a>
          </div>
@@ -34,7 +34,7 @@
             </div>
             <div class = "col s6 offset-s3">
                 <a href = "/ticket/info"><p>{{__("Ticketshop")}}</p></a>
-                <a href = "http://aikido-switzerland.org"></a><p>{{__("Verband")}}</p>
+                <a href = "http://aikido-switzerland.org"><p>{{__("Verband")}}</p></a>
                 <a href = "https://www.basel.com">                <p>{{__("Basel Tourismus")}}</p>
                 </a>
             </div>
