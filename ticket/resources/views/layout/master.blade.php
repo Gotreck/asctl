@@ -7,7 +7,7 @@
     <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
     <meta name = "theme-color" content = "#9f0909">
     <meta name = "csrf-token" content = "{{ csrf_token() }}">
-    <title>ASCTL Ticket </title>
+    <title>Aïkido Switzerland </title>
     <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
     <link href = "https://fonts.googleapis.com/css?family=Rubik:400" rel = "stylesheet">
     <link rel = "stylesheet" href = "/css/materialize.css">

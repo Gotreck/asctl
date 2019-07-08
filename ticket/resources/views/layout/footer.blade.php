@@ -2,16 +2,14 @@
     <div class = "col l6 offset-l3">
         <div class = "row">
             <div class = "col l3">
-                <a href = "/ticket/info"><p>{{__("Kontakt")}}</p></a>
+                <a href = "mailto:info@10anniversary-as.ch"><p>{{__("Kontakt")}}</p></a>
 
-                <p>{{__("Impressum")}}</p>
+                <a href = "\document\Impressum DE FR EN.pdf"><p>{{__("Impressum")}}</p></a>
                 <a href = "\image\Datenschutz DE FR EN.pdf"><p>{{__("Datenschutz")}}</p></a>
-                <p>{{__("Verband")}}</p>
             </div>
             <div class = "col l3">
-                <a href = "/event/1/tickets"><p>{{__("Ticketshop")}}</p></a>
-                <a href = "/login"><p>{{__("Login")}}</p></a>
-                <p>{{__("Flyer")}}</p>
+                <a href = "/ticket/info"><p>{{__("Ticketshop")}}</p></a>
+                <a href = "http://aikido-switzerland.org"></a><p>{{__("Verband")}}</p>
                 <a href = "https://www.basel.com">                <p>{{__("Basel Tourismus")}}</p>
                 </a>
          </div>
@@ -29,16 +27,14 @@
     <div class = "col s10 offset-s1">
         <div class = "row">
             <div class = "col s3">
-                <a href = "/ticket/info"><p>{{__("Kontakt")}}</p></a>
+                <a href = "mailto:info@10anniversary-as.ch"><p>{{__("Kontakt")}}</p></a>
 
-                <p>{{__("Impressum")}}</p>
+                <a href = "\document\Impressum DE FR EN.pdf"><p>{{__("Impressum")}}</p></a>
                 <a href = "\image\Datenschutz DE FR EN.pdf"><p>{{__("Datenschutz")}}</p></a>
-                <p>{{__("Verband")}}</p>
             </div>
             <div class = "col s6 offset-s3">
-                <a href = "/event/1/tickets"><p>{{__("Ticketshop")}}</p></a>
-                <a href = "/login"><p>{{__("Login")}}</p></a>
-                <p>{{__("Flyer")}}</p>
+                <a href = "/ticket/info"><p>{{__("Ticketshop")}}</p></a>
+                <a href = "http://aikido-switzerland.org"></a><p>{{__("Verband")}}</p>
                 <a href = "https://www.basel.com">                <p>{{__("Basel Tourismus")}}</p>
                 </a>
             </div>

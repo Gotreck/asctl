@@ -101,7 +101,7 @@
 <body style = "margin:0; padding:0; background-color: rgba(159, 9, 9, 1);">
 
 <!-- 100% background wrapper (grey background) -->
-<table border = "0" width = "100%" cellpadding = "0" cellspacing = "0">
+<table border = "0" width = "100%" cellpadding = "0" cellspacing = "0" bgcolor="white">
     <tr>
         <td align = "center" valign = "top" style = "background-color: #F0F0F0;">
             <br>
@@ -116,7 +116,7 @@
                     <td class = "container-padding content" align = "left">
                         <br>
 
-                        <div class = "title">{{__("Sehr geehrter Herr / Frau,")}}</div>
+                        <div >{{__("Guten Tag")}}</div>
                         <br>
 
                         <div class = "body-text">
