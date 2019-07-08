@@ -122,7 +122,7 @@
                         <div class = "body-text">
                             {{__("Wir freuen uns, Ihre Bestellung zu bestätigen.")}}
                             <br>{{__(" Sie finden Ihre Rechnung unter folgendem Link :")}}
-                            <br><br><a href = "http://10-anniversary-aikido-switzerland.ch/order/old">http://10-anniversary-aikido-switzerland.ch/order/old</a>
+                            <br><br><a href = "http://10-anniversary-aikido-switzerland.ch/order/old">http://10-anniversary-aikido-switzerland.ch/order</a>
                             <br>
 
                             <br><br>
