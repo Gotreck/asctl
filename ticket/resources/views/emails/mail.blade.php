@@ -126,7 +126,7 @@
                             <br>
 
                             <br><br>
-                            {{__("herzlich")}}
+                            {{__("Herzlich ihr AS-Team")}}
                             <br><br>
                             <table style = 'font-family: Arial ; font-size:13px'>
                                 <tr>
