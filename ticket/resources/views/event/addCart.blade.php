@@ -48,7 +48,7 @@ $n=0;
             <h3>{{ $ticket->description }}</h3>  
         </div>
         <div class="col l1 m2 s2 s4">
-            <h3>{{ $ticket->price }} €</h3>
+            <h3>{{ $ticket->price }} CHF</h3>
         </div>
         <div class="col l1 m1 s4">
             <input type="hidden" class="validate" name="ticket_id" value="{{$ticket->id}}">

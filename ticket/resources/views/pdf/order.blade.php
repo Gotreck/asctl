@@ -141,13 +141,13 @@ a{
 
 <body>
   <div id="logoAS">
-    <img class="img"src="..\public\image\Event_logo.jpg">
+    <img class="img"src="{{asset('\image\Event_logo.jpg')}}">
     <h4>TICKET FÜR</h4>
     <p>{{ $user->last_name}} {{ $user->first_name}}</p>
     <p><a href="mailto:{{ $user->email}}">{{ $user->email}}</a></p>
   </div>
   <div id="QRCode">
-    <img class="img"src="..\public\image\qr_code.jpg">
+    <img class="img"src="{{asset('\image\qr_code.jpg')}}">
   </div>
 
   <div id="pdf-body">
@@ -195,7 +195,7 @@ a{
               <tr>
                 <td></td>
                 <td>Gesamt</td>
-                <td>{{$cart->totalprice()}} €</td>
+                <td>{{$cart->totalprice()}} CHF</td>
               </tr>
             </tbody>
           </table>

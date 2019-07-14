@@ -233,7 +233,7 @@ footer {
                     
                     <tr>
                       <td colspan="4" class="grand total">TOTAL</td>
-                      <td class="grand total">{{$cart->totalprice()}} €</td>
+                      <td class="grand total">{{$cart->totalprice()}} CHF</td>
                     </tr>
                   </tbody>
                 </table>

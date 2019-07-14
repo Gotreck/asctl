@@ -39,7 +39,7 @@
                         <h3>{{ $ticket->type()->description}}</h3>
                     </div>
                     <div class = "col l2 m2 s4">
-                        <h3>{{ $ticket->type()->price }} €</h3>
+                        <h3>{{ $ticket->type()->price }} CHF</h3>
                     </div>
                     <div class = "col l2 m2 s2 hide-on-small-only">
                         <h3>1</h3>
@@ -105,7 +105,7 @@
                             return actions.order.create({
                                 purchase_units: [{
                                     amount: {
-                                        value: 0.01
+                                        value: <?php echo $cart->totalprice() ?>
                                     }
                                 }]
                             });
