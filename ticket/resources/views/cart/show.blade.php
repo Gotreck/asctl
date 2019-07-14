@@ -73,7 +73,7 @@
                 </div>
 
                 <div class = "col l2 offset-l3 m2 offset-m3 s4">
-                    <h3>{{$cart->totalprice()}} €</h3>
+                    <h3>{{$cart->totalprice()}} CHF</h3>
                 </div>
                 <div class = "col l3 m3">
                     <h3>{{$cart->totalarticles()}}</h3>
@@ -132,8 +132,7 @@
                                 displayLength: 5000
                             });
 
-                            setTimeout(() => location.replace('/order/pdf/' + <?php echo $cart->id ?>), 2000);
-                            setTimeout(() => location.replace('/order/old'), 1000);
+                            setTimeout(() => location.replace('/order/old'), 2000);
 
 
                         }

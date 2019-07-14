@@ -85,14 +85,14 @@ table td.grand {
   
   color: #9f0909;
   margin-left: 250px;
-  margin-top: 300px;
+  margin-top: 100px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 #pdf-body #gultig{
   
   color: #9f0909;
-  margin-top: 400px;
+  margin-top: 300px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
@@ -140,35 +140,32 @@ a{
 </head>
 
 <body>
-  <div id="logoAS">
-    <img class="img"src="{{asset('\image\Event_logo.jpg')}}">
-    <h4>TICKET FÜR</h4>
-    <p>{{ $user->last_name}} {{ $user->first_name}}</p>
-    <p><a href="mailto:{{ $user->email}}">{{ $user->email}}</a></p>
-  </div>
-  <div id="QRCode">
-    <img class="img"src="{{asset('\image\qr_code.jpg')}}">
-  </div>
+
+<div id="logoAS">
+  <h4>{{__("TICKET FÜR")}}</h4>
+  <p>{{ $user->last_name}} {{ $user->first_name}}</p>
+  <p><a href="mailto:{{ $user->email}}">{{ $user->email}}</a></p>
+</div>
 
   <div id="pdf-body">
     <div id="body-info">
-      <h4 id="gultig">GÜLTIG FÜR</h4>
-      <p>19 - 21 Juni 2020</p>
+      <h4 id="gultig">{{__("GÜLTIG FÜR")}}</h4>
+      <p>{{__("19 - 21 Juni 2020")}}</p>
 
-      <h4>INFO & KONTAKT</h4>
+      <h4>{{__("INFO & KONTAKT")}}</h4>
       <p>info@10anniversary-as.fr</p>
     </div>
     <div id="pdf-table"> 
-      <h4>RECHNUNG</h4>
-      <p>Voverkauf: Early Bird Ticket</p>
-      <p>Bestellnummer: {{ $cart->id }}</p>
-      <p>Status: Bezahlt</p>
+      <h4>{{__("RECHNUNG")}}</h4>
+      <p>{{__("Voverkauf: Early Bird Ticket")}}</p>
+      <p>{{__("Bestellnummer")}}: {{ $cart->id }}</p>
+      <p>{{__("Status: Bezahlt")}}</p>
         <table>
             <thead>
               <tr>
-                <th>Beschreibung</th>
-                <th>Menge</th>
-                <th>Einzelpreis</th>
+                <th>{{__("Beschreibung")}}</th>
+                <th>{{__("Menge")}}</th>
+                <th>{{__("Einzelpreis")}}</th>
               </tr>
             </thead>
             <tbody>
@@ -194,7 +191,7 @@ a{
               
               <tr>
                 <td></td>
-                <td>Gesamt</td>
+                <td>{{__("Gesamt")}}</td>
                 <td>{{$cart->totalprice()}} CHF</td>
               </tr>
             </tbody>
@@ -202,8 +199,10 @@ a{
     </div>
     <div id="info-text">
       <p>
-        Die Rechnung ist gleichzeitig das Eintrittsticket. Bitte mitbringen und an der Kasse vorweisen! Bei nicht Teilnahme sind keine Rückerstattungen möglich.
-        Wir bedanken uns für deinen Auftrag. Mit freundlichen Grüssen.
+        {{__("Gegen Abgabe der Rechnung erhaltet ihr an der Kasse euer Ticket. Bei nicht Teilnahme sind keine Rückerstattungen möglich.")}}
+        <br>
+        {{__("Wir bedanken uns für deinen Auftrag. Mit freundlichen Grüssen ")}}
+
       </p>
       <br>
       <br>

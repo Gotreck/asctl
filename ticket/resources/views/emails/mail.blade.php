@@ -39,7 +39,6 @@
     }
 
     code {
-        background-color: #eee;
         padding: 0 4px;
         font-family: Menlo, Courier, monospace;
         font-size: 12px;
@@ -98,20 +97,15 @@
     <title>Ticket Email</title>
 </head>
 
-<body style = "margin:0; padding:0; background-color: rgba(159, 9, 9, 1);">
+<body style = "margin:0; padding:0;">
 
 <!-- 100% background wrapper (grey background) -->
 <table border = "0" width = "100%" cellpadding = "0" cellspacing = "0" bgcolor="white">
     <tr>
-        <td align = "center" valign = "top" style = "background-color: #F0F0F0;">
+        <td align = "center" valign = "top" >
             <br>
             <!-- 600px container (white background) -->
             <table border = "0" width = "800" cellpadding = "0" cellspacing = "0" class = "container">
-                <tr>
-                    <td class = "container-padding header" align = "left">
-                        <br>{{__("Neue Bestellung")}} <br>
-                    </td>
-                </tr>
                 <tr>
                     <td class = "container-padding content" align = "left">
                         <br>
@@ -120,13 +114,13 @@
                         <br>
 
                         <div class = "body-text">
-                            {{__("Wir freuen uns, Ihre Bestellung zu bestätigen.")}}
-                            <br>{{__(" Sie finden Ihre Rechnung unter folgendem Link :")}}
+                            {{__("Wir freuen uns, deine Bestellung zu bestätigen.")}}
+                            <br>{{__("Du findest die Rechnung unter folgendem Link und im Anhang dieser E-Mail:")}}
                             <br><br><a href = "http://10-anniversary-aikido-switzerland.ch/order/old">http://10-anniversary-aikido-switzerland.ch/order</a>
                             <br>
 
                             <br><br>
-                            {{__("Herzlich ihr AS-Team")}}
+                            {{__("Herzlich dein AS-Team")}}
                             <br><br>
                             <table style = 'font-family: Arial ; font-size:13px'>
                                 <tr>
