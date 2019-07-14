@@ -72,7 +72,7 @@
                     <h3>Total</h3>
                 </div>
 
-                <div class = "col l2 offset-l3 m2 offset-m3 s4" >
+                <div class = "col l2 offset-l3 m2 offset-m3 s4">
                     <h3>{{$cart->totalprice()}} €</h3>
                 </div>
                 <div class = "col l3 m3">
@@ -105,7 +105,7 @@
                             return actions.order.create({
                                 purchase_units: [{
                                     amount: {
-                                        value: <?php echo $cart->totalprice() ?>
+                                        value: 0.01
                                     }
                                 }]
                             });
@@ -123,25 +123,26 @@
                                 },
                                 type: 'post',
                                 url: `/paypal-transaction-complete/${data.orderID}/` + <?php echo $cart->id ?> ,
-                            })
-                                .done(
-                                    function () {
-                                        M.toast({
-                                            html: 'Transaction completed.', //details.payer.name.given_name,
-                                            classes: 'green darken-3 rounded white-text',
-                                            displayLength: 5000
-                                        });
+                            });
 
-                                        setTimeout(() => location.reload(), 2000);
-                                    }
-                                );
+
+                            M.toast({
+                                html: 'Transaction completed.', //details.payer.name.given_name,
+                                classes: 'green darken-3 rounded white-text',
+                                displayLength: 5000
+                            });
+
+                            setTimeout(() => location.replace('/order/old'), 1000);
+                            setTimeout(() => location.replace('/order/pdf/' + <?php echo $cart->id ?>), 2000);
+
+
                         }
                     }).render('#paypal-button-wrapper');
                 </script>
 
             </div>
         @else
-            <div class="row" style="margin-bottom: 10rem">
+            <div class = "row" style = "margin-bottom: 10rem">
             </div>
         @endif
 

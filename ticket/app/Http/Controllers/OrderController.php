@@ -77,8 +77,6 @@ class OrderController extends Controller
 				function ( $message ) use ( $Orderid, $user )
 			{
 //				$cart = $user->oneCart( $Orderid );
-//				$id   = $Orderid;
-//				$pdf  = PDF::loadView( 'pdf.order', compact( 'cart' ), compact( 'id', 'user' ) );
 				$message->from( 'order@10anniversary-as.ch', '10-anniversary-asctl' );
 
 				$message->to( $user->email )
@@ -87,8 +85,13 @@ class OrderController extends Controller
 			}
 			);
 
+//			$pdf  = PDF::loadView( 'pdf.order', compact( 'cart' ), compact( 'Orderid', 'user' ) );
+//
+//
+//
+//			return redirect( '/order/old' );
 
-			return redirect( '/order/old' );
+			return;
 
 		}
 

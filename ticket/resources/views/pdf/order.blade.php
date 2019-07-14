@@ -203,13 +203,10 @@ a{
     <div id="info-text">
       <p>
         Die Rechnung ist gleichzeitig das Eintrittsticket. Bitte mitbringen und an der Kasse vorweisen! Bei nicht Teilnahme sind keine Rückerstattungen möglich.
-        Wir bedanken uns für deinen Auftrag. Mit freundlichen Grüssen
+        Wir bedanken uns für deinen Auftrag. Mit freundlichen Grüssen.
       </p>
       <br>
       <br>
-      <p>
-        Wir bedanken uns für deinen Auftrag. Mit freundlichen Grüssen
-      </p>
     </div>
   </div>
   </div>
