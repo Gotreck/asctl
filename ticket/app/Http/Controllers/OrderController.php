@@ -76,22 +76,19 @@ class OrderController extends Controller
 				$data,
 				function ( $message ) use ( $Orderid, $user )
 			{
-//				$cart = $user->oneCart( $Orderid );
+				$cart = $user->oneCart( $Orderid );
+				$id   = $Orderid;
+				$pdf  = PDF::loadView( 'pdf.order', compact( 'cart' ), compact( 'id', 'user' ) );
 				$message->from( 'order@10anniversary-as.ch', '10-anniversary-asctl' );
 
 				$message->to( $user->email )
 					  ->subject( 'New order' );
-//				$message->attachData( $pdf->output(), "Order n°$id .pdf" );
+				$message->attachData( $pdf->output(), "Order n°$id .pdf" );
 			}
 			);
 
-//			$pdf  = PDF::loadView( 'pdf.order', compact( 'cart' ), compact( 'Orderid', 'user' ) );
-//
-//
-//
-//			return redirect( '/order/old' );
 
-			return;
+			return redirect( '/order/old' );
 
 		}
 

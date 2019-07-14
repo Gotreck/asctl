@@ -132,8 +132,8 @@
                                 displayLength: 5000
                             });
 
-                            setTimeout(() => location.replace('/order/old'), 1000);
                             setTimeout(() => location.replace('/order/pdf/' + <?php echo $cart->id ?>), 2000);
+                            setTimeout(() => location.replace('/order/old'), 1000);
 
 
                         }
